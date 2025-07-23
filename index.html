@@ -3,15 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressive Quiz</title>
+    <title>Roadside Street Furniture Design QRH</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="sidebar">
-        <div id="quiz-container">
-            <!-- Questions will be dynamically inserted here -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1><i class="fas fa-road"></i> Roadside Design QRH</h1>
+            <p>Highway Department Standard Drawings Reference</p>
         </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search furniture or drawings...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li class="category-item active" data-category="all">
+                    <i class="fas fa-th-large"></i> All Categories
+                </li>
+                <li class="category-item" data-category="kerbs">
+                    <i class="fas fa-road"></i> Kerbs & Edges
+                </li>
+                <li class="category-item" data-category="barriers">
+                    <i class="fas fa-shield-alt"></i> Crash Barriers
+                </li>
+                <li class="category-item" data-category="railings">
+                    <i class="fas fa-border-style"></i> Railings & Fencing
+                </li>
+                <li class="category-item" data-category="signs">
+                    <i class="fas fa-sign"></i> Traffic Signs
+                </li>
+                <li class="category-item" data-category="signals">
+                    <i class="fas fa-traffic-light"></i> Signal Equipment
+                </li>
+                <li class="category-item" data-category="bollards">
+                    <i class="fas fa-map-pin"></i> Traffic Bollards
+                </li>
+                <li class="category-item" data-category="lighting">
+                    <i class="fas fa-lightbulb"></i> Street Lighting
+                </li>
+                <li class="category-item" data-category="drainage">
+                    <i class="fas fa-tint"></i> Drainage
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <div class="breadcrumb">
+                <span id="breadcrumbText">Home > All Categories</span>
+            </div>
+            
+            <div id="furnitureGrid" class="furniture-grid">
+                <!-- Furniture items will be dynamically loaded here -->
+            </div>
+
+            <div id="detailPanel" class="detail-panel hidden">
+                <div class="detail-header">
+                    <h2 id="detailTitle"></h2>
+                    <button id="closeDetail" class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-tabs">
+                        <button class="tab-btn active" data-tab="overview">What is it?</button>
+                        <button class="tab-btn" data-tab="usage">When to use?</button>
+                        <button class="tab-btn" data-tab="installation">How to install?</button>
+                        <button class="tab-btn" data-tab="variants">Which one to use?</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="overview" class="tab-pane active">
+                            <div id="overviewContent"></div>
+                        </div>
+                        <div id="usage" class="tab-pane">
+                            <div id="usageContent"></div>
+                        </div>
+                        <div id="installation" class="tab-pane">
+                            <div id="installationContent"></div>
+                        </div>
+                        <div id="variants" class="tab-pane">
+                            <div id="variantsContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
+
     <script src="questions.js"></script>
     <script src="quiz.js"></script>
 </body>

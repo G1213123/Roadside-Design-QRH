@@ -1,0 +1,46 @@
+{
+  "name": "hyd-drawings-crawler",
+  "version": "1.0.0",
+  "description": "Web crawler for Hong Kong Highways Department Standard Drawings",
+  "main": "crawler.js",
+  "scripts": {
+    "crawl": "node crawler-runner.js",
+    "crawl:verbose": "node crawler-runner.js --verbose",
+    "test": "node -e \"console.log('✅ Node.js setup is working'); console.log('📦 Package.json loaded successfully');\"",
+    "install-deps": "npm install node-fetch",
+    "serve": "npx http-server -p 8080 -c-1",
+    "help": "node crawler-runner.js --help"
+  },
+  "keywords": [
+    "hyd",
+    "hong-kong",
+    "highways",
+    "standard-drawings",
+    "crawler",
+    "scraper",
+    "construction",
+    "engineering"
+  ],
+  "author": "HYD Crawler Tool",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "files": [
+    "crawler.js",
+    "crawler-runner.js",
+    "crawler-tool.html",
+    "hyd-drawings-database.js",
+    "crawler-output/**/*"
+  ]
+}
