@@ -1589,11 +1589,11 @@ const furnitureDatabase = {
             ]
         },
     ],
-    railings: [
+    "railing & gate": [
         {
             id: "r1",
             name: "Type 2 Railings",
-            category: "railings",
+            category: "railing & gate",
             description: "Type 2 railings for pedestrian control purpose",
             drawing: "H2130H",
             manual: "HYD Standard Drawing H2130H",
@@ -1631,8 +1631,8 @@ const furnitureDatabase = {
         },
         {
             id: "r2",
-            name: "Type 4 Railings",
-            category: "railings",
+            name: "Decorative Type Railings",
+            category: "railing & gate",
             description: "Type 4 railings for pedestrian control purpose",
             drawing: "H2282A",
             manual: "HYD Standard Drawing H2282A",
@@ -1669,328 +1669,9 @@ const furnitureDatabase = {
             }
         },
         {
-            id: "r3",
-            name: "Type 5 Railing (Half Panel)",
-            category: "railings",
-            description: "Type 5 half panel railings for control purpose",
-            drawing: "H2284",
-            manual: "HYD Standard Drawing H2284",
-            hydDrawings: ["H2284", "H2286"],
-            overview: {
-                description: "Type 5 railings featuring half panel design for pedestrian control applications with specific aesthetic and functional requirements.",
-                specifications: ["Half panel design", "Control purpose application", "Material: Galvanized steel", "Standardized dimensions"]
-            },
-            usage: {
-                applications: [
-                    "Pedestrian control with visibility",
-                    "Areas requiring partial screening",
-                    "Urban streetscape applications",
-                    "Commercial area boundaries"
-                ],
-                conditions: [
-                    "Balance between control and visibility",
-                    "Aesthetic considerations important",
-                    "Urban environment applications"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Survey and mark installation locations",
-                    "Prepare foundations as per drawings",
-                    "Install half panel railing sections",
-                    "Check alignment and finish",
-                    "Apply protective treatments"
-                ],
-                drawings: ["H2284", "H2286"],
-                tools: ["Survey equipment", "Installation tools", "Alignment guides"],
-                materials: ["Half panel railing sections", "Foundation materials", "Fasteners"]
-            }
-        },
-        {
-            id: "r4",
-            name: "Type 6 Railing (Full Panel)",
-            category: "railings",
-            description: "Type 6 full panel railings for control purpose",
-            drawing: "H2285",
-            manual: "HYD Standard Drawing H2285",
-            hydDrawings: ["H2285", "H2286"],
-            overview: {
-                description: "Type 6 railings with full panel design providing complete screening and control for pedestrian management applications.",
-                specifications: ["Full panel design", "Complete screening capability", "Material: Galvanized steel", "Enhanced control features"]
-            },
-            usage: {
-                applications: [
-                    "Complete pedestrian screening",
-                    "Security and privacy applications",
-                    "Noise reduction barriers",
-                    "Visual screening requirements"
-                ],
-                conditions: [
-                    "Areas requiring full screening",
-                    "Security-sensitive locations",
-                    "Privacy protection needs"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Prepare installation area",
-                    "Install foundation systems",
-                    "Mount full panel sections",
-                    "Ensure proper alignment",
-                    "Complete finishing work"
-                ],
-                drawings: ["H2285", "H2286"],
-                tools: ["Panel lifting equipment", "Alignment tools", "Fastening systems"],
-                materials: ["Full panel sections", "Foundation components", "Joining hardware"]
-            }
-        },
-        {
-            id: "r5",
-            name: "Type 7 Railing (Half Panel)",
-            category: "railings",
-            description: "Type 7 half panel railings for control purpose",
-            drawing: "H2287",
-            manual: "HYD Standard Drawing H2287",
-            hydDrawings: ["H2287", "H2289"],
-            overview: {
-                description: "Type 7 railings with half panel configuration designed for specific control applications with enhanced design features.",
-                specifications: ["Half panel configuration", "Enhanced design features", "Control purpose application", "Improved aesthetics"]
-            },
-            usage: {
-                applications: [
-                    "Enhanced pedestrian control",
-                    "Improved aesthetic applications",
-                    "Modern streetscape designs",
-                    "High-profile area installations"
-                ],
-                conditions: [
-                    "Areas requiring enhanced aesthetics",
-                    "Modern urban design contexts",
-                    "High-visibility locations"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Site preparation and marking",
-                    "Foundation installation",
-                    "Half panel section mounting",
-                    "Alignment verification",
-                    "Protective coating application"
-                ],
-                drawings: ["H2287", "H2289"],
-                tools: ["Modern installation equipment", "Precision alignment tools"],
-                materials: ["Type 7 railing components", "Enhanced foundation systems"]
-            }
-        },
-        {
-            id: "r6",
-            name: "Type 8 Railing (Full Panel)",
-            category: "railings",
-            description: "Type 8 full panel railings for control purpose",
-            drawing: "H2288",
-            manual: "HYD Standard Drawing H2288",
-            hydDrawings: ["H2288", "H2289"],
-            overview: {
-                description: "Type 8 railings featuring full panel design with advanced control capabilities and enhanced aesthetic features.",
-                specifications: ["Full panel advanced design", "Enhanced control capabilities", "Superior aesthetics", "Modern materials"]
-            },
-            usage: {
-                applications: [
-                    "Advanced pedestrian control",
-                    "Premium streetscape projects",
-                    "High-security applications",
-                    "Architectural feature installations"
-                ],
-                conditions: [
-                    "Premium project requirements",
-                    "High-security needs",
-                    "Architectural significance"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Detailed site preparation",
-                    "Precision foundation work",
-                    "Full panel installation",
-                    "Quality alignment checks",
-                    "Premium finishing application"
-                ],
-                drawings: ["H2288", "H2289"],
-                tools: ["Precision installation equipment", "Quality control tools"],
-                materials: ["Premium railing components", "High-grade foundation materials"]
-            }
-        },
-        {
-            id: "r7",
-            name: "Type 9 Railing",
-            category: "railings",
-            description: "Type 9 railings for control purpose",
-            drawing: "H2290",
-            manual: "HYD Standard Drawing H2290",
-            hydDrawings: ["H2290", "H2291"],
-            overview: {
-                description: "Type 9 railings designed for specialized control applications with unique design characteristics and functional requirements.",
-                specifications: ["Specialized design features", "Unique control characteristics", "Application-specific configuration"]
-            },
-            usage: {
-                applications: [
-                    "Specialized control applications",
-                    "Unique design requirements",
-                    "Custom pedestrian management",
-                    "Special project installations"
-                ],
-                conditions: [
-                    "Specialized application needs",
-                    "Unique design requirements",
-                    "Custom project specifications"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Specialized site preparation",
-                    "Custom foundation installation",
-                    "Type 9 railing mounting",
-                    "Specialized alignment procedures",
-                    "Custom finishing work"
-                ],
-                drawings: ["H2290", "H2291"],
-                tools: ["Specialized installation equipment"],
-                materials: ["Type 9 railing components", "Specialized materials"]
-            }
-        },
-        {
-            id: "r8",
-            name: "Type 10 Railing",
-            category: "railings",
-            description: "Type 10 railings for control purpose",
-            drawing: "H2292",
-            manual: "HYD Standard Drawing H2292",
-            hydDrawings: ["H2292", "H2294"],
-            overview: {
-                description: "Type 10 railings for advanced control applications with modern design features and enhanced functionality.",
-                specifications: ["Advanced control features", "Modern design elements", "Enhanced functionality"]
-            },
-            usage: {
-                applications: [
-                    "Advanced control applications",
-                    "Modern urban environments",
-                    "Enhanced functionality needs",
-                    "Contemporary design projects"
-                ],
-                conditions: [
-                    "Modern urban contexts",
-                    "Advanced functionality requirements",
-                    "Contemporary design needs"
-                ]
-            }
-        },
-        {
-            id: "r9",
-            name: "Type 11 Railing",
-            category: "railings",
-            description: "Type 11 railings for control purpose",
-            drawing: "H2293",
-            manual: "HYD Standard Drawing H2293",
-            hydDrawings: ["H2293", "H2294"],
-            overview: {
-                description: "Type 11 railings designed for comprehensive control applications with advanced features and superior performance characteristics.",
-                specifications: ["Comprehensive control capability", "Advanced design features", "Superior performance characteristics"]
-            },
-            usage: {
-                applications: [
-                    "Comprehensive control needs",
-                    "Superior performance requirements",
-                    "Advanced pedestrian management",
-                    "High-performance installations"
-                ],
-                conditions: [
-                    "Superior performance needs",
-                    "Comprehensive control requirements",
-                    "High-performance applications"
-                ]
-            }
-        },
-        {
-            id: "r10",
-            name: "Type 12 Railing",
-            category: "railings",
-            description: "Type 12 railings for control purpose",
-            drawing: "H2295",
-            manual: "HYD Standard Drawing H2295",
-            hydDrawings: ["H2295", "H2296", "H2298", "H2299"],
-            overview: {
-                description: "Type 12 railings with standard and end panel configurations for comprehensive control applications with detailed design specifications.",
-                specifications: ["Standard and end panel options", "Comprehensive control features", "Detailed design specifications"]
-            },
-            usage: {
-                applications: [
-                    "Comprehensive railing systems",
-                    "End panel terminations",
-                    "Complete installation projects",
-                    "System-wide applications"
-                ],
-                conditions: [
-                    "Complete system requirements",
-                    "End panel termination needs",
-                    "Comprehensive project scope"
-                ]
-            },
-            installation: {
-                steps: [
-                    "System planning and layout",
-                    "Foundation system installation",
-                    "Standard panel installation",
-                    "End panel termination",
-                    "System completion and finishing"
-                ],
-                drawings: ["H2295", "H2296", "H2298", "H2299"],
-                tools: ["System installation equipment"],
-                materials: ["Type 12 standard and end panels", "System components"]
-            }
-        },
-        {
-            id: "r11",
-            name: "Type 13 Railing (High Visibility)",
-            category: "railings",
-            description: "Type 13 high visibility panel railings for control purpose",
-            drawing: "H2297",
-            manual: "HYD Standard Drawing H2297",
-            hydDrawings: ["H2297", "H2298", "H2299"],
-            overview: {
-                description: "Type 13 railings featuring high visibility panels for enhanced safety and control applications with superior visibility characteristics.",
-                specifications: ["High visibility panel design", "Enhanced safety features", "Superior visibility characteristics", "Control purpose optimization"]
-            },
-            usage: {
-                applications: [
-                    "High visibility safety applications",
-                    "Enhanced pedestrian safety",
-                    "Night-time visibility needs",
-                    "Safety-critical locations"
-                ],
-                conditions: [
-                    "Enhanced visibility requirements",
-                    "Safety-critical applications",
-                    "Night-time operation needs",
-                    "High-traffic safety zones"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Safety-critical site preparation",
-                    "High visibility panel installation",
-                    "Visibility testing and verification",
-                    "Safety feature activation",
-                    "High visibility finishing"
-                ],
-                drawings: ["H2297", "H2298", "H2299"],
-                tools: ["High visibility installation equipment", "Visibility testing tools"],
-                materials: ["High visibility panel components", "Safety-enhanced materials"]
-            }
-        },
-        {
             id: "r12",
             name: "Tubular Amenity Railings",
-            category: "railings",
+            category: "railing & gate",
             description: "Tubular amenity railings for aesthetic and functional applications",
             drawing: "H2135C",
             manual: "HYD Standard Drawing H2135C",
@@ -2028,7 +1709,7 @@ const furnitureDatabase = {
         {
             id: "r13",
             name: "Stainless Steel Railing SS01",
-            category: "railings",
+            category: "railing & gate",
             description: "Stainless steel railings for public transport interchange",
             drawing: "H2271",
             manual: "HYD Standard Drawing H2271",
@@ -2067,7 +1748,7 @@ const furnitureDatabase = {
         {
             id: "r14",
             name: "Removable Railings",
-            category: "railings",
+            category: "railing & gate",
             description: "Removable bollards and railings system",
             drawing: "H2259",
             manual: "HYD Standard Drawing H2259",
@@ -2102,7 +1783,133 @@ const furnitureDatabase = {
                 tools: ["Removable system tools", "Deployment equipment"],
                 materials: ["Removable railing components", "Base installation materials"]
             }
-        }
+        },
+        {
+            id: "r15",
+            name: "Emergency Crash Gate",
+            category: "railing & gate",
+            description: "Emergency crash gate for emergency vehicle access through barriers",
+            drawing: "H2108C",
+            manual: "HYD Standard Drawing H2108C",
+            hydDrawings: ["H2108C"],
+            overview: {
+                description: "Emergency crash gate system designed for emergency vehicle access through barrier systems, providing controlled access during emergency situations while maintaining barrier integrity under normal conditions.",
+                specifications: ["Emergency vehicle access capability", "Crash-through design", "Barrier integration", "Emergency activation system"]
+            },
+            usage: {
+                applications: [
+                    "Emergency vehicle access points",
+                    "Barrier system integration",
+                    "Fire service access routes",
+                    "Emergency response corridors",
+                    "Controlled access points",
+                    "Critical infrastructure protection"
+                ],
+                conditions: [
+                    "Emergency access requirements",
+                    "Barrier system installations",
+                    "Fire safety compliance",
+                    "Emergency response needs"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Identify emergency access requirements",
+                    "Integrate with existing barrier system",
+                    "Install crash gate mechanism",
+                    "Test emergency activation system",
+                    "Coordinate with emergency services",
+                    "Establish maintenance protocols"
+                ],
+                drawings: ["H2108C"],
+                tools: ["Gate installation equipment", "Emergency mechanism tools", "Testing equipment"],
+                materials: ["Emergency crash gate components", "Activation mechanisms", "Integration hardware"]
+            }
+        },
+        {
+            id: "r16",
+            name: "Emergency Access Gate (EAG)",
+            category: "railing & gate",
+            description: "Emergency Access Gate for controlled emergency vehicle access",
+            drawing: "H2276B",
+            manual: "HYD Standard Drawing H2276B",
+            hydDrawings: ["H2276B"],
+            overview: {
+                description: "Emergency Access Gate (EAG) system providing controlled access for emergency vehicles through restricted areas while maintaining security and access control under normal conditions.",
+                specifications: ["Emergency Access Gate design", "Controlled access system", "Emergency vehicle compatibility", "Security maintenance capability"]
+            },
+            usage: {
+                applications: [
+                    "Emergency vehicle access control",
+                    "Restricted area entry points",
+                    "Security perimeter access",
+                    "Fire department access routes",
+                    "Ambulance service corridors",
+                    "Police emergency access"
+                ],
+                conditions: [
+                    "Emergency access control requirements",
+                    "Security perimeter installations",
+                    "Emergency service coordination needs",
+                    "Controlled access applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Plan emergency access strategy",
+                    "Install EAG foundation and frame",
+                    "Mount gate mechanism and controls",
+                    "Install emergency activation systems",
+                    "Test access control functionality",
+                    "Train emergency service personnel"
+                ],
+                drawings: ["H2276B"],
+                tools: ["EAG installation equipment", "Control system tools", "Access testing equipment"],
+                materials: ["Emergency Access Gate components", "Control mechanisms", "Foundation materials"]
+            }
+        },
+        {
+            id: "r17",
+            name: "Chain Link Fence - Standard Installation",
+            category: "railing & gate",
+            description: "Standard chain link fence installation for perimeter security and area control",
+            drawing: "6121D",
+            manual: "Standard Drawing 6121D",
+            hydDrawings: ["6121D"],
+            overview: {
+                description: "Standard chain link fence system designed for perimeter security, area control, and boundary definition with durable galvanized construction and standard installation procedures.",
+                specifications: ["Galvanized chain link construction", "Standard height options", "Post and foundation system", "Gate integration capability"]
+            },
+            usage: {
+                applications: [
+                    "Perimeter security fencing",
+                    "Property boundary definition",
+                    "Area access control",
+                    "Construction site security",
+                    "Facility protection",
+                    "Restricted area enclosure"
+                ],
+                conditions: [
+                    "Security perimeter requirements",
+                    "Boundary definition needs",
+                    "Access control applications",
+                    "Long-term installation requirements"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Survey and mark fence line",
+                    "Install fence posts and foundations",
+                    "Mount chain link fabric",
+                    "Install tension systems",
+                    "Add gates and access points",
+                    "Apply protective coatings and finishes"
+                ],
+                drawings: ["6121D", "6122C",],
+                tools: ["Fence installation equipment", "Post setting tools", "Tension equipment"],
+                materials: ["Chain link fabric", "Fence posts", "Concrete for foundations", "Hardware and fasteners"]
+            }
+        },
     ],
     signs: [
         {
@@ -2338,7 +2145,7 @@ const furnitureDatabase = {
             name: "Street Name Plates",
             category: "signs",
             description: "Street name plates with building numbers",
-            drawing: "H2206D",
+            drawing: "H2205",
             hydDrawings: ["H2205", "H2206D", "H2207", "H2208E", "H2211C"],
             overview: {
                 description: "Street name plate system with building number integration for street identification and address reference in urban environments.",
@@ -2600,29 +2407,507 @@ const furnitureDatabase = {
     signals: [
         {
             id: "sg1",
-            name: "SG1 - Traffic Light Poles",
+            name: "Traffic Signal Pole",
             category: "signals",
-            description: "Standard traffic signal pole installation",
-            drawing: "SG1",
-            manual: "Traffic Signal Installation Guide"
+            description: "Foundation and mini-drawpit for traffic signal pole installation",
+            drawing: "H2146C",
+            manual: "HYD Standard Drawing H2146C",
+            hydDrawings: ["H2146C"],
+            overview: {
+                description: "Complete traffic signal pole installation system including foundation design and integrated mini-drawpit for electrical connections and maintenance access.",
+                specifications: ["Signal pole foundation", "Mini-drawpit integration", "Electrical connection provisions", "Maintenance access features"]
+            },
+            usage: {
+                applications: [
+                    "Traffic signal installations",
+                    "Pedestrian crossing signals",
+                    "Junction control systems",
+                    "Traffic management points"
+                ],
+                conditions: [
+                    "Traffic signal requirements",
+                    "Electrical infrastructure needs",
+                    "Foundation stability requirements"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Excavate foundation to specified depth",
+                    "Install reinforcement and formwork",
+                    "Construct integrated mini-drawpit",
+                    "Pour concrete foundation",
+                    "Install signal pole and electrical connections"
+                ],
+                drawings: ["H2146C"],
+                tools: ["Foundation excavation equipment", "Concrete placement tools", "Electrical installation equipment"],
+                materials: ["Signal pole", "Foundation concrete", "Reinforcement steel", "Electrical conduits"]
+            }
+        },
+        {
+            id: "sg2",
+            name: "ATC Drawpit",
+            category: "signals",
+            description: "Area Traffic Control drawpit systems - single and twin concrete draw/jointing chambers",
+            drawing: "H2159B",
+            manual: "HYD Standard Drawing H2159B",
+            hydDrawings: ["H2159B", "H2160A", "H2161A", "H2162A", "H2168A", "H2169B", "H2180A"],
+            overview: {
+                description: "Comprehensive Area Traffic Control drawpit system including single concrete draw/jointing chamber for shallow depths, and Type A & Type B twin concrete chambers for deeper installations, with covers and frames.",
+                specifications: ["Single concrete draw/jointing chamber (≤850mm depth)", "Type A twin concrete chamber (>850mm depth)", "Type B twin concrete chamber (>850mm depth)", "Heavy duty and light duty covers", "Cable draw-in pit capability"]
+            },
+            usage: {
+                applications: [
+                    "Area traffic control systems",
+                    "Traffic signal cable management", 
+                    "Control equipment housing",
+                    "Electrical infrastructure protection",
+                    "Shallow depth installations (≤850mm)",
+                    "Deep installations (>850mm)"
+                ],
+                conditions: [
+                    "Traffic control system requirements",
+                    "Cable management needs",
+                    "Equipment protection requirements",
+                    "Variable depth requirements"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Determine required depth and chamber type",
+                    "Excavate drawpit to specified dimensions", 
+                    "Install appropriate chamber type (single or twin)",
+                    "Install cable draw-in provisions",
+                    "Mount appropriate cover and frame systems",
+                    "Connect to traffic control infrastructure"
+                ],
+                drawings: ["H2159B", "H2160A", "H2161A", "H2162A", "H2168A", "H2169B", "H2180A"],
+                tools: ["Drawpit construction equipment", "Heavy lifting equipment", "Cable installation tools"],
+                materials: ["Concrete chamber construction", "Cast iron covers and frames", "Cable management systems"]
+            }
+        },
+        {
+            id: "sg3",
+            name: "E&M Earth Pit",
+            category: "signals",
+            description: "Electrical and Mechanical earthing pit system",
+            drawing: "H2165B",
+            manual: "HYD Standard Drawing H2165B",
+            hydDrawings: ["H2165B", "H2166B", "H2170A", "H2171"],
+            overview: {
+                description: "Specialized Electrical and Mechanical earthing pit system including concrete earth pit construction, cover and frame details, and concentrator pit integration.",
+                specifications: ["Concrete earth pit construction", "Specialized cover & frame", "Concentrator pit integration", "Earthing system provisions"]
+            },
+            usage: {
+                applications: [
+                    "Electrical system earthing",
+                    "Equipment grounding systems",
+                    "Safety earthing installations",
+                    "E&M infrastructure protection"
+                ],
+                conditions: [
+                    "Electrical safety requirements",
+                    "Grounding system needs",
+                    "E&M equipment installations"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Excavate earth pit to specifications",
+                    "Install concrete pit construction",
+                    "Install earthing electrode systems",
+                    "Mount specialized cover and frame",
+                    "Connect to electrical distribution system"
+                ],
+                drawings: ["H2165B", "H2166B", "H2170A", "H2171"],
+                tools: ["Earth pit construction equipment", "Earthing installation tools", "Electrical testing equipment"],
+                materials: ["Concrete pit materials", "Earthing electrodes", "Cover and frame systems", "Electrical connections"]
+            }
+        },
+        {
+            id: "sg4",
+            name: "Loop Detector",
+            category: "signals",
+            description: "Vehicle loop detector systems for traffic control",
+            drawing: "H2181A",
+            manual: "HYD Standard Drawing H2181A",
+            hydDrawings: ["H2181A", "H2182A", "H2183B"],
+            overview: {
+                description: "Complete vehicle loop detector system including typical slot construction for ATC, mini drawpit details, and cover and frame specifications for traffic detection.",
+                specifications: ["Loop detector slot design", "Mini drawpit integration", "Detection system provisions", "Cover and frame details"]
+            },
+            usage: {
+                applications: [
+                    "Vehicle detection systems",
+                    "Traffic flow monitoring",
+                    "Signal timing control",
+                    "Traffic data collection"
+                ],
+                conditions: [
+                    "Traffic detection requirements",
+                    "Signal control system needs",
+                    "Traffic monitoring applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Cut loop detector slots in pavement",
+                    "Install loop detector cables",
+                    "Construct mini drawpit",
+                    "Install cover and frame system",
+                    "Connect to traffic control system"
+                ],
+                drawings: ["H2181A", "H2182A", "H2183B"],
+                tools: ["Pavement cutting equipment", "Loop installation tools", "Electrical connection equipment"],
+                materials: ["Loop detector cables", "Sealant materials", "Mini drawpit components", "Cover and frame systems"]
+            }
+        },
+        {
+            id: "sg5",
+            name: "Controller Plinth",
+            category: "signals",
+            description: "Traffic controller plinth systems for various controller types",
+            drawing: "H2164C",
+            manual: "HYD Standard Drawing H2164C",
+            hydDrawings: ["H2163B", "H2164C", "H2167A", "H2184B", "H2185B", "H2186C"],
+            overview: {
+                description: "Comprehensive traffic controller plinth system including Type Delta 4 controller details, Type C 2000 & C 3000 controller plinths, T125B controller base, and fabricated steel recessed covers.",
+                specifications: ["Multiple controller type compatibility", "Delta 4 controller support", "C 2000 & C 3000 controller types", "T125B controller base", "Fabricated steel recessed covers"]
+            },
+            usage: {
+                applications: [
+                    "Traffic controller installations",
+                    "Signal timing equipment housing",
+                    "Control system protection",
+                    "Equipment mounting platforms"
+                ],
+                conditions: [
+                    "Traffic controller requirements",
+                    "Equipment protection needs",
+                    "Signal system installations"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Prepare controller plinth foundation",
+                    "Install plinth base construction",
+                    "Mount controller equipment",
+                    "Install fabricated steel covers",
+                    "Connect to signal control network"
+                ],
+                drawings: ["H2163B", "H2164C", "H2167A", "H2184B", "H2185B", "H2186C"],
+                tools: ["Plinth construction equipment", "Controller mounting tools", "Electrical installation equipment"],
+                materials: ["Plinth construction materials", "Controller mounting hardware", "Steel cover systems", "Electrical connections"]
+            }
         }
     ],
     bollards: [
         {
             id: "b1",
-            name: "B1 - Flexible Bollards",
+            name: "Non-Illuminated Retro-Reflective Traffic Bollard (NRTB)",
             category: "bollards",
-            description: "Flexible delineator bollards",
-            drawing: "B1",
-            manual: "Highway Standard Drawing B1"
+            description: "Non-illuminated retro-reflective traffic bollard for road delineation",
+            drawing: "HLDSDGE06-CL0047A",
+            manual: "HLD Standard Drawing HLDSDGE06-CL0047A",
+            hydDrawings: ["HLDSDGE06-CL0047A"],
+            overview: {
+                description: "Non-illuminated retro-reflective traffic bollard system designed for road delineation and traffic guidance with high-visibility retro-reflective materials for enhanced nighttime visibility.",
+                specifications: ["Non-illuminated design", "Retro-reflective materials", "Traffic delineation capability", "High nighttime visibility"]
+            },
+            usage: {
+                applications: [
+                    "Road delineation",
+                    "Traffic lane separation",
+                    "Pedestrian area protection",
+                    "Vehicle guidance systems"
+                ],
+                conditions: [
+                    "Traffic delineation requirements",
+                    "Nighttime visibility needs",
+                    "Non-powered installation preference"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Determine bollard positioning requirements",
+                    "Prepare foundation according to specifications",
+                    "Install bollard mounting system",
+                    "Mount retro-reflective bollard",
+                    "Verify visibility and alignment"
+                ],
+                drawings: ["HLDSDGE06-CL0047A"],
+                tools: ["Foundation preparation equipment", "Bollard installation tools"],
+                materials: ["NRTB bollard units", "Foundation materials", "Mounting hardware"]
+            }
         },
         {
             id: "b2",
-            name: "B2 - Rigid Bollards",
+            name: "Omnidirectional Non-Illuminated Retro-Reflective Traffic Bollard (O-NRTB)",
             category: "bollards",
-            description: "Rigid concrete bollards",
-            drawing: "B2",
-            manual: "Highway Standard Drawing B2"
+            description: "Omnidirectional non-illuminated retro-reflective traffic bollard for 360-degree visibility",
+            drawing: "HLDSDGE06-CL0058",
+            manual: "HLD Standard Drawing HLDSDGE06-CL0058",
+            hydDrawings: ["HLDSDGE06-CL0058"],
+            overview: {
+                description: "Omnidirectional non-illuminated retro-reflective traffic bollard system providing 360-degree visibility for comprehensive traffic guidance and area delineation.",
+                specifications: ["Omnidirectional visibility", "360-degree retro-reflection", "Non-illuminated design", "Comprehensive area coverage"]
+            },
+            usage: {
+                applications: [
+                    "Central island delineation",
+                    "Roundabout guidance",
+                    "Multi-directional traffic areas",
+                    "Complex intersection guidance"
+                ],
+                conditions: [
+                    "Multi-directional visibility requirements",
+                    "Complex traffic pattern areas",
+                    "Central positioning needs"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Plan omnidirectional visibility requirements",
+                    "Prepare centralized foundation",
+                    "Install omnidirectional mounting system",
+                    "Mount O-NRTB bollard",
+                    "Verify 360-degree visibility performance"
+                ],
+                drawings: ["HLDSDGE06-CL0058"],
+                tools: ["Specialized mounting equipment", "Visibility verification tools"],
+                materials: ["O-NRTB bollard units", "Omnidirectional mounting hardware", "Foundation materials"]
+            }
+        },
+        {
+            id: "b3",
+            name: "Traffic Bollard",
+            category: "bollards",
+            description: "Standard traffic bollard with concrete plinth foundation",
+            drawing: "H2140A",
+            manual: "HYD Standard Drawing H2140A",
+            hydDrawings: ["H2140A", "H2141A"],
+            overview: {
+                description: "Standard traffic bollard system with detailed concrete plinth foundation design for reliable traffic control and pedestrian area protection.",
+                specifications: ["Concrete plinth foundation", "Two-sheet detailed design", "Standard traffic control", "Durable construction"]
+            },
+            usage: {
+                applications: [
+                    "Traffic control points",
+                    "Pedestrian area protection",
+                    "Vehicle access restriction",
+                    "Road boundary definition"
+                ],
+                conditions: [
+                    "Traffic control requirements",
+                    "Pedestrian protection needs",
+                    "Vehicle restriction applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Excavate for concrete plinth foundation",
+                    "Install reinforcement and formwork",
+                    "Pour concrete plinth base",
+                    "Mount traffic bollard system",
+                    "Apply finishing and protective coatings"
+                ],
+                drawings: ["H2140A", "H2141A"],
+                tools: ["Foundation construction equipment", "Concrete placement tools"],
+                materials: ["Traffic bollard", "Concrete for plinth", "Reinforcement steel", "Mounting hardware"]
+            }
+        },
+        {
+            id: "b4",
+            name: "G.I. Bollard",
+            category: "bollards",
+            description: "Galvanized Iron bollard for standard applications",
+            drawing: "H2179C",
+            manual: "HYD Standard Drawing H2179C",
+            hydDrawings: ["H2179C"],
+            overview: {
+                description: "Galvanized Iron bollard system providing durable and cost-effective traffic control and area delineation with corrosion-resistant finish.",
+                specifications: ["Galvanized Iron construction", "Corrosion-resistant finish", "Standard height design", "Cost-effective solution"]
+            },
+            usage: {
+                applications: [
+                    "Standard traffic control",
+                    "Parking area delineation",
+                    "Pedestrian walkway protection",
+                    "General area restriction"
+                ],
+                conditions: [
+                    "Standard bollard requirements",
+                    "Cost-effective installation needs",
+                    "General purpose applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Mark bollard installation positions",
+                    "Prepare foundation holes",
+                    "Install G.I. bollard posts",
+                    "Secure with concrete or mounting system",
+                    "Apply final protective treatments"
+                ],
+                drawings: ["H2179C"],
+                tools: ["Post installation equipment", "Foundation preparation tools"],
+                materials: ["G.I. bollard posts", "Mounting materials", "Protective treatments"]
+            }
+        },
+        {
+            id: "b5",
+            name: "Frangible Bollards for Cycle Track",
+            category: "bollards",
+            description: "Type 1 and Type 2 frangible bollards designed for cycle track applications",
+            drawing: "H2189",
+            manual: "HYD Standard Drawing H2189",
+            hydDrawings: ["H2189"],
+            overview: {
+                description: "Specialized Type 1 and Type 2 frangible bollard system designed specifically for cycle track applications with breakaway capability for safety.",
+                specifications: ["Type 1 and Type 2 designs", "Frangible breakaway capability", "Cycle track specific design", "Safety-oriented construction"]
+            },
+            usage: {
+                applications: [
+                    "Cycle track delineation",
+                    "Cyclist safety protection",
+                    "Cycle path boundary definition",
+                    "Bicycle area access control"
+                ],
+                conditions: [
+                    "Cycle track applications",
+                    "Cyclist safety requirements",
+                    "Breakaway safety needs"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Plan cycle track bollard positioning",
+                    "Install frangible mounting systems",
+                    "Mount Type 1 or Type 2 bollards as required",
+                    "Test breakaway functionality",
+                    "Verify cyclist safety clearances"
+                ],
+                drawings: ["H2189"],
+                tools: ["Cycle track installation equipment", "Frangible mounting tools"],
+                materials: ["Type 1 and Type 2 frangible bollards", "Breakaway mounting systems"]
+            }
+        },
+        {
+            id: "b6",
+            name: "Self-Erective Tubular Marker on Cycle Track",
+            category: "bollards",
+            description: "Self-erecting tubular marker system for cycle track applications",
+            drawing: "H2189",
+            manual: "HYD Standard Drawing H2189",
+            hydDrawings: ["H2189"],
+            overview: {
+                description: "Self-erecting tubular marker system designed for cycle track applications with automatic recovery capability after impact for continuous guidance.",
+                specifications: ["Self-erecting capability", "Tubular marker design", "Cycle track specific application", "Impact recovery system"]
+            },
+            usage: {
+                applications: [
+                    "Cycle track guidance",
+                    "Flexible delineation systems",
+                    "High-impact area marking",
+                    "Resilient boundary definition"
+                ],
+                conditions: [
+                    "High-impact environments",
+                    "Flexible delineation needs",
+                    "Self-recovery requirements"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Prepare self-erecting marker foundations",
+                    "Install spring-loaded base systems",
+                    "Mount tubular marker components",
+                    "Test self-erecting functionality",
+                    "Verify impact recovery performance"
+                ],
+                drawings: ["H2189"],
+                tools: ["Spring mechanism installation tools", "Impact testing equipment"],
+                materials: ["Self-erecting tubular markers", "Spring-loaded mounting systems"]
+            }
+        },
+        {
+            id: "b8",
+            name: "Bollard and Rail Combination",
+            category: "bollards",
+            description: "Combined bollard and rail system for comprehensive area control",
+            drawing: "H2139B",
+            manual: "HYD Standard Drawing H2139B",
+            hydDrawings: ["H2139B"],
+            overview: {
+                description: "Integrated bollard and rail combination system providing comprehensive area control with both point and linear barrier capabilities.",
+                specifications: ["Combined bollard and rail design", "Integrated system approach", "Comprehensive area control", "Point and linear barriers"]
+            },
+            usage: {
+                applications: [
+                    "Comprehensive area control",
+                    "Mixed barrier requirements",
+                    "Integrated boundary systems",
+                    "Multi-function delineation"
+                ],
+                conditions: [
+                    "Combined barrier needs",
+                    "Integrated system requirements",
+                    "Multi-function applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Design integrated bollard and rail layout",
+                    "Install combined foundation systems",
+                    "Mount bollard components",
+                    "Install connecting rail sections",
+                    "Coordinate integrated system functionality"
+                ],
+                drawings: ["H2139B"],
+                tools: ["Integrated installation equipment", "Combined mounting tools"],
+                materials: ["Bollard and rail components", "Integrated mounting systems", "Connection hardware"]
+            }
+        },
+        {
+            id: "b9",
+            name: "Removable Bollards and Railings",
+            category: "bollards",
+            description: "Removable bollard and railing system for temporary traffic control",
+            drawing: "H2259",
+            manual: "HYD Standard Drawing H2259",
+            hydDrawings: ["H2259", "H2260", "H2261", "H2262"],
+            overview: {
+                description: "Comprehensive removable bollard and railing system designed for temporary traffic control and flexible area management with four-sheet detailed specifications covering all installation and removal procedures.",
+                specifications: ["Removable design capability", "Four-sheet comprehensive system", "Temporary installation capability", "Flexible area management", "Easy installation and removal"]
+            },
+            usage: {
+                applications: [
+                    "Temporary traffic control",
+                    "Event area management",
+                    "Construction zone delineation",
+                    "Flexible pedestrian control",
+                    "Seasonal area restrictions",
+                    "Emergency traffic diversion"
+                ],
+                conditions: [
+                    "Temporary installation requirements",
+                    "Flexible area control needs",
+                    "Easy removal requirements",
+                    "Event-based applications"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Plan temporary installation layout",
+                    "Prepare removable foundation systems",
+                    "Install removable bollard mounting points",
+                    "Mount removable railing components",
+                    "Test removal and reinstallation procedures",
+                    "Establish maintenance and storage protocols"
+                ],
+                drawings: ["H2259", "H2260", "H2261", "H2262"],
+                tools: ["Removable mounting equipment", "Temporary installation tools", "Storage and transport equipment"],
+                materials: ["Removable bollard units", "Removable railing sections", "Temporary mounting hardware", "Storage systems"]
+            }
         }
     ],
     lighting: [
@@ -2712,8 +2997,7 @@ function searchFurniture(query) {
     const allItems = getAllFurniture();
     return allItems.filter(item => 
         item.name.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.drawing.toLowerCase().includes(query.toLowerCase())
+        item.description.toLowerCase().includes(query.toLowerCase()) 
     );
 }
 
