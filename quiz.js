@@ -96,21 +96,38 @@ class RoadsideCatalog {
         card.dataset.itemId = item.id;
         card.onclick = () => catalog.showItemDetail(item.id);
         
+        // Generate URLs for both drawing and manual
+        const drawingUrl = getDrawingUrl(item.drawing);
+        const manualUrl = getManualUrl(item.manual);
+        
         card.innerHTML = `
             <div class="card-image">
                 <img src="assets/${item.id}.png" alt="${item.name}" 
-                     onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\" viewBox=\"0 0 200 150\"><rect width=\"200\" height=\"150\" fill=\"%23f0f0f0\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"%23666\">${item.drawing}</text></svg>'">
+                     onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\" viewBox=\"0 0 200 150\"><rect width=\"200\" height=\"150\" fill=\"%23f0f0f0\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"%23666\">${item.drawing || item.manual}</text></svg>'">
                 <div class="card-overlay">
-                    <span class="drawing-ref">${item.drawing}</span>
+                    <span class="drawing-ref">${item.drawing || item.manual}</span>
                 </div>
             </div>
             <div class="card-content">
                 <h3 class="card-title">${item.name}</h3>
                 <p class="card-description">${item.description}</p>
                 <div class="card-meta">
-                    <span class="manual-ref">
-                        <i class="fas fa-book"></i> ${item.manual}
-                    </span>
+                    <div class="reference-links">
+                        ${item.drawing ? `
+                        <a href="${drawingUrl}" target="_blank" class="ref-link drawing-ref-link" 
+                           onclick="event.stopPropagation()" title="View HYD Standard Drawing">
+                            <i class="fas fa-drafting-compass"></i> 
+                            <span>${item.drawing.toUpperCase()}</span>
+                        </a>
+                        ` : ''}
+                        ${item.manual ? `
+                        <a href="${manualUrl}" target="_blank" class="ref-link manual-ref-link" 
+                           onclick="event.stopPropagation()" title="View Technical Manual">
+                            <i class="fas fa-book"></i> 
+                            <span>${item.manual.toUpperCase()}</span>
+                        </a>
+                        ` : ''}
+                    </div>
                 </div>
             </div>
             <div class="card-actions">
@@ -149,27 +166,60 @@ class RoadsideCatalog {
 
     populateOverviewTab(item) {
         const content = document.getElementById('overviewContent');
-        const overview = {
+        const overview = item.overview || {
             description: item.description,
-            specifications: [`Drawing Reference: ${item.drawing}`, `Manual: ${item.manual}`],
-            image: `assets/${item.id}.png`
+            specifications: []
         };
+
+        // Generate URLs for both drawing and manual
+        const drawingUrl = getDrawingUrl(item.drawing);
+        const manualUrl = getManualUrl(item.manual);
+        
+        // Generate image path using item ID
+        const imagePath = `assets/${item.id}.png`;
 
         content.innerHTML = `
             <div class="overview-section">
                 <div class="overview-image">
-                    <img src="${overview.image}" 
+                    <img src="${imagePath}" 
                          alt="${item.name}" 
                          style="object-fit: cover; width: 100%; height: 100%;"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>'">
                 </div>
                 <div class="overview-text">
                     <h4>Description</h4>
                     <p>${overview.description}</p>
+                    
+                    <h4>Reference Documents</h4>
+                    <div class="reference-links">
+                        ${item.drawing ? `
+                        <div class="reference-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>Canonical Drawing: </span>
+                            <a href="${drawingUrl}" target="_blank" class="drawing-link" title="View HYD Standard Drawing">
+                                ${item.drawing.toUpperCase()}
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        ` : ''}
+                        ${item.manual ? `
+                        <div class="reference-item">
+                            <i class="fas fa-book"></i>
+                            <span>Manual: </span>
+                            <a href="${manualUrl}" target="_blank" class="manual-link" title="View Technical Manual">
+                                ${item.manual.toUpperCase()}
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        ` : ''}
+                    </div>
+                    
+                    ${overview.specifications && overview.specifications.length > 0 ? `
                     <h4>Specifications</h4>
                     <ul>
                         ${overview.specifications.map(spec => `<li>${spec}</li>`).join('')}
                     </ul>
+                    ` : ''}
                 </div>
             </div>
         `;
@@ -200,10 +250,10 @@ class RoadsideCatalog {
     populateInstallationTab(item) {
         const content = document.getElementById('installationContent');
         const installation = item.installation || {
-            steps: ['Refer to standard drawing for installation details'],
-            drawings: [item.drawing],
+            steps: ['Refer to technical manual for installation details'],
+            manuals: [item.manual],
             tools: ['Standard construction tools'],
-            materials: ['As specified in drawing']
+            materials: ['As specified in manual']
         };
 
         content.innerHTML = `
@@ -215,10 +265,10 @@ class RoadsideCatalog {
                 
                 <div class="installation-resources">
                     <div class="resource-group">
-                        <h5><i class="fas fa-drafting-compass"></i> Reference Drawings</h5>
-                        <div class="drawing-refs">
-                            ${installation.drawings.map(drawing => 
-                                `<span class="drawing-tag">${drawing}</span>`
+                        <h5><i class="fas fa-book"></i> Reference Manuals</h5>
+                        <div class="manual-refs">
+                            ${(installation.manuals || installation.drawings || [item.manual]).map(manual => 
+                                `<span class="manual-tag">${manual}</span>`
                             ).join('')}
                         </div>
                     </div>
@@ -246,6 +296,7 @@ class RoadsideCatalog {
         const variants = item.variants || [{
             name: item.name,
             use: 'Standard application',
+            manual: item.manual,
             drawing: item.drawing
         }];
 
@@ -253,13 +304,34 @@ class RoadsideCatalog {
             <div class="variants-section">
                 <h4><i class="fas fa-layer-group"></i> Available Variants</h4>
                 <div class="variants-grid">
-                    ${variants.map(variant => `
-                        <div class="variant-card">
-                            <h5>${variant.name}</h5>
-                            <p><strong>Use:</strong> ${variant.use}</p>
-                            <p><strong>Drawing:</strong> <span class="drawing-ref">${variant.drawing}</span></p>
-                        </div>
-                    `).join('')}
+                    ${variants.map(variant => {
+                        let referenceInfo = '';
+                        
+                        // Show drawing if available
+                        if (variant.drawing) {
+                            const drawingUrl = getDrawingUrl(variant.drawing);
+                            referenceInfo += `<p><strong>Drawing:</strong> <a href="${drawingUrl}" target="_blank" class="drawing-link" title="View HYD Standard Drawing"><span class="drawing-ref">${variant.drawing}</span></a></p>`;
+                        }
+                        
+                        // Show manual if available
+                        if (variant.manual) {
+                            const manualUrl = getManualUrl(variant.manual);
+                            referenceInfo += `<p><strong>Manual:</strong> <a href="${manualUrl}" target="_blank" class="manual-link" title="View Technical Manual"><span class="manual-ref">${variant.manual}</span></a></p>`;
+                        }
+                        
+                        // Fallback if neither is available
+                        if (!variant.drawing && !variant.manual) {
+                            referenceInfo = `<p><strong>Reference:</strong> <span class="ref-fallback">No reference available</span></p>`;
+                        }
+                        
+                        return `
+                            <div class="variant-card">
+                                <h5>${variant.name}</h5>
+                                <p><strong>Use:</strong> ${variant.use}</p>
+                                ${referenceInfo}
+                            </div>
+                        `;
+                    }).join('')}
                 </div>
             </div>
         `;
