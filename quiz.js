@@ -92,10 +92,11 @@ class RoadsideCatalog {
         const card = document.createElement('div');
         card.className = 'furniture-card';
         card.dataset.itemId = item.id;
+        card.onclick = () => catalog.showItemDetail(item.id);
         
         card.innerHTML = `
             <div class="card-image">
-                <img src="assets/placeholder-${item.category}.png" alt="${item.name}" 
+                <img src="assets/${item.id}.png" alt="${item.name}" 
                      onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\" viewBox=\"0 0 200 150\"><rect width=\"200\" height=\"150\" fill=\"%23f0f0f0\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"%23666\">${item.drawing}</text></svg>'">
                 <div class="card-overlay">
                     <span class="drawing-ref">${item.drawing}</span>
@@ -146,18 +147,19 @@ class RoadsideCatalog {
 
     populateOverviewTab(item) {
         const content = document.getElementById('overviewContent');
-        const overview = item.overview || {
+        const overview = {
             description: item.description,
             specifications: [`Drawing Reference: ${item.drawing}`, `Manual: ${item.manual}`],
-            image: null
+            image: `assets/${item.id}.png`
         };
 
         content.innerHTML = `
             <div class="overview-section">
                 <div class="overview-image">
-                    <img src="${overview.image || `assets/detail-${item.category}.png`}" 
+                    <img src="${overview.image}" 
                          alt="${item.name}" 
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>'">
+                         style="object-fit: cover; width: 100%; height: 100%;"
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>
                 </div>
                 <div class="overview-text">
                     <h4>Description</h4>
@@ -263,12 +265,11 @@ class RoadsideCatalog {
 
     showDetailPanel() {
         document.getElementById('detailPanel').classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        // Keep main page scrollable when panel is shown
     }
 
     closeDetailPanel() {
         document.getElementById('detailPanel').classList.add('hidden');
-        document.body.style.overflow = 'auto';
         this.selectedItem = null;
     }
 

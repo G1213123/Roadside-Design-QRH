@@ -397,6 +397,10 @@ body {
     font-size: 1.2rem;
 }
 
+.overview-text h4:not(:first-child) {
+    margin-top: 25px;
+}
+
 .overview-text ul {
     list-style: none;
     padding-left: 0;
