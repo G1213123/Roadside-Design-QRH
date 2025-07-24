@@ -59,6 +59,8 @@ class RoadsideCatalog {
         const breadcrumb = document.getElementById('breadcrumbText');
         const categoryNames = {
             'all': 'All Categories',
+            'road': 'Road Geometry',
+            'pavement': 'Pavement',
             'kerbs': 'Kerbs & Edges',
             'barriers': 'Crash Barriers',
             'railings': 'Railings & Fencing',

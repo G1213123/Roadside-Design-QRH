@@ -220,16 +220,16 @@ const furnitureDatabase = {
     ],
     barriers: [
         {
-            id: "cp1",
-            name: "CP1 - Concrete Profile Barrier",
+            id: "cpb1",
+            name: "CPB1 - Concrete Profile Barrier",
             category: "barriers",
             description: "Single-sided concrete profile barrier",
-            drawing: "CP1",
-            manual: "Highway Standard Drawing CP1",
+            drawing: "CPB1",
+            manual: "Highway Standard Drawing CPB1",
             overview: {
                 description: "Single-sided concrete profile barrier for median and roadside protection.",
                 specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey"],
-                image: "assets/cp1-profile.png"
+                image: "assets/cpb1-profile.png"
             },
             usage: {
                 applications: [
@@ -271,16 +271,16 @@ const furnitureDatabase = {
             ]
         },
         {
-            id: "cp2",
-            name: "CP2 - Removable Concrete Profile Barrier",
+            id: "cpb2",
+            name: "CPB2 - Removable Concrete Profile Barrier",
             category: "barriers",
             description: "Removable concrete profile barrier",
-            drawing: "CP2",
-            manual: "Highway Standard Drawing CP2",
+            drawing: "CPB2",
+            manual: "Highway Standard Drawing CPB2",
             overview: {
                 description: "Removable concrete profile barrier for traffic diversion.",
                 specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey"],
-                image: "assets/cp2-profile.png"
+                image: "assets/cpb2-profile.png"
             },
             usage: {
                 applications: [
