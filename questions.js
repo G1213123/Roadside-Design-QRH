@@ -5,7 +5,7 @@ const furnitureDatabase = {
         {
             id: "rg1",
             name: "Alignments",
-            category: "road-geometry",
+            category: "road",
             description: "Horizontal alignment design standards including design speeds, curvature, and sight distances",
             manual: "TPDM Volume 2 Chapter 3.3",
             overview: {
@@ -53,7 +53,7 @@ const furnitureDatabase = {
         {
             id: "rg2",
             name: "Profile",
-            category: "road-geometry", 
+            category: "road", 
             description: "Vertical profile design including gradients, vertical curves, and climbing lanes",
             manual: "TPDM Volume 2 Chapter 3.3",
             overview: {
@@ -88,7 +88,7 @@ const furnitureDatabase = {
         {
             id: "rg3",
             name: "Crossfall",
-            category: "road-geometry",
+            category: "road",
             description: "Cross-sectional slope design for surface drainage and vehicle stability",
             manual: "TPDM Volume 2 Chapter 3.4",
             overview: {
@@ -121,7 +121,7 @@ const furnitureDatabase = {
         {
             id: "rg4",
             name: "Transition and Superelevation",
-            category: "road-geometry",
+            category: "road",
             description: "Banking design for curved sections and transitions between different crossfall",
             manual: "TPDM Volume 2 Chapter 3.3",
             overview: {
@@ -184,55 +184,56 @@ const furnitureDatabase = {
                 {
                     name: "Standard Clothoid Transitions",
                     use: "Normal design conditions with 0.3 m/sec³ acceleration rate",
-                    manual: "TPDM V2C3.3.4.2, County Surveyors Society Tables"
+                    manual: "TPDM Volume 2 Chapter 3.3.4.2, County Surveyors Society Tables"
                 },
                 {
                     name: "Constrained Location Transitions",
                     use: "Dense urban areas, increased acceleration rate 0.6+ m/sec³",
-                    manual: "TPDM V2C3.3.4.5"
+                    manual: "TPDM Volume 2 Chapter 3.3.4.5"
                 },
                 {
                     name: "Elevated Structure Curves",
                     use: "Complex geometry areas, circular curves replacing clothoids",
-                    manual: "TPDM V2C3.3.4.3"
+                    manual: "TPDM Volume 2 Chapter 3.3.4.3"
                 },
                 {
                     name: "Rural High-Speed Curves",
                     use: "Design speeds ≥80 km/h with 7% maximum superelevation",
-                    manual: "TPDM V2C3.3.3.3"
+                    manual: "TPDM Volume 2 Chapter 3.3.3.3"
                 },
                 {
                     name: "Urban At-Grade Roads",
                     use: "Built-up areas with junctions, 4-5% maximum superelevation",
-                    manual: "TPDM V2C3.3.3.4"
+                    manual: "TPDM Volume 2 Chapter 3.3.3.4"
                 },
                 {
                     name: "Multi-Lane Highway Transitions",
                     use: "Wide carriageways requiring >1% edge profile variation",
-                    manual: "TPDM V2C3.3.4.5"
+                    manual: "TPDM Volume 2 Chapter 3.3.4.5"
                 },
                 {
                     name: "Heavy Vehicle Routes",
                     use: "Areas with stationary/slow heavy goods vehicles, avoid 10%",
-                    manual: "TPDM V2C3.3.3.3"
+                    manual: "TPDM Volume 2 Chapter 3.3.3.3"
                 }
             ]
         },
         {
             id: "rg5",
             name: "Road Width",
-            category: "road-geometry",
+            category: "road",
             description: "Carriageway width standards for different road types and traffic conditions",
             manual: "TPDM Volume 2 Chapter 3.4",
             overview: {
                 description: "Minimum carriageway width requirements for urban and rural roads across all hierarchy levels. Includes widening requirements for curves, parking provisions, and special applications like climbing lanes and service roads.",
                 specifications: [
-                    "Urban single carriageway: 7.3-13.5m (2-4 lanes)",
+                    "Urban single carriageway: 7.3-13.5m (2-4 lanes), refer to Table 3.4.2.1",
                     "Urban dual carriageway: 6.75-14.6m per direction",
                     "Rural single carriageway: 6-14.5m (2-4 lanes)", 
                     "Rural dual carriageway: 7.3-14.6m per direction",
-                    "Curve widening: additional 0.3-1.9m for radii <400m",
-                    "Service roads: 4.5-7.3m based on vehicle types"
+                    "Service roads: 4.5-7.3m based on vehicle types",
+                    "Curve widening: additional 0.3-1.9m for radii <400m, refer to Table 3.4.4.1",
+                    "Check road width enough to achieve sight distance, further widening is needed when < R3",
                 ]
             },
             usage: {
@@ -270,25 +271,24 @@ const furnitureDatabase = {
         },
         {
             id: "rg6",
-            name: "Road Type",
-            category: "road-geometry",
+            name: "Road Type and Speed Limit",
+            category: "road",
             description: "Classification and design standards for different road types",
-            manual: "Highway Design Manual Chapter 2"
+            manual: "TPDM Volume 2 Chapter 3.3",
         },
         {
             id: "rg8",
             name: "Sight Distance",
-            category: "road-geometry",
+            category: "road",
             description: "Forward visibility requirements for safe driving including stopping and junction sight distances",
             manual: "TPDM Volume 2 Chapter 3.3.5",
             overview: {
                 description: "Standards for sight distance provision on roads including stopping sight distances, junction visibility, and horizontal curve sight requirements. Covers measurement methods and clearance requirements for safe forward visibility.",
                 specifications: [
-                    "Sight distances by design speed: 50m (50 km/h) to 295m (120 km/h)",
+                    "Sight distances by design speed: 50m (50 km/h) to 295m (120 km/h), refer to Table 3.3.5.1",
                     "Driver eye height: 1.05-2.0m above road surface",
                     "Target object height: 0.26-2.0m above road surface",
                     "Horizontal curve clearance: 3m (80 km/h) to 4m (≥100 km/h)",
-                    "Junction/access sight distance: Table 3.3.5.1 requirements",
                     "Low radius curve (<R3) clearance: 3-4m from carriageway edge"
                 ]
             },
@@ -351,7 +351,7 @@ const furnitureDatabase = {
         {
             id: "rg13",
             name: "Clearance",
-            category: "road-geometry",
+            category: "road",
             description: "Vertical and horizontal clearance requirements for structures and obstructions",
             manual: "TPDM Volume 2 Chapter 3.5",
             overview: {
@@ -578,7 +578,7 @@ const furnitureDatabase = {
             hydDrawings: ["H1104C", "H2189"],
             overview: {
                 description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features.",
-                specifications: ["Width: 2.0-3.0m", "Surface: Color Surface dressing", "Gradient: <5%", "Drainage: Adequate falls"],
+                specifications: ["Width: 2.0-3.0m", "Surface: Resin-based Color Surface dressing", "Gradient: <5%", "Drainage: Adequate falls"],
                 image: "assets/pv3-profile.png"
             },
             usage: {
@@ -1593,10 +1593,10 @@ const furnitureDatabase = {
         {
             id: "r1",
             name: "Type 2 Railings",
-            category: "railing & gate",
+            category: "railings",
             description: "Type 2 railings for pedestrian control purpose",
             drawing: "H2130H",
-            manual: "HYD Standard Drawing H2130H",
+            manual: "TPDM Volume 2 Chapter 3.9",
             hydDrawings: ["H2130H", "H2131D", "H2132H", "H2134I"],
             overview: {
                 description: "Type 2 railings designed for pedestrian control applications including standard sections, junction details, and expansion joint provisions.",
@@ -1631,8 +1631,47 @@ const furnitureDatabase = {
         },
         {
             id: "r2",
+            name: "Type 2 Railings at Junction and Crossing",
+            category: "railings",
+            description: "Type 2 railings near Junction and Crossing with high visibility",
+            drawing: "H2132H",
+            manual: "TPDM Volume 2 Chapter 3.9",
+            hydDrawings: ["H2130H", "H2131D", "H2132H", "H2134I"],
+            overview: {
+                description: "Type 2 railings located near Junction and Crossing should adopt a higher visibility panel to avoid block motorists sight line.",
+                specifications: ["Height: 1100mm", "Panel length: 2000mm", "Material: Galvanized steel", "Infill: Vertical bars"],
+                image: "assets/r1-profile.png"
+            },
+            usage: {
+                applications: [
+                    "Pedestrian control at junctions",
+                    "Footway edge protection",
+                    "Traffic island protection",
+                    "School zone safety"
+                ],
+                conditions: [
+                    "Areas requiring pedestrian guidance",
+                    "Junction and crossing locations",
+                    "High pedestrian activity zones"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Mark post positions at required centers",
+                    "Drill holes for post foundations",
+                    "Install posts with concrete",
+                    "Mount railing panels",
+                    "Install expansion joints where required"
+                ],
+                drawings: ["H2130H", "H2131D", "H2132H", "H2134I"],
+                tools: ["Core drill", "Level", "Torque wrench"],
+                materials: ["Steel posts", "Railing panels", "Concrete", "Expansion joint materials"]
+            }
+        },
+        {
+            id: "r3",
             name: "Decorative Type Railings",
-            category: "railing & gate",
+            category: "railings",
             description: "Type 4 railings for pedestrian control purpose",
             drawing: "H2282A",
             manual: "HYD Standard Drawing H2282A",
@@ -1671,7 +1710,7 @@ const furnitureDatabase = {
         {
             id: "r12",
             name: "Tubular Amenity Railings",
-            category: "railing & gate",
+            category: "railings",
             description: "Tubular amenity railings for aesthetic and functional applications",
             drawing: "H2135C",
             manual: "HYD Standard Drawing H2135C",
@@ -1709,7 +1748,7 @@ const furnitureDatabase = {
         {
             id: "r13",
             name: "Stainless Steel Railing SS01",
-            category: "railing & gate",
+            category: "railings",
             description: "Stainless steel railings for public transport interchange",
             drawing: "H2271",
             manual: "HYD Standard Drawing H2271",
@@ -1748,7 +1787,7 @@ const furnitureDatabase = {
         {
             id: "r14",
             name: "Removable Railings",
-            category: "railing & gate",
+            category: "railings",
             description: "Removable bollards and railings system",
             drawing: "H2259",
             manual: "HYD Standard Drawing H2259",
@@ -1787,7 +1826,7 @@ const furnitureDatabase = {
         {
             id: "r15",
             name: "Emergency Crash Gate",
-            category: "railing & gate",
+            category: "railings",
             description: "Emergency crash gate for emergency vehicle access through barriers",
             drawing: "H2108C",
             manual: "HYD Standard Drawing H2108C",
@@ -1829,7 +1868,7 @@ const furnitureDatabase = {
         {
             id: "r16",
             name: "Emergency Access Gate (EAG)",
-            category: "railing & gate",
+            category: "railings",
             description: "Emergency Access Gate for controlled emergency vehicle access",
             drawing: "H2276B",
             manual: "HYD Standard Drawing H2276B",
@@ -1871,7 +1910,7 @@ const furnitureDatabase = {
         {
             id: "r17",
             name: "Chain Link Fence - Standard Installation",
-            category: "railing & gate",
+            category: "railings",
             description: "Standard chain link fence installation for perimeter security and area control",
             drawing: "6121D",
             manual: "Standard Drawing 6121D",
@@ -2831,12 +2870,12 @@ const furnitureDatabase = {
         },
         {
             id: "b8",
-            name: "Bollard and Rail Combination",
+            name: "Bollard with Chains Combination",
             category: "bollards",
-            description: "Combined bollard and rail system for comprehensive area control",
-            drawing: "H2139B",
-            manual: "HYD Standard Drawing H2139B",
-            hydDrawings: ["H2139B"],
+            description: "Combined bollard and chain system for comprehensive area control",
+            drawing: "h2308",
+            manual: "TD DC 2/2022",
+            hydDrawings: ["H2308"],
             overview: {
                 description: "Integrated bollard and rail combination system providing comprehensive area control with both point and linear barrier capabilities.",
                 specifications: ["Combined bollard and rail design", "Integrated system approach", "Comprehensive area control", "Point and linear barriers"]
@@ -3049,6 +3088,9 @@ function getManualUrl(manualCode) {
     } else if (manualCode.toLowerCase().startsWith('hyd-sdm')) {
         // Structures Design Manual format: hyd-sdm
         return `https://www.hyd.gov.hk/en/technical_references/technical_document/structures_design_manual_2013/doc/SDM2013.pdf`;
+    } else if (manualCode.toLowerCase().startsWith('tpdm')){
+        const cleanCode = manualCode.match(/(?<=Volume )(.*?)(?= Chapter)/g)[0];
+        return `https://www.td.gov.hk/filemanager/en/content_5055/V${cleanCode}_12_2024.pdf`;
     }
     
     // Default fallback for other manual types

@@ -4,6 +4,19 @@ class RoadsideCatalog {
         this.currentCategory = 'all';
         this.currentView = 'catalog';
         this.selectedItem = null;
+        this.categoryNames = {
+            'all': 'All Categories',
+            'road': 'Road Geometry',
+            'pavement': 'Pavement',
+            'kerbs': 'Kerbs & Edges',
+            'barriers': 'Crash Barriers',
+            'railings': 'Railings, Fencing, Gate',
+            'signs': 'Traffic Signs',
+            'signals': 'Signal Equipment',
+            'bollards': 'Traffic Bollards',
+            'lighting': 'Street Lighting',
+            'drainage': 'Drainage'
+        };
         this.init();
     }
 
@@ -57,20 +70,7 @@ class RoadsideCatalog {
 
     updateBreadcrumb(category) {
         const breadcrumb = document.getElementById('breadcrumbText');
-        const categoryNames = {
-            'all': 'All Categories',
-            'road': 'Road Geometry',
-            'pavement': 'Pavement',
-            'kerbs': 'Kerbs & Edges',
-            'barriers': 'Crash Barriers',
-            'railings': 'Railings & Fencing',
-            'signs': 'Traffic Signs',
-            'signals': 'Signal Equipment',
-            'bollards': 'Traffic Bollards',
-            'lighting': 'Street Lighting',
-            'drainage': 'Drainage'
-        };
-        breadcrumb.textContent = `Home > ${categoryNames[category]}`;
+        breadcrumb.textContent = `Home > ${this.categoryNames[category]}`;
     }
 
     loadCatalog() {
@@ -105,7 +105,7 @@ class RoadsideCatalog {
                 <img src="assets/${item.id}.png" alt="${item.name}" 
                      onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\" viewBox=\"0 0 200 150\"><rect width=\"200\" height=\"150\" fill=\"%23f0f0f0\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"%23666\">${item.drawing || item.manual}</text></svg>'">
                 <div class="card-overlay">
-                    <span class="drawing-ref">${item.drawing || item.manual}</span>
+                    <span class="drawing-ref">${this.categoryNames[item.category]}</span>
                 </div>
             </div>
             <div class="card-content">
@@ -184,7 +184,7 @@ class RoadsideCatalog {
                     <img src="${imagePath}" 
                          alt="${item.name}" 
                          style="object-fit: cover; width: 100%; height: 100%;"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>'">
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"200\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23f8f9fa\" stroke=\"%23dee2e6\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"%23666\">${item.name}</text></svg>
                 </div>
                 <div class="overview-text">
                     <h4>Description</h4>
