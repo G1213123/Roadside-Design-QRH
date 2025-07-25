@@ -24,7 +24,8 @@
   "author": "HYD Crawler Tool",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
     "http-server": "^14.1.1"

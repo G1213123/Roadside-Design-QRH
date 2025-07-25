@@ -7,7 +7,7 @@ const furnitureDatabase = {
             name: "Alignments",
             category: "road",
             description: "Horizontal alignment design standards including design speeds, curvature, and sight distances",
-            manual: "TPDM Volume 2 Chapter 3.3",
+            manuals: ["TPDM Volume 2 Chapter 3.3"],
             overview: {
                 description: "Standards for horizontal road alignment including design speed selection, minimum curve radii, superelevation, and sight distance requirements. Covers general principles for different road types and locations.",
                 specifications: [
@@ -55,7 +55,7 @@ const furnitureDatabase = {
             name: "Profile",
             category: "road", 
             description: "Vertical profile design including gradients, vertical curves, and climbing lanes",
-            manual: "TPDM Volume 2 Chapter 3.3",
+            manuals: ["TPDM Volume 2 Chapter 3.3"],
             overview: {
                 description: "Standards for vertical road profile design including maximum gradients, vertical curve design, and climbing lane provision. Covers both crest and sag curve requirements with minimum K-values for different design speeds.",
                 specifications: [
@@ -90,7 +90,7 @@ const furnitureDatabase = {
             name: "Crossfall",
             category: "road",
             description: "Cross-sectional slope design for surface drainage and vehicle stability",
-            manual: "TPDM Volume 2 Chapter 3.4",
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
             overview: {
                 description: "Standards for crossfall design including normal crossfall, superelevation transitions, and drainage requirements. Covers crossfall requirements for different road types and junction treatments.",
                 specifications: [
@@ -123,7 +123,7 @@ const furnitureDatabase = {
             name: "Transition and Superelevation",
             category: "road",
             description: "Banking design for curved sections and transitions between different crossfall",
-            manual: "TPDM Volume 2 Chapter 3.3",
+            manuals: ["TPDM Volume 2 Chapter 3.3"],
             overview: {
                 description: "Standards for superelevation (banking) design on horizontal curves and transitional design between normal crossfall and superelevated sections. Includes calculation methods, maximum rates, transition lengths, and special considerations for urban roads and constrained locations.",
                 specifications: [
@@ -184,37 +184,37 @@ const furnitureDatabase = {
                 {
                     name: "Standard Clothoid Transitions",
                     use: "Normal design conditions with 0.3 m/sec³ acceleration rate",
-                    manual: "TPDM Volume 2 Chapter 3.3.4.2, County Surveyors Society Tables"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.4.2, County Surveyors Society Tables"]
                 },
                 {
                     name: "Constrained Location Transitions",
                     use: "Dense urban areas, increased acceleration rate 0.6+ m/sec³",
-                    manual: "TPDM Volume 2 Chapter 3.3.4.5"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.4.5"]
                 },
                 {
                     name: "Elevated Structure Curves",
                     use: "Complex geometry areas, circular curves replacing clothoids",
-                    manual: "TPDM Volume 2 Chapter 3.3.4.3"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.4.3"]
                 },
                 {
                     name: "Rural High-Speed Curves",
                     use: "Design speeds ≥80 km/h with 7% maximum superelevation",
-                    manual: "TPDM Volume 2 Chapter 3.3.3.3"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.3.3"]
                 },
                 {
                     name: "Urban At-Grade Roads",
                     use: "Built-up areas with junctions, 4-5% maximum superelevation",
-                    manual: "TPDM Volume 2 Chapter 3.3.3.4"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.3.4"]
                 },
                 {
                     name: "Multi-Lane Highway Transitions",
                     use: "Wide carriageways requiring >1% edge profile variation",
-                    manual: "TPDM Volume 2 Chapter 3.3.4.5"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.4.5"]
                 },
                 {
                     name: "Heavy Vehicle Routes",
                     use: "Areas with stationary/slow heavy goods vehicles, avoid 10%",
-                    manual: "TPDM Volume 2 Chapter 3.3.3.3"
+                    manuals: ["TPDM Volume 2 Chapter 3.3.3.3"]
                 }
             ]
         },
@@ -223,7 +223,7 @@ const furnitureDatabase = {
             name: "Road Width",
             category: "road",
             description: "Carriageway width standards for different road types and traffic conditions",
-            manual: "TPDM Volume 2 Chapter 3.4",
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
             overview: {
                 description: "Minimum carriageway width requirements for urban and rural roads across all hierarchy levels. Includes widening requirements for curves, parking provisions, and special applications like climbing lanes and service roads.",
                 specifications: [
@@ -274,14 +274,14 @@ const furnitureDatabase = {
             name: "Road Type and Speed Limit",
             category: "road",
             description: "Classification and design standards for different road types",
-            manual: "TPDM Volume 2 Chapter 3.3",
+            manuals: ["TPDM Volume 2 Chapter 3.3"],
         },
         {
             id: "rg8",
             name: "Sight Distance",
             category: "road",
             description: "Forward visibility requirements for safe driving including stopping and junction sight distances",
-            manual: "TPDM Volume 2 Chapter 3.3.5",
+            manuals: ["TPDM Volume 2 Chapter 3.3.5"],
             overview: {
                 description: "Standards for sight distance provision on roads including stopping sight distances, junction visibility, and horizontal curve sight requirements. Covers measurement methods and clearance requirements for safe forward visibility.",
                 specifications: [
@@ -329,22 +329,22 @@ const furnitureDatabase = {
                 {
                     name: "Junction Sight Distance",
                     use: "Approaches to and through junctions and access points",
-                    manual: "TPDM V2C3.3.5.1 Table 3.3.5.1"
+                    manuals: ["TPDM V2C3.3.5.1 Table 3.3.5.1"]
                 },
                 {
                     name: "Urban Road Visibility",
                     use: "Low-speed roads with unrestricted pedestrian/vehicle access",
-                    manual: "TPDM V2C3.3.5.4(i)"
+                    manuals: ["TPDM V2C3.3.5.4(i)"]
                 },
                 {
                     name: "High-Speed Curve Clearance",
                     use: "≥80 km/h roads with radius <R3, 3-4m clearance required",
-                    manual: "TPDM V2C3.3.5.4(ii)"
+                    manuals: ["TPDM V2C3.3.5.4(ii)"]
                 },
                 {
                     name: "Standard Curve Clearance",
                     use: "≥80 km/h roads with radius ≥R3, reduced clearance acceptable",
-                    manual: "TPDM V2C3.3.5.4(iii)"
+                    manuals: ["TPDM V2C3.3.5.4(iii)"]
                 }
             ]
         },
@@ -353,7 +353,7 @@ const furnitureDatabase = {
             name: "Clearance",
             category: "road",
             description: "Vertical and horizontal clearance requirements for structures and obstructions",
-            manual: "TPDM Volume 2 Chapter 3.5",
+            manuals: ["TPDM Volume 2 Chapter 3.5"],
             overview: {
                 description: "Standards for vertical clearances above carriageways and horizontal clearances from carriageway edges to obstructions. Includes requirements for bridges, sign gantries, utilities, and roadside furniture.",
                 specifications: [
@@ -403,32 +403,32 @@ const furnitureDatabase = {
                 {
                     name: "Bridge Vertical Clearance",
                     use: "Structures over carriageways: 5.1m new, 5.0m maintained",
-                    manual: "TPDM V2C3.5.1.1 Table 3.5.1.1"
+                    manuals: ["TPDM V2C3.5.1.1 Table 3.5.1.1"]
                 },
                 {
                     name: "Sign Gantry Clearance", 
                     use: "Overhead sign structures: 5.5m new, 5.4m maintained",
-                    manual: "TPDM V2C3.5.1.1 Table 3.5.1.1"
+                    manuals: ["TPDM V2C3.5.1.1 Table 3.5.1.1"]
                 },
                 {
                     name: "Railway Crossing Clearance",
                     use: "Structures over railway: 5.6m minimum, subject to MTR consultation",
-                    manual: "TPDM V2C3.5.1.1 Table 3.5.1.1"
+                    manuals: ["TPDM V2C3.5.1.1 Table 3.5.1.1"]
                 },
                 {
                     name: "Low-Speed Horizontal Clearance",
                     use: "≤50 km/h roads: 500-600mm clearance based on crossfall",
-                    manual: "TPDM V2C3.5.2.1 Table 3.5.2.1"
+                    manuals: ["TPDM V2C3.5.2.1 Table 3.5.2.1"]
                 },
                 {
                     name: "High-Speed Horizontal Clearance",
                     use: "≥80 km/h roads: 1000mm clearance regardless of height",
-                    manual: "TPDM V2C3.5.2.1 Table 3.5.2.1"
+                    manuals: ["TPDM V2C3.5.2.1 Table 3.5.2.1"]
                 },
                 {
                     name: "Construction Temporary Clearance",
                     use: "Temporary reduction to 4.7m during construction with signing",
-                    manual: "TPDM V2C3.5.1.3"
+                    manuals: ["TPDM V2C3.5.1.3"]
                 }
             ]
         }
@@ -439,77 +439,106 @@ const furnitureDatabase = {
             name: "Bituminous",
             category: "pavement",
             description: "Flexible pavement design using bituminous materials",
-            drawing: "h1101e",
-            manual: "hyd-gn042a",
-            hydDrawings: ["H1101E", "H1129A", "H1130"],
+            drawings: ["h1101e"],
+            manuals: ["hyd-gn042a"],
             overview: {
                 description: "Flexible pavement construction using bituminous materials for various traffic loading conditions.",
-                specifications: ["Base course: 150-300mm", "Binder course: 60mm", "Wearing course: 40mm", "Material: Hot rolled asphalt"],
+                specifications: [
+                    "Wearing course: 40mm (WC20/HMSMA10)",
+                    "Base course: 30mm (HMSMA6/HMFC)", 
+                    "Road base: 65mm bituminous",
+                    "Sub-base: Granular material (thickness designed to RD/GN/042)",
+                    "Total thickness: min. 205mm (low-volume roads), min. 280mm (other roads), min. 350mm (Expressway/Trunk/Primary)",
+                    "Max thickness: 395mm (WC20/HMSMA10), 405mm (HMSMA6/HMFC)"
+                ],
                 image: "assets/pv1-profile.png"
             },
             usage: {
                 applications: [
                     "Main carriageways",
-                    "Secondary roads",
-                    "Car parks",
-                    "Industrial areas"
+                    "Secondary roads", 
+                    "Expressways and trunk roads",
+                    "Primary distributors",
+                    "Low-volume roads"
                 ],
                 conditions: [
                     "Heavy traffic loading",
                     "Flexible pavement required",
-                    "Cost-effective solution"
+                    "Cost-effective solution",
+                    "Various traffic volumes"
                 ]
             },
-            installation: {
-                steps: [
-                    "Prepare subgrade and compact",
-                    "Lay base course material",
-                    "Install binder course",
-                    "Apply wearing course",
-                    "Compact and finish surface"
+            composition: {
+                layers: [
+                    "Subgrade preparation and compaction",
+                    "Sub-base: Granular material (thickness per RD/GN/042)",
+                    "Road base: 65mm bituminous layer",
+                    "Base course: 30mm (HMSMA6/HMFC)",
+                    "Wearing course: 40mm (WC20/HMSMA10)",
+                    "Joint construction with minimum overlap 150mm longitudinal, 500mm transverse"
                 ],
-                drawings: ["H1101E", "H1129A", "H1130"],
-                tools: ["Paver", "Roller", "Compactor"],
-                materials: ["Hot rolled asphalt", "Base course material", "Tack coat"]
+                materials: [
+                    "Bituminous materials per specifications",
+                    "Granular sub-base material",
+                    "HMSMA6/HMFC for base course",
+                    "WC20/HMSMA10 for wearing course"
+                ],
+                drawings: ["H1101E"]
             }
         },
         {
-            id: "pv2",
+            id: "pv2", 
             name: "Concrete",
             category: "pavement",
             description: "Rigid pavement design using concrete construction",
-            drawing: "h1102c",
-            manual: "hyd-gn042a",
-            hydDrawings: ["H1102C", "H1124C", "H1125"],
+            drawings: ["h1102c"],
+            manuals: ["hyd-gn042a"],
             overview: {
                 description: "Rigid pavement construction using concrete for heavy-duty applications requiring long service life.",
-                specifications: ["Slab thickness: 200-300mm", "Concrete grade: C40/20 ", "Joint spacing: 4-5m", "Reinforcement as required"],
+                specifications: [
+                    "Concrete slab: Grade 40/20 concrete",
+                    "Reinforcement: B503 mesh (where specified) with >188mm²/m",
+                    "Polythene sheeting: 0.125mm under slab",
+                    "Sub-base: Granular material or lean concrete",
+                    "Maximum slab width: 4.5m (unreinforced), 6.0m (with B503 mesh)",
+                    "Maximum slab length: 20.0m (reinforced), 5.0m (unreinforced)",
+                    "Joint spacing: 4.0m x 4.5m typical panels"
+                ],
                 image: "assets/pv2-profile.png"
             },
             usage: {
                 applications: [
                     "Heavy duty pavements",
-                    "Airport runways",
+                    "Airport runways", 
                     "Industrial loading areas",
-                    "Container terminals"
+                    "Container terminals",
+                    "Long-life pavement requirements"
                 ],
                 conditions: [
                     "Very heavy traffic loading",
                     "Long service life required",
-                    "Minimal maintenance desired"
+                    "Minimal maintenance desired",
+                    "Structural integrity priority"
                 ]
             },
-            installation: {
-                steps: [
-                    "Prepare and compact subbase",
-                    "Install reinforcement if required",
-                    "Place concrete using paver",
-                    "Finish and texture surface",
-                    "Cut joints and apply sealant"
+            composition: {
+                layers: [
+                    "Subgrade preparation and compaction",
+                    "Sub-base: Granular material or lean concrete",
+                    "Polythene sheeting: 0.125mm waterproof membrane",
+                    "Mesh reinforcement installation (B503 mesh where specified, >188mm²/m)",
+                    "Concrete slab: Grade 40/20 concrete placement", 
+                    "Joint construction: Transverse and longitudinal joints per H1105-H1109",
+                    "Surface finishing and curing"
                 ],
-                drawings: ["H1102C", "H1105", "H1106A", "H1107"],
-                tools: ["Concrete paver", "Texturing equipment", "Joint cutting saw"],
-                materials: ["Concrete C40/20", "Reinforcement", "Joint sealant"]
+                materials: [
+                    "Grade 40/20 concrete",
+                    "B503 mesh reinforcement (where specified)",
+                    "0.125mm polythene sheeting",
+                    "Granular sub-base or lean concrete",
+                    "Joint sealant materials"
+                ],
+                drawings: ["H1102C", "H1105", "H1106A", "H1107"]
             }
         },
         {
@@ -517,55 +546,71 @@ const furnitureDatabase = {
             name: "Low noise road surfacing",
             category: "pavement",
             description: "Specialized surfacing designed to reduce traffic noise",
-            drawing: "h1101e",
-            manual: "hyd-gn011e",
-            hydDrawings: ["H1101", "H1135"],
+            drawings: ["h1101e"],
+            manuals: ["hyd-gn011e"],
             overview: {
                 description: "Low noise road surfacing using specialized materials and techniques to reduce traffic noise while maintaining durability and safety.",
-                specifications: ["Surface: Porous asphalt or stone mastic", "Thickness: 30-40mm wearing course", "Void content: 18-25%", "Noise reduction: 3-5 dB(A)"],
+                specifications: [
+                    "Wearing course: 40mm specialized low-noise materials (WC20/HMSMA10)",
+                    "Base course: 30mm (HMSMA6/HMFC)",
+                    "Road base: 65mm bituminous",
+                    "Sub-base: Granular material (thickness designed to RD/GN/042)",
+                    "Noise reduction: 3-5 dB(A) typical",
+                    "Void content: 18-25% for porous asphalt variants"
+                ],
                 image: "assets/pv2a-profile.png"
             },
             usage: {
                 applications: [
                     "Noise-sensitive areas",
                     "Residential zones",
-                    "Hospital and school vicinities",
-                    "Urban motorways"
+                    "Hospital and school vicinities", 
+                    "Urban motorways",
+                    "Environmental noise mitigation projects"
                 ],
                 conditions: [
                     "Noise reduction requirements",
                     "Environmental considerations",
                     "Urban traffic management",
-                    "Community noise mitigation"
+                    "Community noise mitigation",
+                    "Acoustic performance priority"
                 ]
             },
-            installation: {
-                steps: [
-                    "Prepare existing pavement surface",
-                    "Apply tack coat if required",
-                    "Lay low noise surfacing material",
-                    "Compact using appropriate rollers",
-                    "Install transition details at interfaces"
+            composition: {
+                layers: [
+                    "Existing pavement surface preparation and cleaning",
+                    "Sub-base: Granular material (where new construction)",
+                    "Road base: 65mm bituminous (where new construction)",
+                    "Base course: 30mm (HMSMA6/HMFC)",
+                    "Tack coat application (if required for overlay)",
+                    "Low noise wearing course: 40mm specialized materials (WC20/HMSMA10)",
+                    "Specialized compaction using pneumatic rollers",
+                    "Transition details at interfaces with standard surfacing"
                 ],
-                drawings: ["H1101", "H1135"],
-                tools: ["Specialized paver", "Pneumatic roller", "Temperature monitoring"],
-                materials: ["Porous asphalt mix", "Stone mastic asphalt", "Modified binder", "Tack coat"]
+                materials: [
+                    "Low-noise specialized bituminous materials",
+                    "Porous asphalt mix (where specified)",
+                    "Stone mastic asphalt with noise reduction properties",
+                    "HMSMA6/HMFC for base course",
+                    "WC20/HMSMA10 for wearing course"
+                ],
+                drawings: ["H1101E", "H1135"]
             },
             variants: [
                 {
                     name: "High Speed Road",
                     use: "Highways and expressways with high speeds",
-                    manual: "hyd-gn032b"
+                    manuals: ["hyd-gn032b"]
                 },
                 {
                     name: "Low Speed Road",
                     use: "Local roads with gentle traffic. Refer to Table 2 of Guidance Note GN011E",
-                    manual: "hyd-gn011e"
+                    manuals: ["hyd-gn011e"]
                 },
                 {
                     name: "Low Speed Road (Heavy Duty)",
                     use: "Local roads with heavy vehicle traffic. Refer to Table 2 of Guidance Note GN038C",
-                    manual: "hyd-gn038c"
+                    manuals: ["hyd-gn038c"]
                 }
             ]
         },
@@ -574,25 +619,52 @@ const furnitureDatabase = {
             name: "Cycle Track",
             category: "pavement",
             description: "Specialized pavement for cycle tracks",
-            drawing: "h1104c",
-            hydDrawings: ["H1104C", "H2189"],
+            drawings: ["h1104c"],
             overview: {
                 description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features.",
-                specifications: ["Width: 2.0-3.0m", "Surface: Resin-based Color Surface dressing", "Gradient: <5%", "Drainage: Adequate falls"],
+                specifications: [
+                    "Width: Variable based on design requirements",
+                    "Surface: Bituminous surfacing wearing course (nominal maximum aggregate size 10)",
+                    "Thickness: 50mm surfacing layer",
+                    "Base: Sub-base material foundation",
+                    "Edge restraint: 150x125x750 precast concrete edging",
+                    "Crossfall: 3% for drainage",
+                    "Edging foundation: Grade 20/20 concrete"
+                ],
                 image: "assets/pv3-profile.png"
             },
             usage: {
                 applications: [
                     "Dedicated cycle lanes",
                     "Shared use paths",
-                    "Park cycling routes",
-                    "Urban cycling infrastructure"
+                    "Park cycling routes", 
+                    "Urban cycling infrastructure",
+                    "Recreational cycling facilities"
                 ],
                 conditions: [
                     "Cyclist safety priority",
                     "Good drainage required",
-                    "Smooth surface essential"
+                    "Smooth surface essential",
+                    "Weather resistance needed"
                 ]
+            },
+            composition: {
+                layers: [
+                    "Subgrade preparation and compaction", 
+                    "Sub-base material placement and compaction",
+                    "Bituminous emulsion tack coat application",
+                    "Bituminous surfacing wearing course (50mm, nominal maximum aggregate size 10)",
+                    "Precast concrete edging installation (150x125x750) on grade 20/20 concrete foundation",
+                    "Surface finishing with 3% crossfall for drainage"
+                ],
+                materials: [
+                    "Sub-base material per specification",
+                    "Bituminous emulsion tack coat",
+                    "Bituminous surfacing material (max aggregate size 10mm)",
+                    "150x125x750 precast concrete edging units",
+                    "Grade 20/20 concrete for edging foundation"
+                ],
+                drawings: ["H1104C"]
             }
         },
         {
@@ -600,11 +672,18 @@ const furnitureDatabase = {
             name: "Concrete Footpath",
             category: "pavement",
             description: "Concrete construction for pedestrian footpaths",
-            drawing: "h1104c",
-            hydDrawings: ["H1127B", "H1128A"],
+            drawings: ["h1104c"],
             overview: {
                 description: "Durable concrete footpath construction for pedestrian areas with proper drainage and accessibility features.",
-                specifications: ["Thickness: 175mm", "Concrete grade: C30/20", "Width: 1.5-2.0m", "Class U4 finish"],
+                specifications: [
+                    "Thickness: Variable - 75mm (level verge), 100mm (sloping verge), 125-200mm (higher load areas)",
+                    "Concrete grade: Grade 30/20 concrete",
+                    "Surface finish: Class U4 finish",
+                    "Membrane: 0.125 polythene sheeting under slab",
+                    "Crossfall: 3% for drainage",
+                    "Joint spacing: Maximum 5m with 20m bay maximum",
+                    "Joint details: 3-6mm wide, 20mm deep open joints"
+                ],
                 image: "assets/pv4-profile.png"
             },
             usage: {
@@ -612,13 +691,34 @@ const furnitureDatabase = {
                     "Urban footpaths",
                     "Shopping areas",
                     "School zones",
-                    "Accessible walkways"
+                    "Accessible walkways",
+                    "Pedestrian plazas"
                 ],
                 conditions: [
                     "Heavy pedestrian traffic",
                     "Durability required",
-                    "Accessibility compliance needed"
+                    "Accessibility compliance needed",
+                    "Weather resistance essential"
                 ]
+            },
+            composition: {
+                layers: [
+                    "Subgrade preparation and leveling",
+                    "Sub-base material placement and compaction",
+                    "Polythene sheeting installation (0.125mm)",
+                    "Grade 30/20 concrete placement (thickness as specified)",
+                    "Class U4 surface finish application",
+                    "Joint cutting (3-6mm wide, 20mm deep) at maximum 5m spacing",
+                    "Curing and protection during setting"
+                ],
+                materials: [
+                    "Sub-base material per specification",
+                    "0.125mm polythene sheeting",
+                    "Grade 30/20 concrete",
+                    "Class U4 surface finish materials",
+                    "Joint sealant (where required)"
+                ],
+                drawings: ["H1104C"]
             }
         },
         {
@@ -626,38 +726,58 @@ const furnitureDatabase = {
             name: "Paver Footpath",
             category: "pavement",
             description: "Paver block construction for footpaths",
-            drawing: "h1103g",
-            manual: "hyd-gn044c",
-            hydDrawings: ["H1103G", "H1131B", "H5101A", "H5102A", "H5103A"],
+            drawings: ["h1103g"],
+            manuals: ["hyd-gn044c"],
             overview: {
                 description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces.",
-                specifications: ["Paver thickness: 60-80mm", "Bedding sand: 25-40mm", "Joint sand: 2-5mm", "Various colors available"],
+                specifications: [
+                    "Paving unit: Paving slab or paving block as specified", 
+                    "Bedding: 20-30mm sand course/sand and cement bedding",
+                    "Sub-base: 150mm thick for footway, varies for carriageway",
+                    "Road-base: 100mm (run-in), 225mm (carriageway <5MSA), 225mm (footway E subgrade >50MPa)",
+                    "Drainage: Minimum 150mm sub-base thickness",
+                    "Edge restraint: Kerb or other edge restraint system",
+                    "Joint sand: 2-5mm joint width with sand filling"
+                ],
                 image: "assets/pv5-profile.png"
             },
             usage: {
                 applications: [
                     "Pedestrian areas",
-                    "Shopping precincts",
+                    "Shopping precincts", 
                     "Historic areas",
-                    "Decorative walkways"
+                    "Decorative walkways",
+                    "Run-in areas",
+                    "Light traffic carriageways"
                 ],
                 conditions: [
                     "Aesthetic enhancement required",
                     "Easy maintenance access",
-                    "Heritage area compliance"
+                    "Heritage area compliance",
+                    "Flexible surface needed"
                 ]
             },
-            installation: {
-                steps: [
-                    "Prepare and compact base course",
-                    "Lay bedding sand and screed",
-                    "Install paver blocks in pattern",
-                    "Compact and joint with sand",
-                    "Apply joint stabilizing sealer"
+            composition: {
+                layers: [
+                    "Subgrade preparation and compaction",
+                    "Sub-base placement and compaction (150mm minimum)",
+                    "Road-base installation (thickness as specified for application)",
+                    "Sand course/sand and cement bedding layer (20-30mm) preparation and screeding",
+                    "Paving unit installation (paving blocks or slabs) in specified pattern",
+                    "Joint sand application and compaction (2-5mm joints)",
+                    "Edge restraint installation (kerb or specified system)",
+                    "Joint stabilizing sealer application (areas with railings or high pressure water jet cleaning)"
                 ],
-                drawings: ["H1103G", "H1131B", "H5609", "H5610", "H5611"],
-                tools: ["Plate compactor", "Screed rails", "Rubber mallet"],
-                materials: ["Paver blocks", "Bedding sand", "Joint sand", "Edge restraints"]
+                materials: [
+                    "Precast concrete pavers (preferred for new paving)",
+                    "Clay pavers (special approval required, not recommended for new work)",
+                    "Granite and artificial granite pavers (200mm concrete base required)",
+                    "Sand course or sand and cement bedding (85% sand, 15% cement by mass)",
+                    "Sub-base material per specification",
+                    "Bituminous road-base (run-in/carriageway) or concrete base (clay/granite pavers)",
+                    "Joint sand and stabilizing sealer"
+                ],
+                drawings: ["H1103G", "H1131B", "H5609", "H5610", "H5611"]
             }
         },
         {
@@ -665,37 +785,64 @@ const furnitureDatabase = {
             name: "Planter",
             category: "pavement",
             description: "Landscaped planter construction and design",
-            drawing: "h5146a",
-            hydDrawings: ["H5146", "H5144", "H5145"],
+            drawings: ["h5146a"],
             overview: {
                 description: "Structural planter construction for landscaping within paved areas, providing controlled growing environments.",
-                specifications: ["Concrete footing at planter edge", "GMS frame for pavement edging"],
+                specifications: [
+                    "Minimum dimensions: 2000mm minimum (modify to suit site conditions)",
+                    "Soil provision: 50mm thick mulch over soil mix",
+                    "Frame: GMS frame fabricated from 75x50x5mm thick angle",
+                    "Foundation: In-situ mass concrete frame footing",
+                    "Base: In-situ planting base with compacted CDG",
+                    "Drainage: Sub-soil drainage consideration essential",
+                    "Tree securing: Stakes/guys as specified",
+                    "Soil level: Top of root ball at same level as finished soil level"
+                ],
                 image: "assets/pv6-profile.png"
             },
             usage: {
                 applications: [
                     "Urban beautification",
                     "Street tree planters",
-                    "Roadside landscaping",
-                    "Central reservation planting"
+                    "Roadside landscaping", 
+                    "Central reservation planting",
+                    "Kerb planters",
+                    "Quality greening along roads"
                 ],
                 conditions: [
                     "Landscaping enhancement",
                     "Environmental improvement",
-                    "Traffic calming measures"
+                    "Traffic calming measures",
+                    "Urban heat island mitigation",
+                    "Air quality improvement"
                 ]
             },
-            installation: {
-                steps: [
-                    "Excavate to required depth",
-                    "Install drainage system",
-                    "Apply waterproof membrane",
-                    "Install planter structure",
-                    "Backfill with growing medium"
+            composition: {
+                layers: [
+                    "Excavation to required depth (minimum 1330mm, typically 2000mm)",
+                    "Compacted CDG (Completely Decomposed Granite) base preparation",
+                    "In-situ planting base construction",
+                    "Sub-soil drainage system installation (essential for proper drainage)",
+                    "In-situ mass concrete frame footing construction",
+                    "GMS frame installation (fabricated from 75x50x5mm thick angle)",
+                    "Surrounding paving installation as specified with cement sand bedding",
+                    "Soil mix backfill to finished level",
+                    "50mm thick mulch layer over soil mix",
+                    "Tree/plant installation with root ball at correct level",
+                    "Tree securing with stakes/guys as specified"
                 ],
-                drawings: ["H5705", "H5706", "H5707"],
-                tools: ["Excavator", "Membrane welding tools", "Compaction equipment"],
-                materials: ["Concrete/masonry units", "Waterproof membrane", "Drainage materials", "Growing medium"]
+                materials: [
+                    "Compacted CDG (Completely Decomposed Granite)",
+                    "In-situ mass concrete for frame footing",
+                    "GMS frame components (75x50x5mm thick angle)",
+                    "Specified soil mix for plant growth",
+                    "50mm thick mulch material",
+                    "Sub-soil drainage materials",
+                    "Surrounding paving materials",
+                    "Cement sand bedding",
+                    "Tree stakes and guy wire systems"
+                ],
+                drawings: ["H5146A", "H5705", "H5706", "H5707"]
             }
         },
         {
@@ -703,25 +850,26 @@ const furnitureDatabase = {
             name: "Expansion Joint",
             category: "pavement-joints",
             description: "Expansion joints in concrete carriageways to accommodate thermal movement",
-            drawing: "H1105",
-            manual: "hyd-gn020a",
-            hydDrawings: ["H1105"],
+            drawings: ["H1105"],
+            manuals: ["hyd-gn020a"],
             overview: {
                 description: "Expansion joints in concrete pavement construction designed to accommodate thermal expansion and contraction movements. These joints allow the concrete slabs to move without cracking, ensuring long-term pavement performance and structural integrity.",
                 specifications: [
                     "Joint spacing: 100-150m depending on local conditions",
-                    "Joint width: 20-25mm sealed with flexible sealant",
-                    "Dowel bars: 25mm diameter at 300mm centers",
-                    "Sealant depth: 25mm minimum",
-                    "Load transfer: Full depth dowelled connection",
-                    "Timing: Cut within 24 hours of concrete placement"
+                    "Joint construction: Sealing groove and approved joint sealant",
+                    "Dowel bars: 25mm diameter, 650mm length, at 300mm centers (slabs ≥150mm thick)",
+                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
+                    "Compressible filler: 20mm thick compressible joint filler",
+                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Polythene sheeting: 0.125mm over full width"
                 ]
             },
             usage: {
                 applications: [
                     "Concrete carriageway construction",
                     "Airport runway pavement",
-                    "Industrial hard standing areas",
+                    "Industrial hard standing areas", 
                     "Bridge deck connections",
                     "Long concrete pavement sections"
                 ],
@@ -732,19 +880,27 @@ const furnitureDatabase = {
                     "Locations requiring controlled movement accommodation"
                 ]
             },
-            installation: {
-                steps: [
-                    "Mark joint locations during concrete placement",
-                    "Install dowel bars with bond-breaker on one end",
-                    "Cut joint groove to specified depth and width",
-                    "Clean joint thoroughly of debris",
-                    "Install backing rod at proper depth",
-                    "Apply joint sealant to specified depth",
-                    "Tool sealant surface for proper profile"
+            composition: {
+                layers: [
+                    "Joint location marking during concrete placement",
+                    "Dowel bar installation (25mm diameter, 650mm length) with PVC anti-corrosive sleeve (400mm)",
+                    "Wire ties and cradle bent 6mm diameter tie bars at 300mm centers installation",
+                    "Compressible joint filler installation (20mm thick) at specified position", 
+                    "Joint groove cutting to accommodate sealant",
+                    "Reinforcement placement with 60 ± 10mm cover maintained",
+                    "0.125mm polythene sheeting installation over full width",
+                    "Joint sealant application and tooling to profile"
                 ],
-                drawings: ["H1105"],
-                tools: ["Joint cutting saw", "Vacuum cleaner", "Sealant gun", "Tooling equipment"],
-                materials: ["Joint sealant", "Backing rod", "Dowel bars", "Bond-breaker compound"]
+                materials: [
+                    "25mm diameter mild steel dowel bars (sow cut at both ends)",
+                    "400mm length tight fitting PVC anti-corrosive dowel sleeve",
+                    "20mm thick compressible joint filler",
+                    "6mm diameter wire ties and tie bars",
+                    "Approved joint sealant",
+                    "0.125mm polythene sheeting",
+                    "Reinforcement materials where specified"
+                ],
+                drawings: ["H1105"]
             }
         },
         {
@@ -752,18 +908,19 @@ const furnitureDatabase = {
             name: "Contraction Joint", 
             category: "pavement-joints",
             description: "Contraction joints in concrete carriageways to control shrinkage cracking",
-            drawing: "H1106A",
-            manual: "hyd-gn020a", 
-            hydDrawings: ["H1106A"],
+            drawings: ["H1106A"],
+            manuals: ["hyd-gn020a"], 
             overview: {
                 description: "Contraction joints (also known as control joints) in concrete pavement designed to control where shrinkage cracks occur during the curing process. These joints create a planned weak point where cracking is intended to occur, preventing random cracking throughout the pavement.",
                 specifications: [
-                    "Joint spacing: 4-6m typically for road pavements",
-                    "Cut depth: 1/4 to 1/3 of slab thickness", 
-                    "Joint width: 6-8mm sealed width",
-                    "Timing: Cut within 6-24 hours of placement",
-                    "Sealant: Applied after joint has opened",
-                    "Load transfer: Usually no dowels required"
+                    "Joint construction: Sealing groove and approved joint sealant",
+                    "Dowel bars: 20mm diameter (150-220mm slabs), 25mm diameter (230mm+ slabs), 650mm length",
+                    "Dowel spacing: 300mm centers at mid-depth",
+                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
+                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Polythene sheeting: 0.125mm over full width",
+                    "Mortar bed: 1 part cement to 3 parts sand"
                 ]
             },
             usage: {
@@ -776,24 +933,33 @@ const furnitureDatabase = {
                 ],
                 conditions: [
                     "All concrete pavements to control shrinkage",
-                    "Regular panel construction requirements",
+                    "Regular panel construction requirements", 
                     "Areas requiring controlled crack location",
                     "New concrete construction projects"
                 ]
             },
-            installation: {
-                steps: [
-                    "Plan joint layout during design phase",
-                    "Mark joint locations on fresh concrete",
-                    "Cut joints within specified time window", 
-                    "Cut to proper depth (1/4 to 1/3 slab thickness)",
-                    "Clean joints of cutting debris",
-                    "Allow joint to open through shrinkage",
-                    "Install backing rod and sealant when ready"
+            composition: {
+                layers: [
+                    "Joint layout planning during design phase",
+                    "Joint location marking on concrete placement",
+                    "Mid steel dowel bar installation (sow cut at both ends, at mid-depth)",
+                    "Dowel bar sizing: 20mm diameter (150-220mm slabs), 25mm diameter (230mm+ slabs)",
+                    "PVC anti-corrosive sleeve installation (400mm length, tight fitting)",
+                    "Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
+                    "0.125mm polythene sheeting installation over full width",
+                    "Mortar bed application (1 part cement to 3 parts sand)",
+                    "Joint sealant groove cutting and sealing"
                 ],
-                drawings: ["H1106A"],
-                tools: ["Early-entry saw", "Conventional joint saw", "Joint cleaning equipment"],
-                materials: ["Diamond blades", "Joint sealant", "Backing rod", "Cleaning materials"]
+                materials: [
+                    "20mm or 25mm diameter mild steel dowel bars (sow cut at both ends)",
+                    "400mm length tight fitting PVC anti-corrosive sleeve",
+                    "6mm diameter wire ties and tie bars",
+                    "Approved joint sealant",
+                    "0.125mm polythene sheeting", 
+                    "Mortar materials (1 part cement, 3 parts sand)",
+                    "Reinforcement materials where specified"
+                ],
+                drawings: ["H1106A"]
             }
         },
         {
@@ -801,18 +967,18 @@ const furnitureDatabase = {
             name: "Longitudinal Joint",
             category: "pavement-joints",
             description: "Longitudinal joints in concrete carriageways to reduce slab width and limit transverse stresses",
-            drawing: "H1107",
-            manual: "hyd-gn020a",
-            hydDrawings: ["H1107"],
+            drawings: ["H1107"],
+            manuals: ["hyd-gn020a"],
             overview: {
                 description: "Longitudinal joints in concrete pavement construction designed to reduce slab width and limit stresses in the transverse direction. These joints provide a balance between construction operations and load transfer requirements while controlling slab dimensions for optimal pavement performance.",
                 specifications: [
-                    "Maximum slab width: 4.5m (unreinforced and mesh reinforced)",
-                    "Maximum slab width with B503 mesh: 6.0m",
-                    "Minimum slab width: 1.0m",
-                    "Length/width ratio: 1.6 desirable maximum (unreinforced)",
-                    "Length/width ratio: 2.0 absolute maximum (unreinforced)",
-                    "Construction: Normally formed, not poured-through"
+                    "Reinforcement: Where specified, with approved sealing strip",
+                    "Tie bars: 12mm diameter, 1.0m length, spaced at 600mm centers at mid-depth (sow-cut)",
+                    "PVC sleeve: 150mm tight fitting anti-corrosive sleeve", 
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Joint spacing: 125 ± 25mm nominal between first and second slab",
+                    "Polythene sheeting: 0.125mm installation",
+                    "Sealing: Approved sealing strip application"
                 ]
             },
             usage: {
@@ -832,38 +998,47 @@ const furnitureDatabase = {
                     "Avoidance of wheel track locations"
                 ]
             },
-            installation: {
-                steps: [
-                    "Position joints between traffic lanes at or near lane lines",
-                    "Alternatively position in center of traffic lane",
-                    "Avoid formation in or near wheel tracks",
-                    "Form joints rather than pour-through construction",
-                    "Joints may terminate at any transverse joint",
-                    "Use purpose-made regulating machine if poured-through",
-                    "Ensure proper load transfer mechanisms"
+            composition: {
+                layers: [
+                    "Joint positioning between traffic lanes at or near lane lines",
+                    "Alternative positioning in center of traffic lane",
+                    "Sow-cut tie bar installation (12mm diameter, 1.0m length) at 600mm centers at mid-depth",
+                    "150mm tight fitting PVC anti-corrosive sleeve installation",
+                    "Reinforcement placement (where specified) with 60 ± 10mm cover",
+                    "0.125mm polythene sheeting installation", 
+                    "Joint spacing maintenance (125 ± 25mm nominal between slabs)",
+                    "Approved sealing strip application",
+                    "Joint termination at any transverse joint"
                 ],
-                drawings: ["H1107"],
-                tools: ["Joint forming equipment", "Regulating machine (if poured-through)", "Alignment guides"],
-                materials: ["Joint forming materials", "Load transfer devices", "Sealant systems"]
+                materials: [
+                    "12mm diameter mild steel tie bars (sow-cut, 1.0m length)",
+                    "150mm tight fitting PVC anti-corrosive sleeve",
+                    "Approved sealing strip",
+                    "0.125mm polythene sheeting",
+                    "Reinforcement materials (where specified)",
+                    "Joint sealant materials"
+                ],
+                drawings: ["H1107"]
             }
         },
         {
             id: "pv11",
             name: "Isolation Joint",
             category: "pavement-joints", 
-            description: "Isolation joints and longitudinal joints in concrete carriageways",
-            drawing: "H1107",
-            manual: "hyd-gn020a",
-            hydDrawings: ["H1107"],
+            description: "Isolation joints in concrete carriageways for complete separation between pavement sections",
+            drawings: ["H1107"],
+            manuals: ["hyd-gn020a"],
             overview: {
                 description: "Isolation joints in concrete pavement construction that provide complete separation between pavement sections without load transfer mechanisms. These joints prevent induced cracking by allowing slabs to move independently in both transverse and longitudinal directions, particularly at road junctions and around utility structures.",
                 specifications: [
                     "No dowel bars or tie bars for load transfer",
                     "Complete separation between concrete sections",
-                    "Joint material: Compressible filler board 10-20mm thick",
-                    "Full depth: Extends through entire slab thickness",
-                    "Box-out arrangement: Orthogonal to road slab alignment",
-                    "Transverse joints: Extended through full slab width"
+                    "Joint material: 10mm thick compressible joint filler",
+                    "Full depth: Extends through entire slab thickness", 
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Joint width: 75mm + 5mm nominal spacing",
+                    "Polythene sheeting: 0.125mm installation",
+                    "Box-out arrangement: Orthogonal to road slab alignment"
                 ]
             },
             usage: {
@@ -883,19 +1058,26 @@ const furnitureDatabase = {
                     "Prevention of induced cracking from joint misalignment"
                 ]
             },
-            installation: {
-                steps: [
-                    "Install compressible filler board against structure",
-                    "Ensure filler board extends full slab depth",
-                    "Maintain filler board position during concrete placement",
-                    "Remove any concrete spillage from joint face",
-                    "Cut sealant groove in top of joint after curing",
-                    "Install backing rod at proper depth",
-                    "Apply sealant and tool to specified profile"
+            composition: {
+                layers: [
+                    "Joint location identification at structure interfaces or junction points",
+                    "10mm thick compressible joint filler installation against structure",
+                    "Full slab depth filler extension through entire thickness",
+                    "Joint spacing maintenance (75mm + 5mm nominal)",
+                    "0.125mm polythene sheeting installation",
+                    "Reinforcement placement with 60 ± 10mm cover (where applicable)",
+                    "Filler board position maintenance during concrete placement",
+                    "Concrete spillage prevention from joint face",
+                    "Joint sealing completion after curing"
                 ],
-                drawings: ["H1107"],
-                tools: ["Joint cutting saw", "Installation guides", "Sealant application equipment"],
-                materials: ["Compressible filler board", "Joint sealant", "Backing rod", "Support materials"]
+                materials: [
+                    "10mm thick compressible joint filler board",
+                    "0.125mm polythene sheeting",
+                    "Joint sealant materials",
+                    "Backing rod (where required)",
+                    "Reinforcement materials (where specified)"
+                ],
+                drawings: ["H1107"]
             }
         }
     ],
@@ -905,9 +1087,8 @@ const furnitureDatabase = {
             name: "K1 - Standard Kerb",
             category: "kerbs",
             description: "Standard concrete kerb for carriageway to footpath transitions",
-            drawing: "K1",
-            manual: "Highway Standard Drawing K1",
-            hydDrawings: ["H1118", "H1119"], // Reference to actual HYD drawings
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing K1"],
             usage: {
                 applications: [
                     "Carriageway to footpath transitions",
@@ -921,23 +1102,21 @@ const furnitureDatabase = {
                     "No heavy vehicle overrun expected"
                 ]
             },
-            installation: {
-                steps: [
-                    "Excavate foundation to required depth",
-                    "Lay concrete foundation (ST2 mix)",
-                    "Position kerb units with 10mm joints",
-                    "Backfill and compact behind kerb",
-                    "Point joints with mortar"
+            composition: {
+                layers: [
+                    "Foundation excavation to required depth",
+                    "Concrete foundation (ST2 mix) laying",
+                    "Kerb unit positioning with 10mm joints",
+                    "Backfill and compaction behind kerb",
+                    "Joint pointing with mortar"
                 ],
-                drawings: ["H1101", "H1102", "H1118", "H1119"], // Include HYD references
-                tools: ["Concrete mixer", "Spirit level", "Rubber mallet"],
-                materials: ["ST2 concrete", "Mortar", "Sand"]
+                drawings: ["H1118"]
             },
             variants: [
                 {
                     name: "K1 Standard",
                     use: "General applications",
-                    drawing: "K1"
+                    drawings: ["K1"]
                 }
             ]
         },
@@ -946,48 +1125,48 @@ const furnitureDatabase = {
             name: "K2 - Carriageway to Verge Kerb",
             category: "kerbs",
             description: "Kerb for carriageway to grass verge transitions",
-            drawing: "K2",
-            manual: "Highway Standard Drawing K2"
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing K2"],
         },
         {
             id: "k3",
             name: "K3 - Bridge Deck Kerb",
             category: "kerbs",
             description: "Specialized kerb for bridge deck applications",
-            drawing: "K3",
-            manual: "Highway Standard Drawing K3"
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing K3"],
         },
         {
             id: "k5-9",
             name: "K5-K9 - Vehicular Drop Kerbs",
             category: "kerbs",
             description: "Drop kerb series for vehicular access",
-            drawing: "K5-K9",
-            manual: "Highway Standard Drawings K5 to K9"
+            drawings: ["h1119"],
+            manuals: ["Highway Standard Drawings K5 to K9"],
         },
         {
             id: "k10-14",
             name: "K10-K14 - Pedestrian Drop Kerbs",
             category: "kerbs",
             description: "Drop kerb series for pedestrian crossings",
-            drawing: "K10-K14",
-            manual: "Highway Standard Drawings K10 to K14"
+            drawings: ["h1134"],
+            manuals: ["Highway Standard Drawings K10 to K14"],
         },
         {
             id: "e1",
             name: "E1 - Cycle Track Edge",
             category: "kerbs",
             description: "Edge detail for cycle track to footpath",
-            drawing: "E1",
-            manual: "Highway Standard Drawing E1"
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing E1"],
         },
         {
             id: "e2",
             name: "E2 - Planter Kerb",
             category: "kerbs",
             description: "Kerb for footpath to planter",
-            drawing: "E2",
-            manual: "Highway Standard Drawing E2",
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing E2"],
             usage: {
                 applications: [
                     "Footpath to planter separation",
@@ -1001,23 +1180,21 @@ const furnitureDatabase = {
                     "Decorative applications"
                 ]
             },
-            installation: {
-                steps: [
-                    "Mark edge alignment",
-                    "Excavate shallow foundation",
-                    "Level and compact base",
-                    "Install edge units",
-                    "Backfill both sides"
+            composition: {
+                layers: [
+                    "Edge alignment marking",
+                    "Shallow foundation excavation",
+                    "Base leveling and compaction",
+                    "Edge unit installation",
+                    "Both sides backfilling"
                 ],
-                drawings: ["E3", "E3-SECTION"],
-                tools: ["String line", "Spade", "Level", "Compactor"],
-                materials: ["Concrete edge units", "Sand", "Type 1 aggregate"]
+                drawings: ["E3", "E3-SECTION"]
             },
             variants: [
                 {
                     name: "E3 Standard",
                     use: "General boundary edging",
-                    drawing: "E3"
+                    drawings: ["E3"]
                 }
             ]
         },
@@ -1026,8 +1203,8 @@ const furnitureDatabase = {
             name: "E3 - Boundary Kerb",
             category: "kerbs",
             description: "Kerb for footpath to boundary",
-            drawing: "E3",
-            manual: "Highway Standard Drawing E3",
+            drawings: ["h1118"],
+            manuals: ["Highway Standard Drawing E3"],
             usage: {
                 applications: [
                     "Footpath to planter separation",
@@ -1041,23 +1218,21 @@ const furnitureDatabase = {
                     "Decorative applications"
                 ]
             },
-            installation: {
-                steps: [
-                    "Mark edge alignment",
-                    "Excavate shallow foundation",
-                    "Level and compact base",
-                    "Install edge units",
-                    "Backfill both sides"
+            composition: {
+                layers: [
+                    "Edge alignment marking",
+                    "Shallow foundation excavation",
+                    "Base leveling and compaction",
+                    "Edge unit installation",
+                    "Both sides backfilling"
                 ],
-                drawings: ["E3", "E3-SECTION"],
-                tools: ["String line", "Spade", "Level", "Compactor"],
-                materials: ["Concrete edge units", "Sand", "Type 1 aggregate"]
+                drawings: ["E3", "E3-SECTION"]
             },
             variants: [
                 {
                     name: "E3 Standard",
                     use: "General boundary edging",
-                    drawing: "E3"
+                    drawings: ["E3"]
                 }
             ]
         },
@@ -1066,8 +1241,8 @@ const furnitureDatabase = {
             name: "Granite Kerb",
             category: "kerbs",
             description: "Natural granite kerb for premium applications",
-            drawing: "h4101",
-            manual: "h4101",
+            drawings: ["h4101"],
+            manuals: ["h4101"],
             overview: {
                 description: "High-quality natural granite kerb providing durable and aesthetic edge definition for premium applications.",
                 specifications: ["Height: 125mm", "Width: 150mm", "Material: Natural granite", "Profile: Dressed finish", "Color: Natural grey granite"],
@@ -1088,30 +1263,28 @@ const furnitureDatabase = {
                     "Heritage conservation areas"
                 ]
             },
-            installation: {
-                steps: [
-                    "Excavate foundation to required depth",
-                    "Lay concrete foundation (ST2 mix)",
-                    "Position granite kerb units with 10mm joints",
-                    "Check alignment and levels carefully",
-                    "Backfill and compact behind kerb",
-                    "Point joints with matching mortar",
-                    "Clean and seal granite surface"
+            composition: {
+                layers: [
+                    "Foundation excavation to required depth",
+                    "Concrete foundation (ST2 mix) laying",
+                    "Granite kerb unit positioning with 10mm joints",
+                    "Alignment and levels careful checking",
+                    "Backfill and compaction behind kerb",
+                    "Joint pointing with matching mortar",
+                    "Granite surface cleaning and sealing"
                 ],
-                drawings: ["H4101", "H4101-DETAIL", "H4101-JOINT"],
-                tools: ["Diamond cutting tools", "Spirit level", "Rubber mallet", "Pointing trowel"],
-                materials: ["ST2 concrete", "Granite-matched mortar", "Sand", "Granite sealer"]
+                drawings: ["H4101", "H4101-DETAIL", "H4101-JOINT"]
             },
             variants: [
                 {
                     name: "GK1 Standard",
                     use: "Standard granite kerb",
-                    drawing: "H4101"
+                    drawings: ["H4101"]
                 },
                 {
                     name: "GK1 Polished",
                     use: "Polished finish version",
-                    drawing: "H4101-P"
+                    drawings: ["H4101-P"]
                 }
             ]
         }
@@ -1122,9 +1295,8 @@ const furnitureDatabase = {
             name: "CPB1 - Concrete Profile Barrier",
             category: "barriers",
             description: "Single-sided concrete profile barrier",
-            drawing: "H2101D",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2101D", "H2102B", "H2103", "H2104"],
+            drawings: ["H2101D"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Concrete profile barriers providing vehicle restraint through controlled redirection. These barriers are designed to contain and redirect errant vehicles while minimizing vehicle damage and occupant injury. The New Jersey profile provides optimal balance between containment and redirection performance.",
                 specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey", "Containment level: L2", "Working width: 1.0-1.3m"],
@@ -1143,29 +1315,27 @@ const furnitureDatabase = {
                     "Protection of fixed objects"
                 ]
             },
-            installation: {
-                steps: [
-                    "Survey and mark barrier alignment",
-                    "Excavate foundation",
-                    "Install reinforcement and formwork",
-                    "Pour concrete foundation",
-                    "Place barrier segments",
-                    "Connect segments with dowel bars"
+            composition: {
+                layers: [
+                    "Barrier alignment surveying and marking",
+                    "Foundation excavation",
+                    "Reinforcement and formwork installation",
+                    "Concrete foundation pouring",
+                    "Barrier segment placement",
+                    "Segment connection with dowel bars"
                 ],
-                drawings: ["H2101D", "H2102B", "H2103", "H2104"],
-                tools: ["Crane", "Surveying equipment", "Concrete pump"],
-                materials: ["Reinforced concrete segments", "Dowel bars", "Sealant"]
+                drawings: ["H2101D", "H2102B", "H2103", "H2104"]
             },
             variants: [
                 {
                     name: "CPB1 Standard",
                     use: "General roadside protection",
-                    drawing: "H2101D"
+                    drawings: ["H2101D"]
                 },
                 {
                     name: "CPB1-T",
                     use: "Terminal end treatment", 
-                    drawing: "H2103"
+                    drawings: ["H2103"]
                 }
             ]
         },
@@ -1174,9 +1344,8 @@ const furnitureDatabase = {
             name: "CPB2 - Removable Concrete Profile Barrier",
             category: "barriers",
             description: "Removable concrete profile barrier",
-            drawing: "H2254",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2254", "H2255", "H2256"],
+            drawings: ["H2254"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Removable concrete profile barriers for temporary traffic management and work zone protection. These barriers can be repositioned using specialized equipment while maintaining the same containment performance as permanent concrete barriers. Designed for quick deployment and removal during construction or emergency situations.",
                 specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey", "Type: Removable/portable", "Containment level: L2", "Lifting points: Integrated"],
@@ -1195,29 +1364,27 @@ const furnitureDatabase = {
                     "Construction zones"
                 ]
             },
-            installation: {
-                steps: [
-                    "Survey and mark barrier alignment",
-                    "Position removable barrier units",
-                    "Connect units with appropriate hardware",
-                    "Install end anchor blocks",
-                    "Apply reflective markings",
-                    "Secure lifting points for removal"
+            composition: {
+                layers: [
+                    "Barrier alignment surveying and marking",
+                    "Removable barrier unit positioning",
+                    "Unit connection with appropriate hardware",
+                    "End anchor block installation",
+                    "Reflective marking application",
+                    "Lifting point securing for removal"
                 ],
-                drawings: ["H2254", "H2255", "H2256"],
-                tools: ["Crane", "Surveying equipment", "Lifting equipment"],
-                materials: ["Removable concrete segments", "Connection hardware", "Anchor blocks"]
+                drawings: ["H2254", "H2255", "H2256"]
             },
             variants: [
                 {
                     name: "CPB2 Standard",
                     use: "General removable barrier",
-                    drawing: "H2254"
+                    drawings: ["H2254"]
                 },
                 {
                     name: "CPB2 End Anchor",
                     use: "End anchor block system",
-                    drawing: "H2255"
+                    drawings: ["H2255"]
                 }
             ]
         },
@@ -1226,9 +1393,8 @@ const furnitureDatabase = {
             name: "CB1 - Corrugated Beam Barrier",
             category: "barriers",
             description: "Corrugated beam crash barrier system",
-            drawing: "H2112C",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2112C", "H2113A", "H2114B", "H2115A", "H2116B"],
+            drawings: ["H2112C"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Corrugated steel beam barriers providing vehicle restraint through controlled deformation and energy absorption. The W-beam profile distributes impact forces over multiple posts while allowing controlled deflection to reduce vehicle damage and occupant injury. Cost-effective solution for medium-risk locations.",
                 specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: W-beam", "Post spacing: 4000mm centers", "Containment level: L1", "Working width: 2.0-2.5m"],
@@ -1247,28 +1413,26 @@ const furnitureDatabase = {
                     "Temporary installations"
                 ]
             },
-            installation: {
-                steps: [
-                    "Install support posts at 4m centers",
-                    "Mount beam sections with spacer blocks",
-                    "Bolt beams together with splice connections",
-                    "Install end treatments",
-                    "Apply reflective markings"
+            composition: {
+                layers: [
+                    "Support post installation at 4m centers",
+                    "Beam section mounting with spacer blocks",
+                    "Beam bolting together with splice connections",
+                    "End treatment installation",
+                    "Reflective marking application"
                 ],
-                drawings: ["H2112C", "H2113A", "H2114B", "H2115A", "H2116B"],
-                tools: ["Post driver", "Impact wrench", "Level"],
-                materials: ["Steel beams", "Posts", "Bolts", "Spacer blocks"]
+                drawings: ["H2112C", "H2113A", "H2114B", "H2115A", "H2116B"]
             },
             variants: [
                 {
                     name: "CB1 Standard",
                     use: "General roadside protection",
-                    drawing: "H2112C"
+                    drawings: ["H2112C"]
                 },
                 {
                     name: "CB1 Earth Footing",
                     use: "Installation with compacted earth footings",
-                    drawing: "H2113A"
+                    drawings: ["H2113A"]
                 }
             ]
         },
@@ -1277,9 +1441,8 @@ const furnitureDatabase = {
             name: "CB2 - Movable Steel Barrier",
             category: "barriers",
             description: "Movable steel barrier system",
-            drawing: "H2273",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2273", "H2274", "H2275"],
+            drawings: ["H2273"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Movable steel beam barriers designed for temporary installations and emergency access provisions. These barriers can be relocated or removed to allow emergency vehicle passage through median openings while maintaining protection during normal operations. Features quick-release mechanisms for rapid deployment.",
                 specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: W-beam", "Type: Movable/removable", "Containment level: L1", "Access: Emergency vehicle passage"],
@@ -1314,12 +1477,12 @@ const furnitureDatabase = {
                 {
                     name: "CB2 Standard",
                     use: "General roadside protection",
-                    drawing: "CB2"
+                    drawings: ["CB2"]
                 },
                 {
                     name: "CB2-D",
                     use: "Double-sided barrier",
-                    drawing: "CB2-D"
+                    drawings: ["CB2-D"]
                 }
             ]
         },
@@ -1328,9 +1491,8 @@ const furnitureDatabase = {
             name: "CB3 - Thrie Beam Barrier",
             category: "barriers",
             description: "Thrie beam crash barrier system",
-            drawing: "H2191A",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2191A", "H2192A", "H2193B", "H2194A", "H2195B"],
+            drawings: ["H2191A"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Three-wave beam barriers providing enhanced containment performance compared to standard W-beam systems. The thrie beam profile offers greater structural depth and resistance to vehicle penetration while maintaining controlled deformation characteristics. Suitable for locations requiring higher containment levels.",
                 specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: Three-wave thrie beam", "Post spacing: 4000mm centers", "Containment level: L2", "Working width: 1.5-2.0m"],
@@ -1365,12 +1527,12 @@ const furnitureDatabase = {
                 {
                     name: "CB2 Standard",
                     use: "General roadside protection",
-                    drawing: "CB2"
+                    drawings: ["CB2"]
                 },
                 {
                     name: "CB2-D",
                     use: "Double-sided barrier",
-                    drawing: "CB2-D"
+                    drawings: ["CB2-D"]
                 }
             ]
         },
@@ -1379,9 +1541,8 @@ const furnitureDatabase = {
             name: "CB4 - Thrie Beam Barrier with Additional Rail",
             category: "barriers",
             description: "Thrie beam crash barrier system",
-            drawing: "H2238",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2238", "H2190A", "H2196", "H2197"],
+            drawings: ["H2238"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Enhanced thrie beam barrier system with additional upper rail for increased containment performance. This double-rail configuration provides superior vehicle restraint for high-risk locations or areas with heavy vehicles. The additional rail helps prevent vehicle rollover and provides redundancy in barrier performance.",
                 specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: Three-wave double-sided", "Configuration: Dual rail system", "Containment level: L3", "Containment: Enhanced level"],
@@ -1416,12 +1577,12 @@ const furnitureDatabase = {
                 {
                     name: "CB2 Standard",
                     use: "General roadside protection",
-                    drawing: "CB2"
+                    drawings: ["CB2"]
                 },
                 {
                     name: "CB2-D",
                     use: "Double-sided barrier",
-                    drawing: "CB2-D"
+                    drawings: ["CB2-D"]
                 }
             ]
         },
@@ -1430,8 +1591,8 @@ const furnitureDatabase = {
             name: "Steel Parapet",
             category: "barriers",
             description: "Steel parapet barrier system for bridges and elevated sections",
-            drawing: "SSD164-165",
-            manual: "TPDM Volume 2 Chapter 3.9",
+            drawings: ["SSD164-165"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Steel parapet barriers designed for bridge and elevated structure applications where both vehicle containment and pedestrian protection are required. These barriers combine structural steel framework with infill panels to provide high containment performance while allowing for drainage and maintenance access.",
                 specifications: ["Height: 1100mm", "Material: Galvanized steel", "Profile: Steel beam construction", "Containment level: L2", "Application: Bridge structures", "Protection: Combined vehicle/pedestrian"],
@@ -1468,12 +1629,12 @@ const furnitureDatabase = {
                 {
                     name: "SP1 Standard",
                     use: "General bridge parapet",
-                    drawing: "SSD164"
+                    drawings: ["SSD164"]
                 },
                 {
                     name: "SP1 Extended",
                     use: "Extended height version",
-                    drawing: "SSD165"
+                    drawings: ["SSD165"]
                 }
             ]
         },
@@ -1482,8 +1643,8 @@ const furnitureDatabase = {
             name: "Combined Rail Concrete Parapet",
             category: "barriers",
             description: "Combined rail and concrete parapet barrier system",
-            drawing: "SSD161-163",
-            manual: "TPDM Volume 2 Chapter 3.9",
+            drawings: ["SSD161-163"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Hybrid barrier system combining reinforced concrete base with steel rail elements for enhanced protection and aesthetic appeal. The concrete base provides structural integrity and containment while the steel rail components offer visibility and architectural enhancement. Designed for urban bridge applications where appearance is important.",
                 specifications: ["Height: 1200mm", "Base: Reinforced concrete", "Rail: Steel tube/beam", "Containment level: L2", "Application: Urban bridges", "Finish: Architectural treatment"],
@@ -1520,17 +1681,17 @@ const furnitureDatabase = {
                 {
                     name: "CRCP1 Standard",
                     use: "Standard combined barrier",
-                    drawing: "SSD161"
+                    drawings: ["SSD161"]
                 },
                 {
                     name: "CRCP1 Enhanced",
                     use: "Enhanced aesthetic version",
-                    drawing: "SSD162"
+                    drawings: ["SSD162"]
                 },
                 {
                     name: "CRCP1 Terminal",
                     use: "Terminal end treatment",
-                    drawing: "SSD163"
+                    drawings: ["SSD163"]
                 }
             ]
         },
@@ -1539,8 +1700,8 @@ const furnitureDatabase = {
             name: "L4 Concrete Parapet",
             category: "barriers",
             description: "L4 containment level concrete parapet barrier",
-            drawing: "Figure 11.3 HyD SDM",
-            manual: "Highways Department Structures Design Manual Figure 11.3",
+            drawings: ["Figure 11.3 HyD SDM"],
+            manuals: ["Highways Department Structures Design Manual Figure 11.3"],
             overview: {
                 description: "Highest level concrete parapet barriers designed for critical infrastructure protection where maximum vehicle containment is essential. These barriers meet L4 containment requirements per EN 1317 standards and are designed to contain large vehicles at high speeds with minimal deflection. Reserved for locations where barrier failure would result in catastrophic consequences.",
                 specifications: ["Height: 1500mm", "Containment Level: L4", "Material: Reinforced concrete", "Design standard: EN 1317", "Working width: <1.0m", "Impact severity: ASI ≤ 1.4"],
@@ -1579,12 +1740,12 @@ const furnitureDatabase = {
                 {
                     name: "L4CP Standard",
                     use: "Standard L4 concrete parapet",
-                    drawing: "Figure 11.3 HyD SDM"
+                    drawings: ["Figure 11.3 HyD SDM"]
                 },
                 {
                     name: "L4CP Modified",
                     use: "Site-specific modifications",
-                    drawing: "Figure 11.3 HyD SDM (Modified)"
+                    drawings: ["Figure 11.3 HyD SDM (Modified)"]
                 }
             ]
         },
@@ -1595,9 +1756,8 @@ const furnitureDatabase = {
             name: "Type 2 Railings",
             category: "railings",
             description: "Type 2 railings for pedestrian control purpose",
-            drawing: "H2130H",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2130H", "H2131D", "H2132H", "H2134I"],
+            drawings: ["H2130H"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Type 2 railings designed for pedestrian control applications including standard sections, junction details, and expansion joint provisions.",
                 specifications: ["Height: 1100mm", "Panel length: 2000mm", "Material: Galvanized steel", "Infill: Vertical bars"],
@@ -1634,9 +1794,8 @@ const furnitureDatabase = {
             name: "Type 2 Railings at Junction and Crossing",
             category: "railings",
             description: "Type 2 railings near Junction and Crossing with high visibility",
-            drawing: "H2132H",
-            manual: "TPDM Volume 2 Chapter 3.9",
-            hydDrawings: ["H2130H", "H2131D", "H2132H", "H2134I"],
+            drawings: ["H2132H"],
+            manuals: ["TPDM Volume 2 Chapter 3.9"],
             overview: {
                 description: "Type 2 railings located near Junction and Crossing should adopt a higher visibility panel to avoid block motorists sight line.",
                 specifications: ["Height: 1100mm", "Panel length: 2000mm", "Material: Galvanized steel", "Infill: Vertical bars"],
@@ -1673,9 +1832,8 @@ const furnitureDatabase = {
             name: "Decorative Type Railings",
             category: "railings",
             description: "Type 4 railings for pedestrian control purpose",
-            drawing: "H2282A",
-            manual: "HYD Standard Drawing H2282A",
-            hydDrawings: ["H2282A", "H2131D", "H2283A"],
+            drawings: ["H2282A"],
+            manuals: ["HYD Standard Drawing H2282A"],
             overview: {
                 description: "Type 4 railings for pedestrian control with enhanced design features and expansion joint capabilities.",
                 specifications: ["Height: 1100mm", "Enhanced design features", "Material: Galvanized steel", "Expansion joint provision"],
@@ -1712,9 +1870,8 @@ const furnitureDatabase = {
             name: "Tubular Amenity Railings",
             category: "railings",
             description: "Tubular amenity railings for aesthetic and functional applications",
-            drawing: "H2135C",
-            manual: "HYD Standard Drawing H2135C",
-            hydDrawings: ["H2135C"],
+            drawings: ["H2135C"],
+            manuals: ["HYD Standard Drawing H2135C"],
             overview: {
                 description: "Tubular amenity railings designed for aesthetic enhancement and functional pedestrian guidance in urban environments.",
                 specifications: ["Tubular construction", "Amenity-focused design", "Aesthetic enhancement", "Urban environment application"]
@@ -1750,9 +1907,8 @@ const furnitureDatabase = {
             name: "Stainless Steel Railing SS01",
             category: "railings",
             description: "Stainless steel railings for public transport interchange",
-            drawing: "H2271",
-            manual: "HYD Standard Drawing H2271",
-            hydDrawings: ["H2271", "H2272"],
+            drawings: ["H2271"],
+            manuals: ["HYD Standard Drawing H2271"],
             overview: {
                 description: "Stainless steel Type SS01 railings specifically designed for public transport interchange applications with corrosion resistance and durability.",
                 specifications: ["Stainless steel construction", "Public transport specification", "Corrosion resistance", "High durability"]
@@ -1789,9 +1945,8 @@ const furnitureDatabase = {
             name: "Removable Railings",
             category: "railings",
             description: "Removable bollards and railings system",
-            drawing: "H2259",
-            manual: "HYD Standard Drawing H2259",
-            hydDrawings: ["H2259", "H2260", "H2261", "H2262"],
+            drawings: ["H2259"],
+            manuals: ["HYD Standard Drawing H2259"],
             overview: {
                 description: "Removable railing system designed for flexible access control and temporary traffic management applications.",
                 specifications: ["Removable design", "Flexible access control", "Temporary installation capability", "Quick deployment system"]
@@ -1828,9 +1983,8 @@ const furnitureDatabase = {
             name: "Emergency Crash Gate",
             category: "railings",
             description: "Emergency crash gate for emergency vehicle access through barriers",
-            drawing: "H2108C",
-            manual: "HYD Standard Drawing H2108C",
-            hydDrawings: ["H2108C"],
+            drawings: ["H2108C"],
+            manuals: ["HYD Standard Drawing H2108C"],
             overview: {
                 description: "Emergency crash gate system designed for emergency vehicle access through barrier systems, providing controlled access during emergency situations while maintaining barrier integrity under normal conditions.",
                 specifications: ["Emergency vehicle access capability", "Crash-through design", "Barrier integration", "Emergency activation system"]
@@ -1870,9 +2024,8 @@ const furnitureDatabase = {
             name: "Emergency Access Gate (EAG)",
             category: "railings",
             description: "Emergency Access Gate for controlled emergency vehicle access",
-            drawing: "H2276B",
-            manual: "HYD Standard Drawing H2276B",
-            hydDrawings: ["H2276B"],
+            drawings: ["H2276B"],
+            manuals: ["HYD Standard Drawing H2276B"],
             overview: {
                 description: "Emergency Access Gate (EAG) system providing controlled access for emergency vehicles through restricted areas while maintaining security and access control under normal conditions.",
                 specifications: ["Emergency Access Gate design", "Controlled access system", "Emergency vehicle compatibility", "Security maintenance capability"]
@@ -1912,9 +2065,8 @@ const furnitureDatabase = {
             name: "Chain Link Fence - Standard Installation",
             category: "railings",
             description: "Standard chain link fence installation for perimeter security and area control",
-            drawing: "6121D",
-            manual: "Standard Drawing 6121D",
-            hydDrawings: ["6121D"],
+            drawings: ["6121D"],
+            manuals: ["Standard Drawing 6121D"],
             overview: {
                 description: "Standard chain link fence system designed for perimeter security, area control, and boundary definition with durable galvanized construction and standard installation procedures.",
                 specifications: ["Galvanized chain link construction", "Standard height options", "Post and foundation system", "Gate integration capability"]
@@ -1956,9 +2108,8 @@ const furnitureDatabase = {
             name: "Single Post Sign Support",
             category: "signs",
             description: "Single post traffic sign support systems",
-            drawing: "H2147F",
-            manual: "HYD Standard Drawing H2147F",
-            hydDrawings: ["H2147F", "H2148C"],
+            drawings: ["H2147F"],
+            manuals: ["HYD Standard Drawing H2147F"],
             overview: {
                 description: "Single post traffic sign support systems designed for standard traffic sign installations with proper foundation and mounting details.",
                 specifications: ["Single post design", "Standard mounting system", "Foundation details included", "Traffic sign compatibility"]
@@ -1994,9 +2145,8 @@ const furnitureDatabase = {
             name: "Single Post Off-Centered Sign Support",
             category: "signs",
             description: "Single post traffic sign support using off-centered method",
-            drawing: "H2198C",
-            manual: "HYD Standard Drawing H2198C",
-            hydDrawings: ["H2198C", "H2199C", "H2200B", "H2201B"],
+            drawings: ["H2198C"],
+            manuals: ["HYD Standard Drawing H2198C"],
             overview: {
                 description: "Single post traffic sign support system using off-centered mounting method for specific installation conditions and sign positioning requirements.",
                 specifications: ["Off-centered mounting design", "Specialized positioning capability", "Enhanced stability features", "Multi-sheet detailed design"]
@@ -2032,9 +2182,8 @@ const furnitureDatabase = {
             name: "Multi-Sign Support - Cantilever",
             category: "signs",
             description: "Single post multi-sign support for cantilever-mounted traffic signs",
-            drawing: "H2227B",
-            manual: "HYD Standard Drawing H2227B",
-            hydDrawings: ["H2227B"],
+            drawings: ["H2227B"],
+            manuals: ["HYD Standard Drawing H2227B"],
             overview: {
                 description: "Single post multi-sign support system designed for cantilever-mounted traffic signs providing multiple sign mounting capability on a single support structure.",
                 specifications: ["Multi-sign capability", "Cantilever mounting system", "Single post efficiency", "Multiple sign coordination"]
@@ -2070,9 +2219,8 @@ const furnitureDatabase = {
             name: "Multi-Sign Support - Street Name & Center Mount",
             category: "signs",
             description: "Single post multi-sign support for street name plates and center-mounted traffic signs",
-            drawing: "H2228E",
-            manual: "HYD Standard Drawing H2228E",
-            hydDrawings: ["H2228E", "H2229C"],
+            drawings: ["H2228E"],
+            manuals: ["HYD Standard Drawing H2228E"],
             overview: {
                 description: "Integrated multi-sign support system combining street name plate mounting with center-mounted traffic signs on a single post structure.",
                 specifications: ["Street name plate integration", "Center-mounted sign capability", "Combined functionality", "Integrated design approach"]
@@ -2108,9 +2256,8 @@ const furnitureDatabase = {
             name: "Multi-Sign Support - Street Name & Cantilever",
             category: "signs",
             description: "Single post multi-sign support for street name plates and cantilever-mounted traffic signs",
-            drawing: "H2230C",
-            manual: "HYD Standard Drawing H2230C",
-            hydDrawings: ["H2230C"],
+            drawings: ["H2230C"],
+            manuals: ["HYD Standard Drawing H2230C"],
             overview: {
                 description: "Advanced multi-sign support system integrating street name plates with cantilever-mounted traffic signs for comprehensive street signage solutions.",
                 specifications: ["Street name plate integration", "Cantilever traffic sign capability", "Comprehensive signage solution", "Advanced design features"]
@@ -2146,9 +2293,8 @@ const furnitureDatabase = {
             name: "Multi-Sign Perpendicular Support",
             category: "signs",
             description: "Single post multi-sign support for perpendicular traffic signs",
-            drawing: "H2268B",
-            manual: "HYD Standard Drawing H2268B",
-            hydDrawings: ["H2268B", "H2269B", "H2270B"],
+            drawings: ["H2268B"],
+            manuals: ["HYD Standard Drawing H2268B"],
             overview: {
                 description: "Advanced multi-sign support system designed for traffic signs positioned perpendicular to each other, providing multi-directional sign visibility.",
                 specifications: ["Perpendicular sign arrangement", "Multi-directional visibility", "Advanced mounting system", "Optimized sign positioning"]
@@ -2184,8 +2330,7 @@ const furnitureDatabase = {
             name: "Street Name Plates",
             category: "signs",
             description: "Street name plates with building numbers",
-            drawing: "H2205",
-            hydDrawings: ["H2205", "H2206D", "H2207", "H2208E", "H2211C"],
+            drawings: ["H2205"],
             overview: {
                 description: "Street name plate system with building number integration for street identification and address reference in urban environments.",
                 specifications: ["Street name identification", "Building number integration", "Urban address system", "Multiple mounting options"]
@@ -2221,8 +2366,7 @@ const furnitureDatabase = {
             name: "Roadside Directional Signs",
             category: "signs",
             description: "Comprehensive roadside directional signage system",
-            drawing: "H2212A",
-            hydDrawings: ["H2212A", "H2213", "H2214", "H2215", "H2216", "H2217", "H2218", "H2219", "H2220", "H2221", "H2222", "H2223", "H2224", "H2225A"],
+            drawings: ["H2212A"],
             overview: {
                 description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
                 specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
@@ -2258,8 +2402,7 @@ const furnitureDatabase = {
             name: "Cantilever Signs",
             category: "signs",
             description: "Cantilever directional signage system",
-            drawing: "SSD153(1)",
-            hydDrawings: ["SSD153(1)", "SSD153(2)", "SSD153(3)", "SSD153(4)", "SSD153(5)",],
+            drawings: ["SSD153(1)"],
             overview: {
                 description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
                 specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
@@ -2295,8 +2438,7 @@ const furnitureDatabase = {
             name: "Gantry Directional Signs",
             category: "signs",
             description: "Overhead gantry directional signage system",
-            drawing: "SSD151(1)-A",
-            hydDrawings: ["SSD151(1)-A", "SSD151(2)-A", "SSD151(3)-A", "SSD151(4)"],
+            drawings: ["SSD151(1)-A"],
             overview: {
                 description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
                 specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
@@ -2332,9 +2474,8 @@ const furnitureDatabase = {
             name: "Visitor Directional Signs",
             category: "signs",
             description: "Directional signage system specifically designed for visitors",
-            drawing: "H2301",
-            manual: "HYD Standard Drawing H2301",
-            hydDrawings: ["H2301", "H2302", "H2303", "H2304"],
+            drawings: ["H2301"],
+            manuals: ["HYD Standard Drawing H2301"],
             overview: {
                 description: "Specialized directional signage system designed specifically for visitor guidance with tourist-friendly design and information presentation.",
                 specifications: ["Visitor-specific design", "Tourist-friendly information", "Multi-sheet comprehensive system", "Visitor guidance optimization"]
@@ -2370,9 +2511,8 @@ const furnitureDatabase = {
             name: "Pedestrian Directional Signs",
             category: "signs",
             description: "Pedestrian directional sign support system",
-            drawing: "H2232C",
-            manual: "HYD Standard Drawing H2232C",
-            hydDrawings: ["H2232C"],
+            drawings: ["H2232C"],
+            manuals: ["HYD Standard Drawing H2232C"],
             overview: {
                 description: "Specialized directional sign support system designed specifically for pedestrian navigation and guidance applications.",
                 specifications: ["Pedestrian-scale design", "Walking route guidance", "Pedestrian-friendly information", "Urban pedestrian applications"]
@@ -2408,9 +2548,8 @@ const furnitureDatabase = {
             name: "Lighting Column Sign Mounting",
             category: "signs",
             description: "Street name plate and traffic sign mounting on public lighting columns",
-            drawing: "H2231",
-            manual: "HYD Standard Drawing H2231",
-            hydDrawings: ["H2231"],
+            drawings: ["H2231"],
+            manuals: ["HYD Standard Drawing H2231"],
             overview: {
                 description: "Specialized mounting system for installing street name plates and traffic signs on existing public lighting columns, maximizing infrastructure efficiency.",
                 specifications: ["Lighting column integration", "Existing infrastructure utilization", "Sign and lighting coordination", "Space-efficient design"]
@@ -2449,9 +2588,8 @@ const furnitureDatabase = {
             name: "Traffic Signal Pole",
             category: "signals",
             description: "Foundation and mini-drawpit for traffic signal pole installation",
-            drawing: "H2146C",
-            manual: "HYD Standard Drawing H2146C",
-            hydDrawings: ["H2146C"],
+            drawings: ["H2146C"],
+            manuals: ["HYD Standard Drawing H2146C"],
             overview: {
                 description: "Complete traffic signal pole installation system including foundation design and integrated mini-drawpit for electrical connections and maintenance access.",
                 specifications: ["Signal pole foundation", "Mini-drawpit integration", "Electrical connection provisions", "Maintenance access features"]
@@ -2487,9 +2625,8 @@ const furnitureDatabase = {
             name: "ATC Drawpit",
             category: "signals",
             description: "Area Traffic Control drawpit systems - single and twin concrete draw/jointing chambers",
-            drawing: "H2159B",
-            manual: "HYD Standard Drawing H2159B",
-            hydDrawings: ["H2159B", "H2160A", "H2161A", "H2162A", "H2168A", "H2169B", "H2180A"],
+            drawings: ["H2159B"],
+            manuals: ["HYD Standard Drawing H2159B"],
             overview: {
                 description: "Comprehensive Area Traffic Control drawpit system including single concrete draw/jointing chamber for shallow depths, and Type A & Type B twin concrete chambers for deeper installations, with covers and frames.",
                 specifications: ["Single concrete draw/jointing chamber (≤850mm depth)", "Type A twin concrete chamber (>850mm depth)", "Type B twin concrete chamber (>850mm depth)", "Heavy duty and light duty covers", "Cable draw-in pit capability"]
@@ -2529,9 +2666,8 @@ const furnitureDatabase = {
             name: "E&M Earth Pit",
             category: "signals",
             description: "Electrical and Mechanical earthing pit system",
-            drawing: "H2165B",
-            manual: "HYD Standard Drawing H2165B",
-            hydDrawings: ["H2165B", "H2166B", "H2170A", "H2171"],
+            drawings: ["H2165B"],
+            manuals: ["HYD Standard Drawing H2165B"],
             overview: {
                 description: "Specialized Electrical and Mechanical earthing pit system including concrete earth pit construction, cover and frame details, and concentrator pit integration.",
                 specifications: ["Concrete earth pit construction", "Specialized cover & frame", "Concentrator pit integration", "Earthing system provisions"]
@@ -2567,9 +2703,8 @@ const furnitureDatabase = {
             name: "Loop Detector",
             category: "signals",
             description: "Vehicle loop detector systems for traffic control",
-            drawing: "H2181A",
-            manual: "HYD Standard Drawing H2181A",
-            hydDrawings: ["H2181A", "H2182A", "H2183B"],
+            drawings: ["H2181A"],
+            manuals: ["HYD Standard Drawing H2181A"],
             overview: {
                 description: "Complete vehicle loop detector system including typical slot construction for ATC, mini drawpit details, and cover and frame specifications for traffic detection.",
                 specifications: ["Loop detector slot design", "Mini drawpit integration", "Detection system provisions", "Cover and frame details"]
@@ -2605,9 +2740,8 @@ const furnitureDatabase = {
             name: "Controller Plinth",
             category: "signals",
             description: "Traffic controller plinth systems for various controller types",
-            drawing: "H2164C",
-            manual: "HYD Standard Drawing H2164C",
-            hydDrawings: ["H2163B", "H2164C", "H2167A", "H2184B", "H2185B", "H2186C"],
+            drawings: ["H2164C"],
+            manuals: ["HYD Standard Drawing H2164C"],
             overview: {
                 description: "Comprehensive traffic controller plinth system including Type Delta 4 controller details, Type C 2000 & C 3000 controller plinths, T125B controller base, and fabricated steel recessed covers.",
                 specifications: ["Multiple controller type compatibility", "Delta 4 controller support", "C 2000 & C 3000 controller types", "T125B controller base", "Fabricated steel recessed covers"]
@@ -2645,9 +2779,8 @@ const furnitureDatabase = {
             name: "Non-Illuminated Retro-Reflective Traffic Bollard (NRTB)",
             category: "bollards",
             description: "Non-illuminated retro-reflective traffic bollard for road delineation",
-            drawing: "HLDSDGE06-CL0047A",
-            manual: "HLD Standard Drawing HLDSDGE06-CL0047A",
-            hydDrawings: ["HLDSDGE06-CL0047A"],
+            drawings: ["HLDSDGE06-CL0047A"],
+            manuals: ["HLD Standard Drawing HLDSDGE06-CL0047A"],
             overview: {
                 description: "Non-illuminated retro-reflective traffic bollard system designed for road delineation and traffic guidance with high-visibility retro-reflective materials for enhanced nighttime visibility.",
                 specifications: ["Non-illuminated design", "Retro-reflective materials", "Traffic delineation capability", "High nighttime visibility"]
@@ -2683,9 +2816,8 @@ const furnitureDatabase = {
             name: "Omnidirectional Non-Illuminated Retro-Reflective Traffic Bollard (O-NRTB)",
             category: "bollards",
             description: "Omnidirectional non-illuminated retro-reflective traffic bollard for 360-degree visibility",
-            drawing: "HLDSDGE06-CL0058",
-            manual: "HLD Standard Drawing HLDSDGE06-CL0058",
-            hydDrawings: ["HLDSDGE06-CL0058"],
+            drawings: ["HLDSDGE06-CL0058"],
+            manuals: ["HLD Standard Drawing HLDSDGE06-CL0058"],
             overview: {
                 description: "Omnidirectional non-illuminated retro-reflective traffic bollard system providing 360-degree visibility for comprehensive traffic guidance and area delineation.",
                 specifications: ["Omnidirectional visibility", "360-degree retro-reflection", "Non-illuminated design", "Comprehensive area coverage"]
@@ -2721,9 +2853,8 @@ const furnitureDatabase = {
             name: "Traffic Bollard",
             category: "bollards",
             description: "Standard traffic bollard with concrete plinth foundation",
-            drawing: "H2140A",
-            manual: "HYD Standard Drawing H2140A",
-            hydDrawings: ["H2140A", "H2141A"],
+            drawings: ["H2140A"],
+            manuals: ["HYD Standard Drawing H2140A"],
             overview: {
                 description: "Standard traffic bollard system with detailed concrete plinth foundation design for reliable traffic control and pedestrian area protection.",
                 specifications: ["Concrete plinth foundation", "Two-sheet detailed design", "Standard traffic control", "Durable construction"]
@@ -2759,9 +2890,8 @@ const furnitureDatabase = {
             name: "G.I. Bollard",
             category: "bollards",
             description: "Galvanized Iron bollard for standard applications",
-            drawing: "H2179C",
-            manual: "HYD Standard Drawing H2179C",
-            hydDrawings: ["H2179C"],
+            drawings: ["H2179C"],
+            manuals: ["HYD Standard Drawing H2179C"],
             overview: {
                 description: "Galvanized Iron bollard system providing durable and cost-effective traffic control and area delineation with corrosion-resistant finish.",
                 specifications: ["Galvanized Iron construction", "Corrosion-resistant finish", "Standard height design", "Cost-effective solution"]
@@ -2797,9 +2927,8 @@ const furnitureDatabase = {
             name: "Frangible Bollards for Cycle Track",
             category: "bollards",
             description: "Type 1 and Type 2 frangible bollards designed for cycle track applications",
-            drawing: "H2189",
-            manual: "HYD Standard Drawing H2189",
-            hydDrawings: ["H2189"],
+            drawings: ["H2189"],
+            manuals: ["HYD Standard Drawing H2189"],
             overview: {
                 description: "Specialized Type 1 and Type 2 frangible bollard system designed specifically for cycle track applications with breakaway capability for safety.",
                 specifications: ["Type 1 and Type 2 designs", "Frangible breakaway capability", "Cycle track specific design", "Safety-oriented construction"]
@@ -2835,9 +2964,8 @@ const furnitureDatabase = {
             name: "Self-Erective Tubular Marker on Cycle Track",
             category: "bollards",
             description: "Self-erecting tubular marker system for cycle track applications",
-            drawing: "H2189",
-            manual: "HYD Standard Drawing H2189",
-            hydDrawings: ["H2189"],
+            drawings: ["H2189"],
+            manuals: ["HYD Standard Drawing H2189"],
             overview: {
                 description: "Self-erecting tubular marker system designed for cycle track applications with automatic recovery capability after impact for continuous guidance.",
                 specifications: ["Self-erecting capability", "Tubular marker design", "Cycle track specific application", "Impact recovery system"]
@@ -2873,9 +3001,8 @@ const furnitureDatabase = {
             name: "Bollard with Chains Combination",
             category: "bollards",
             description: "Combined bollard and chain system for comprehensive area control",
-            drawing: "h2308",
-            manual: "TD DC 2/2022",
-            hydDrawings: ["H2308"],
+            drawings: ["h2308"],
+            manuals: ["TD DC 2/2022"],
             overview: {
                 description: "Integrated bollard and rail combination system providing comprehensive area control with both point and linear barrier capabilities.",
                 specifications: ["Combined bollard and rail design", "Integrated system approach", "Comprehensive area control", "Point and linear barriers"]
@@ -2911,9 +3038,8 @@ const furnitureDatabase = {
             name: "Removable Bollards and Railings",
             category: "bollards",
             description: "Removable bollard and railing system for temporary traffic control",
-            drawing: "H2259",
-            manual: "HYD Standard Drawing H2259",
-            hydDrawings: ["H2259", "H2260", "H2261", "H2262"],
+            drawings: ["H2259"],
+            manuals: ["HYD Standard Drawing H2259"],
             overview: {
                 description: "Comprehensive removable bollard and railing system designed for temporary traffic control and flexible area management with four-sheet detailed specifications covering all installation and removal procedures.",
                 specifications: ["Removable design capability", "Four-sheet comprehensive system", "Temporary installation capability", "Flexible area management", "Easy installation and removal"]
@@ -2955,8 +3081,8 @@ const furnitureDatabase = {
             name: "L1 - Street Lighting Columns",
             category: "lighting",
             description: "Standard street lighting installations",
-            drawing: "L1",
-            manual: "Street Lighting Design Guide"
+            drawings: ["L1"],
+            manuals: ["Street Lighting Design Guide"]
         }
     ],
     drainage: [
@@ -2965,8 +3091,8 @@ const furnitureDatabase = {
             name: "D1 - Gully Grating",
             category: "drainage",
             description: "Standard road drainage gullies",
-            drawing: "D1",
-            manual: "Drainage Design Manual"
+            drawings: ["D1"],
+            manuals: ["Drainage Design Manual"]
         }
     ]
 };
