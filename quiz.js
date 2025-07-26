@@ -178,6 +178,10 @@ class RoadsideCatalog {
         // Generate image path using item ID
         const imagePath = `assets/${item.id}.png`;
 
+        // Handle canonical and related drawings
+        const canonicalDrawing = item.drawings && item.drawings.length > 0 ? item.drawings[0] : null;
+        const relatedDrawings = item.drawings && item.drawings.length > 1 ? item.drawings.slice(1) : [];
+
         content.innerHTML = `
             <div class="overview-section">
                 <div class="overview-image">
@@ -192,12 +196,22 @@ class RoadsideCatalog {
                     
                     <h4>Reference Documents</h4>
                     <div class="reference-links">
-                        ${item.drawings && item.drawings.length > 0 ? `
+                        ${canonicalDrawing ? `
                         <div class="reference-item">
                             <i class="fas fa-drafting-compass"></i>
-                            <span>Canonical Drawing${item.drawings.length > 1 ? 's' : ''}: </span>
-                            ${item.drawings.map(drawing => `
-                                <a href="${getDrawingUrl(drawing)}" target="_blank" class="drawing-link" title="View HYD Standard Drawing">
+                            <span>Canonical Drawing: </span>
+                            <a href="${getDrawingUrl(canonicalDrawing)}" target="_blank" class="drawing-link primary-drawing" title="View HYD Standard Drawing">
+                                ${canonicalDrawing.toUpperCase()}
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        ` : ''}
+                        ${relatedDrawings.length > 0 ? `
+                        <div class="reference-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Related Drawing${relatedDrawings.length > 1 ? 's' : ''}: </span>
+                            ${relatedDrawings.map(drawing => `
+                                <a href="${getDrawingUrl(drawing)}" target="_blank" class="drawing-link related-drawing" title="View HYD Standard Drawing">
                                     ${drawing.toUpperCase()}
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
@@ -270,12 +284,10 @@ class RoadsideCatalog {
                     
                     <div class="composition-resources">
                         <div class="resource-group">
-                            <h5><i class="fas fa-book"></i> Reference Drawings</h5>
-                            <div class="manual-refs">
-                                ${(composition.drawings || item.drawings || []).map(drawing => 
-                                    `<span class="manual-tag">${drawing}</span>`
-                                ).join('')}
-                            </div>
+                            <h5><i class="fas fa-cubes"></i> Materials</h5>
+                            <ul class="materials-list">
+                                ${(composition.materials || []).map(material => `<li>${material}</li>`).join('')}
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -504,11 +504,47 @@ body {
     gap: 6px;
 }
 
+.overview-text .drawing-link.primary-drawing {
+    background: rgba(30, 60, 114, 0.15);
+    border: 2px solid #1e3c72;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(30, 60, 114, 0.2);
+    position: relative;
+}
+
+.overview-text .drawing-link.primary-drawing::before {
+    content: "⭐";
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+.overview-text .drawing-link.related-drawing {
+    background: rgba(30, 60, 114, 0.05);
+    border: 1px solid rgba(30, 60, 114, 0.3);
+    opacity: 0.85;
+}
+
+.overview-text .drawing-link.related-drawing::before {
+    content: "📋";
+    margin-right: 4px;
+    font-size: 11px;
+}
+
 .overview-text .drawing-link:hover,
 .overview-text .manual-link:hover {
     background: rgba(30, 60, 114, 0.1);
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(30, 60, 114, 0.15);
+}
+
+.overview-text .drawing-link.primary-drawing:hover {
+    background: rgba(30, 60, 114, 0.25);
+    box-shadow: 0 3px 12px rgba(30, 60, 114, 0.3);
+}
+
+.overview-text .drawing-link.related-drawing:hover {
+    background: rgba(30, 60, 114, 0.15);
+    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.2);
 }
 
 .overview-text .manual-link {
@@ -523,6 +559,42 @@ body {
 .overview-text .drawing-link i,
 .overview-text .manual-link i {
     font-size: 12px;
+}
+
+/* Reference Item Styling */
+.overview-text .reference-item {
+    margin: 12px 0;
+    padding: 10px 12px;
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 6px;
+    border-left: 4px solid #1e3c72;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.overview-text .reference-item:first-child {
+    border-left-color: #d4a017; /* Gold for main drawing */
+    background: rgba(212, 160, 23, 0.05);
+}
+
+.overview-text .reference-item:nth-child(2) {
+    border-left-color: #1e3c72; /* Blue for related drawings */
+    background: rgba(30, 60, 114, 0.05);
+}
+
+.overview-text .reference-item:last-child {
+    border-left-color: #28a745; /* Green for manuals */
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.overview-text .reference-item i {
+    color: inherit;
+    margin-right: 8px;
+    width: 16px;
+}
+
+.overview-text .reference-item span {
+    font-weight: 600;
+    margin-right: 8px;
 }
 
 /* Usage Tab */

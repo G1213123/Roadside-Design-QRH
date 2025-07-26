@@ -482,8 +482,7 @@ const furnitureDatabase = {
                     "Granular sub-base material",
                     "HMSMA6/HMFC for base course",
                     "WC20/HMSMA10 for wearing course"
-                ],
-                drawings: ["H1101E"]
+                ]
             }
         },
         {
@@ -491,7 +490,7 @@ const furnitureDatabase = {
             name: "Concrete",
             category: "pavement",
             description: "Rigid pavement design using concrete construction",
-            drawings: ["h1102c"],
+            drawings: ["h1102c", "H1105", "H1106A", "H1107"],
             manuals: ["hyd-gn042a"],
             overview: {
                 description: "Rigid pavement construction using concrete for heavy-duty applications requiring long service life.",
@@ -537,8 +536,7 @@ const furnitureDatabase = {
                     "0.125mm polythene sheeting",
                     "Granular sub-base or lean concrete",
                     "Joint sealant materials"
-                ],
-                drawings: ["H1102C", "H1105", "H1106A", "H1107"]
+                ]
             }
         },
         {
@@ -546,7 +544,7 @@ const furnitureDatabase = {
             name: "Low noise road surfacing",
             category: "pavement",
             description: "Specialized surfacing designed to reduce traffic noise",
-            drawings: ["h1101e"],
+            drawings: ["h1101e", "H1135"],
             manuals: ["hyd-gn011e"],
             overview: {
                 description: "Low noise road surfacing using specialized materials and techniques to reduce traffic noise while maintaining durability and safety.",
@@ -593,8 +591,7 @@ const furnitureDatabase = {
                     "Stone mastic asphalt with noise reduction properties",
                     "HMSMA6/HMFC for base course",
                     "WC20/HMSMA10 for wearing course"
-                ],
-                drawings: ["H1101E", "H1135"]
+                ]
             },
             variants: [
                 {
@@ -663,8 +660,7 @@ const furnitureDatabase = {
                     "Bituminous surfacing material (max aggregate size 10mm)",
                     "150x125x750 precast concrete edging units",
                     "Grade 20/20 concrete for edging foundation"
-                ],
-                drawings: ["H1104C"]
+                ]
             }
         },
         {
@@ -717,8 +713,7 @@ const furnitureDatabase = {
                     "Grade 30/20 concrete",
                     "Class U4 surface finish materials",
                     "Joint sealant (where required)"
-                ],
-                drawings: ["H1104C"]
+                ]
             }
         },
         {
@@ -726,7 +721,7 @@ const furnitureDatabase = {
             name: "Paver Footpath",
             category: "pavement",
             description: "Paver block construction for footpaths",
-            drawings: ["h1103g"],
+            drawings: ["h1103g", "H1131B", "H5609", "H5610", "H5611"],
             manuals: ["hyd-gn044c"],
             overview: {
                 description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces.",
@@ -776,8 +771,7 @@ const furnitureDatabase = {
                     "Sub-base material per specification",
                     "Bituminous road-base (run-in/carriageway) or concrete base (clay/granite pavers)",
                     "Joint sand and stabilizing sealer"
-                ],
-                drawings: ["H1103G", "H1131B", "H5609", "H5610", "H5611"]
+                ]
             }
         },
         {
@@ -785,7 +779,7 @@ const furnitureDatabase = {
             name: "Planter",
             category: "pavement",
             description: "Landscaped planter construction and design",
-            drawings: ["h5146a"],
+            drawings: ["h5146a", "H5705", "H5706", "H5707"],
             overview: {
                 description: "Structural planter construction for landscaping within paved areas, providing controlled growing environments.",
                 specifications: [
@@ -841,8 +835,7 @@ const furnitureDatabase = {
                     "Surrounding paving materials",
                     "Cement sand bedding",
                     "Tree stakes and guy wire systems"
-                ],
-                drawings: ["H5146A", "H5705", "H5706", "H5707"]
+                ]
             }
         },
         {
@@ -899,8 +892,7 @@ const furnitureDatabase = {
                     "Approved joint sealant",
                     "0.125mm polythene sheeting",
                     "Reinforcement materials where specified"
-                ],
-                drawings: ["H1105"]
+                ]
             }
         },
         {
@@ -958,8 +950,7 @@ const furnitureDatabase = {
                     "0.125mm polythene sheeting", 
                     "Mortar materials (1 part cement, 3 parts sand)",
                     "Reinforcement materials where specified"
-                ],
-                drawings: ["H1106A"]
+                ]
             }
         },
         {
@@ -1017,8 +1008,7 @@ const furnitureDatabase = {
                     "0.125mm polythene sheeting",
                     "Reinforcement materials (where specified)",
                     "Joint sealant materials"
-                ],
-                drawings: ["H1107"]
+                ]
             }
         },
         {
@@ -1076,8 +1066,7 @@ const furnitureDatabase = {
                     "Joint sealant materials",
                     "Backing rod (where required)",
                     "Reinforcement materials (where specified)"
-                ],
-                drawings: ["H1107"]
+                ]
             }
         }
     ],
@@ -1109,14 +1098,12 @@ const furnitureDatabase = {
                     "Kerb unit positioning with 10mm joints",
                     "Backfill and compaction behind kerb",
                     "Joint pointing with mortar"
-                ],
-                drawings: ["H1118"]
+                ]
             },
             variants: [
                 {
                     name: "K1 Standard",
-                    use: "General applications",
-                    drawings: ["K1"]
+                    use: "General applications"
                 }
             ]
         },
@@ -1187,14 +1174,12 @@ const furnitureDatabase = {
                     "Base leveling and compaction",
                     "Edge unit installation",
                     "Both sides backfilling"
-                ],
-                drawings: ["E3", "E3-SECTION"]
+                ]
             },
             variants: [
                 {
                     name: "E3 Standard",
-                    use: "General boundary edging",
-                    drawings: ["E3"]
+                    use: "General boundary edging"
                 }
             ]
         },
@@ -1225,14 +1210,12 @@ const furnitureDatabase = {
                     "Base leveling and compaction",
                     "Edge unit installation",
                     "Both sides backfilling"
-                ],
-                drawings: ["E3", "E3-SECTION"]
+                ]
             },
             variants: [
                 {
                     name: "E3 Standard",
-                    use: "General boundary edging",
-                    drawings: ["E3"]
+                    use: "General boundary edging"
                 }
             ]
         },
@@ -1272,19 +1255,16 @@ const furnitureDatabase = {
                     "Backfill and compaction behind kerb",
                     "Joint pointing with matching mortar",
                     "Granite surface cleaning and sealing"
-                ],
-                drawings: ["H4101", "H4101-DETAIL", "H4101-JOINT"]
+                ]
             },
             variants: [
                 {
                     name: "GK1 Standard",
-                    use: "Standard granite kerb",
-                    drawings: ["H4101"]
+                    use: "Standard granite kerb"
                 },
                 {
                     name: "GK1 Polished",
-                    use: "Polished finish version",
-                    drawings: ["H4101-P"]
+                    use: "Polished finish version"
                 }
             ]
         }
@@ -1323,19 +1303,16 @@ const furnitureDatabase = {
                     "Concrete foundation pouring",
                     "Barrier segment placement",
                     "Segment connection with dowel bars"
-                ],
-                drawings: ["H2101D", "H2102B", "H2103", "H2104"]
+                ]
             },
             variants: [
                 {
                     name: "CPB1 Standard",
-                    use: "General roadside protection",
-                    drawings: ["H2101D"]
+                    use: "General roadside protection"
                 },
                 {
                     name: "CPB1-T",
-                    use: "Terminal end treatment", 
-                    drawings: ["H2103"]
+                    use: "Terminal end treatment"
                 }
             ]
         },
@@ -1372,19 +1349,16 @@ const furnitureDatabase = {
                     "End anchor block installation",
                     "Reflective marking application",
                     "Lifting point securing for removal"
-                ],
-                drawings: ["H2254", "H2255", "H2256"]
+                ]
             },
             variants: [
                 {
                     name: "CPB2 Standard",
-                    use: "General removable barrier",
-                    drawings: ["H2254"]
+                    use: "General removable barrier"
                 },
                 {
                     name: "CPB2 End Anchor",
-                    use: "End anchor block system",
-                    drawings: ["H2255"]
+                    use: "End anchor block system"
                 }
             ]
         },
@@ -1420,19 +1394,16 @@ const furnitureDatabase = {
                     "Beam bolting together with splice connections",
                     "End treatment installation",
                     "Reflective marking application"
-                ],
-                drawings: ["H2112C", "H2113A", "H2114B", "H2115A", "H2116B"]
+                ]
             },
             variants: [
                 {
                     name: "CB1 Standard",
-                    use: "General roadside protection",
-                    drawings: ["H2112C"]
+                    use: "General roadside protection"
                 },
                 {
                     name: "CB1 Earth Footing",
-                    use: "Installation with compacted earth footings",
-                    drawings: ["H2113A"]
+                    use: "Installation with compacted earth footings"
                 }
             ]
         },
@@ -1476,13 +1447,11 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "CB2 Standard",
-                    use: "General roadside protection",
-                    drawings: ["CB2"]
+                    use: "General roadside protection"
                 },
                 {
                     name: "CB2-D",
-                    use: "Double-sided barrier",
-                    drawings: ["CB2-D"]
+                    use: "Double-sided barrier"
                 }
             ]
         },
@@ -1526,13 +1495,11 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "CB2 Standard",
-                    use: "General roadside protection",
-                    drawings: ["CB2"]
+                    use: "General roadside protection"
                 },
                 {
                     name: "CB2-D",
-                    use: "Double-sided barrier",
-                    drawings: ["CB2-D"]
+                    use: "Double-sided barrier"
                 }
             ]
         },
@@ -1576,13 +1543,11 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "CB2 Standard",
-                    use: "General roadside protection",
-                    drawings: ["CB2"]
+                    use: "General roadside protection"
                 },
                 {
                     name: "CB2-D",
-                    use: "Double-sided barrier",
-                    drawings: ["CB2-D"]
+                    use: "Double-sided barrier"
                 }
             ]
         },
@@ -1628,13 +1593,11 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "SP1 Standard",
-                    use: "General bridge parapet",
-                    drawings: ["SSD164"]
+                    use: "General bridge parapet"
                 },
                 {
                     name: "SP1 Extended",
-                    use: "Extended height version",
-                    drawings: ["SSD165"]
+                    use: "Extended height version"
                 }
             ]
         },
@@ -1680,18 +1643,15 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "CRCP1 Standard",
-                    use: "Standard combined barrier",
-                    drawings: ["SSD161"]
+                    use: "Standard combined barrier"
                 },
                 {
                     name: "CRCP1 Enhanced",
-                    use: "Enhanced aesthetic version",
-                    drawings: ["SSD162"]
+                    use: "Enhanced aesthetic version"
                 },
                 {
                     name: "CRCP1 Terminal",
-                    use: "Terminal end treatment",
-                    drawings: ["SSD163"]
+                    use: "Terminal end treatment"
                 }
             ]
         },
@@ -1739,13 +1699,11 @@ const furnitureDatabase = {
             variants: [
                 {
                     name: "L4CP Standard",
-                    use: "Standard L4 concrete parapet",
-                    drawings: ["Figure 11.3 HyD SDM"]
+                    use: "Standard L4 concrete parapet"
                 },
                 {
                     name: "L4CP Modified",
-                    use: "Site-specific modifications",
-                    drawings: ["Figure 11.3 HyD SDM (Modified)"]
+                    use: "Site-specific modifications"
                 }
             ]
         },
