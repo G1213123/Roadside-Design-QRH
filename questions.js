@@ -1075,196 +1075,643 @@ const furnitureDatabase = {
             id: "k1",
             name: "K1 - Standard Kerb",
             category: "kerbs",
-            description: "Standard concrete kerb for carriageway to footpath transitions",
+            description: "Type K1 precast concrete kerb for urban areas with adjacent footways",
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing K1"],
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K1 precast concrete kerb designed for urban areas where a footway is adjacent to the carriageway. Provides standard edge definition and protection between carriageway and footway with 125mm height profile.",
+                specifications: [
+                    "Height: 125mm above carriageway level", 
+                    "Length: 1000mm nominal kerb unit, 750mm edging unit",
+                    "Material: Grade 30/20 concrete",
+                    "Profile: Standard K1 section per H1118",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
             usage: {
                 applications: [
-                    "Carriageway to footpath transitions",
-                    "Standard urban road edges", 
-                    "Car park perimeters",
-                    "General kerbing applications"
+                    "Urban area carriageway edges",
+                    "Footway to carriageway transitions", 
+                    "Standard kerbing in built-up areas",
+                    "Areas with pedestrian activity",
+                    "Shopping and commercial precincts"
                 ],
                 conditions: [
-                    "Normal traffic conditions",
-                    "Standard drainage requirements",
-                    "No heavy vehicle overrun expected"
+                    "Urban areas with adjacent footways",
+                    "Areas requiring pedestrian protection",
+                    "Standard traffic loading conditions",
+                    "Where clear edge definition needed"
                 ]
             },
             composition: {
                 layers: [
-                    "Foundation excavation to required depth",
-                    "Concrete foundation (ST2 mix) laying",
-                    "Kerb unit positioning with 10mm joints",
+                    "Excavation and subgrade preparation",
+                    "Concrete foundation bedding (Grade 30/20)",
+                    "K1 kerb unit positioning with 1000mm nominal length",
+                    "10mm joint spacing between units",
                     "Backfill and compaction behind kerb",
-                    "Joint pointing with mortar"
+                    "Joint pointing with appropriate mortar",
+                    "Surface finishing and cleaning"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete kerb units",
+                    "Concrete foundation bedding material",
+                    "Joint pointing mortar",
+                    "Backfill material for support"
                 ]
             },
-            variants: [
-                {
-                    name: "K1 Standard",
-                    use: "General applications"
-                }
-            ]
+            installation: {
+                steps: [
+                    "Mark kerb line alignment and levels",
+                    "Excavate foundation to required depth and width",
+                    "Place and compact concrete foundation bedding",
+                    "Position K1 kerb units with 10mm joints",
+                    "Check alignment and levels throughout",
+                    "Backfill and compact behind kerb line",
+                    "Point joints with mortar finish"
+                ],
+                manuals: ["H1118", "TPDM Volume 2 Chapter 3.4"],
+                tools: ["Excavation equipment", "Level and alignment tools", "Compaction equipment"],
+                materials: ["K1 precast concrete kerbs", "Foundation concrete", "Pointing mortar", "Backfill material"]
+            }
         },
         {
-            id: "k2",
+            id: "k2", 
             name: "K2 - Carriageway to Verge Kerb",
             category: "kerbs",
-            description: "Kerb for carriageway to grass verge transitions",
+            description: "Type K2 precast concrete kerb for rural areas without adjacent footways",
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing K2"],
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K2 precast concrete kerb designed for rural areas and high speed roads where there is no adjoining footway. Features lower profile than K1 for improved vehicle safety on high-speed roads.",
+                specifications: [
+                    "Profile: K2 section per H1118 (lower than K1)",
+                    "Length: 1000mm nominal kerb unit", 
+                    "Material: Grade 30/20 concrete",
+                    "Application: Rural areas without footways",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
+            usage: {
+                applications: [
+                    "Rural road edges",
+                    "High speed roads without footways",
+                    "Carriageway to grass verge transitions",
+                    "Areas where lower kerb profile preferred",
+                    "Roads with limited pedestrian access"
+                ],
+                conditions: [
+                    "Rural areas without adjacent footways",
+                    "High speed road environments", 
+                    "Where reduced kerb height is appropriate",
+                    "Areas with grass verges or landscaping"
+                ]
+            },
+            composition: {
+                layers: [
+                    "Excavation and subgrade preparation",
+                    "Concrete foundation bedding (Grade 30/20)",
+                    "K2 kerb unit positioning with 1000mm nominal length",
+                    "10mm joint spacing between units",
+                    "Backfill and compaction behind kerb",
+                    "Joint pointing with appropriate mortar",
+                    "Verge preparation and seeding/planting"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete K2 kerb units",
+                    "Concrete foundation bedding material", 
+                    "Joint pointing mortar",
+                    "Topsoil and seed for verge areas"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Mark kerb line alignment for rural conditions",
+                    "Excavate foundation allowing for verge levels",
+                    "Place concrete foundation bedding",
+                    "Position K2 kerb units with correct profile",
+                    "Maintain consistent low profile throughout",
+                    "Backfill and prepare verge areas",
+                    "Complete joint pointing and verge establishment"
+                ],
+                manuals: ["H1118", "TPDM Volume 2 Chapter 3.4"],
+                tools: ["Rural construction equipment", "Level control tools", "Verge preparation tools"],
+                materials: ["K2 precast concrete kerbs", "Foundation materials", "Verge establishment materials"]
+            }
         },
         {
             id: "k3",
-            name: "K3 - Bridge Deck Kerb",
+            name: "K3 - Bridge Deck Kerb", 
             category: "kerbs",
-            description: "Specialized kerb for bridge deck applications",
+            description: "Type K3 precast concrete kerb specifically for bridge deck applications",
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing K3"],
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K3 precast concrete kerb designed specifically for use on bridge decks. Features specialized profile and mounting details suitable for bridge structure requirements and loading conditions.",
+                specifications: [
+                    "Profile: K3 section per H1118 (bridge deck specific)",
+                    "Length: 1000mm nominal kerb unit",
+                    "Material: Grade 30/20 concrete", 
+                    "Application: Bridge decks only",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
+            usage: {
+                applications: [
+                    "Bridge deck edge definition",
+                    "Elevated structure kerbing",
+                    "Viaduct and flyover edges", 
+                    "Bridge approach transitions",
+                    "Specialized structural applications"
+                ],
+                conditions: [
+                    "Bridge deck installations only",
+                    "Structural loading requirements",
+                    "Elevated construction conditions",
+                    "Integration with bridge barriers/parapets"
+                ]
+            },
+            composition: {
+                layers: [
+                    "Bridge deck surface preparation",
+                    "Specialized foundation bedding for bridge deck",
+                    "K3 kerb unit positioning for structural loads",
+                    "10mm joint spacing with structural considerations",
+                    "Backfill appropriate for bridge construction",
+                    "Joint sealing for bridge environment",
+                    "Integration with bridge drainage systems"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete K3 kerb units",
+                    "Bridge-grade foundation bedding material",
+                    "Structural joint sealant",
+                    "Bridge-compatible backfill materials"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Coordinate with bridge deck construction",
+                    "Prepare bridge deck surface for kerb installation",
+                    "Install specialized foundation for structural loads",
+                    "Position K3 kerbs with bridge deck integration",
+                    "Ensure structural connectivity and load transfer",
+                    "Complete joint sealing for bridge environment",
+                    "Integrate with bridge drainage and safety systems"
+                ],
+                manuals: ["H1118", "TPDM Volume 2 Chapter 3.4", "Bridge Construction Standards"],
+                tools: ["Bridge construction equipment", "Structural alignment tools", "Specialized lifting equipment"],
+                materials: ["K3 bridge deck kerbs", "Structural bedding materials", "Bridge joint sealants"]
+            }
         },
         {
             id: "k5-9",
             name: "K5-K9 - Vehicular Drop Kerbs",
             category: "kerbs",
-            description: "Drop kerb series for vehicular access",
+            description: "Drop kerb series (K5-K9) for vehicular access across footways",
             drawings: ["h1119"],
-            manuals: ["Highway Standard Drawings K5 to K9"],
+            manuals: ["TPDM Volume 2 Chapter 3.6"],
+            overview: {
+                description: "Series of precast concrete drop kerbs (K5, K6, K7, K8, K9) designed for vehicular access across footways. Provides smooth transition from carriageway level to footway level for vehicle crossings and run-ins.",
+                specifications: [
+                    "Series: K5 (left hand), K6 (left hand), K7 (centre), K8 (right hand), K9 (right hand)",
+                    "Material: Grade 30/20 concrete",
+                    "Profile: Gradual slope transition for vehicle access",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Application: Double drop crossing kerb arrangements"
+                ]
+            },
+            usage: {
+                applications: [
+                    "Vehicle access points across footways",
+                    "Private driveway entrances",
+                    "Commercial vehicle access",
+                    "Car park entrances",
+                    "Run-in construction per TPDM Chapter 3.6"
+                ],
+                conditions: [
+                    "Vehicular access requirements across footways",
+                    "Areas requiring smooth vehicle transition",
+                    "Compliance with run-in location restrictions",
+                    "Minimum 7.3m width for container vehicle access",
+                    "Visibility requirements per TPDM Table 3.6.3.1"
+                ]
+            },
+            composition: {
+                layers: [
+                    "Footway surface preparation and marking",
+                    "Excavation for drop kerb installation",
+                    "Foundation bedding for vehicle loading",
+                    "Sequential installation: K1-K5-K6-K7-K7-K8-K9-K1",
+                    "Joint sealing between drop kerb units",
+                    "Footway surface reinstatement around kerbs",
+                    "Tactile paving installation where required"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete drop kerbs (K5-K9)",
+                    "Reinforced foundation bedding for vehicle loads",
+                    "Flexible joint sealant",
+                    "Footway reinstatement materials",
+                    "Tactile paving units where applicable"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Check run-in location compliance per TPDM 3.6.2",
+                    "Verify visibility requirements per Table 3.6.3.1",
+                    "Mark out drop kerb sequence and footway crossing",
+                    "Excavate and prepare reinforced foundation",
+                    "Install drop kerbs in correct sequence (K5-K6-K7-K8-K9)",
+                    "Ensure smooth vehicle transition profile",
+                    "Complete footway reinstatement and tactile paving",
+                    "Apply appropriate road markings and signage"
+                ],
+                manuals: ["H1119", "TPDM Volume 2 Chapter 3.6", "TPDM Volume 3 Traffic Signs"],
+                tools: ["Vehicle access construction equipment", "Profile checking tools", "Footway construction tools"],
+                materials: ["K5-K9 drop kerb units", "Vehicle-grade foundation materials", "Tactile paving materials"]
+            },
+            variants: [
+                {
+                    name: "Standard Vehicle Access",
+                    use: "Normal car and light commercial vehicle access, minimum width as required",
+                    manuals: ["TPDM V2C3.6.3.1"]
+                },
+                {
+                    name: "Container Vehicle Access", 
+                    use: "Heavy goods and container vehicle access, minimum 7.3m width",
+                    manuals: ["TPDM V2C3.6.3.1"]
+                },
+                {
+                    name: "Filling Station Access",
+                    use: "Specialized wide access for petrol stations with underground services",
+                    manuals: ["H1119 Diagram 3.6.3.3"]
+                }
+            ]
         },
         {
             id: "k10-14",
-            name: "K10-K14 - Pedestrian Drop Kerbs",
+            name: "K10-K14 - Pedestrian Drop Kerbs", 
             category: "kerbs",
-            description: "Drop kerb series for pedestrian crossings",
+            description: "Drop kerb series (K10-K14) for pedestrian crossings and accessibility",
             drawings: ["h1134"],
-            manuals: ["Highway Standard Drawings K10 to K14"],
+            manuals: ["TPDM Volume 2 Chapter 3.7"],
+            overview: {
+                description: "Series of precast concrete drop kerbs (K10, K11, K12, K13, K14) designed for pedestrian crossings and accessibility compliance. Provides level access for wheelchairs, pushchairs, and mobility aids.",
+                specifications: [
+                    "Series: K10, K11, K12, K13, K14 for pedestrian crossings",
+                    "Material: Grade 30/20 concrete",
+                    "Profile: Gradual slope for accessibility compliance",
+                    "Gradient: Maximum 1:12 (8.33%) for accessibility",
+                    "Width: Full footway width coverage typically required",
+                    "Compliance: BS 7263 Part 1 and accessibility standards"
+                ]
+            },
+            usage: {
+                applications: [
+                    "Designated pedestrian crossings",
+                    "Zebra crossing approaches",
+                    "Pelican and puffin crossing points", 
+                    "Accessibility compliance at junctions",
+                    "Wheelchair and mobility aid access",
+                    "Pushchair and trolley access points"
+                ],
+                conditions: [
+                    "All designated pedestrian crossing points",
+                    "Accessibility compliance requirements",
+                    "Areas with wheelchair and mobility aid users",
+                    "Integration with tactile paving systems",
+                    "Compliance with footway ramping standards"
+                ]
+            },
+            composition: {
+                layers: [
+                    "Existing kerb and footway removal at crossing point",
+                    "Subgrade preparation for accessibility gradient",
+                    "Reinforced foundation for pedestrian and vehicle loads",
+                    "Sequential drop kerb installation (K10-K11-K12-K13-K14)",
+                    "Precise level and gradient control for accessibility",
+                    "Tactile paving installation per accessibility standards",
+                    "Integration with crossing infrastructure and markings"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete drop kerbs (K10-K14)",
+                    "Accessibility-compliant foundation materials",
+                    "Tactile paving units (blister and corduroy)",
+                    "Joint sealant and pointing materials",
+                    "Footway surface materials for integration"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Survey crossing point for accessibility compliance",
+                    "Calculate gradient requirements (max 1:12)",
+                    "Remove existing kerb and prepare crossing area",
+                    "Install reinforced foundation to accessibility levels",
+                    "Position drop kerbs (K10-K14) to achieve required gradient",
+                    "Install tactile paving in accordance with standards",
+                    "Complete integration with road markings and signage",
+                    "Test accessibility compliance and smooth operation"
+                ],
+                manuals: ["H1134", "TPDM Volume 2 Chapter 3.7", "Accessibility Design Standards"],
+                tools: ["Accessibility gradient measuring tools", "Tactile paving installation equipment", "Level control instruments"],
+                materials: ["K10-K14 pedestrian drop kerbs", "Tactile paving systems", "Accessibility-compliant materials"]
+            },
+            variants: [
+                {
+                    name: "Standard Pedestrian Crossing",
+                    use: "Normal pedestrian crossings with standard width requirements",
+                    manuals: ["TPDM V2C3.7"]
+                },
+                {
+                    name: "Wide Pedestrian Crossing",
+                    use: "Wider crossings for high pedestrian volumes or multiple lanes",
+                    manuals: ["H1134"]
+                },
+                {
+                    name: "Controlled Crossing Integration",
+                    use: "Integration with traffic signals, pelican/puffin crossings",
+                    manuals: ["TPDM Volume 4 Road Traffic Signals"]
+                }
+            ]
         },
         {
             id: "e1",
             name: "E1 - Cycle Track Edge",
-            category: "kerbs",
-            description: "Edge detail for cycle track to footpath",
+            category: "kerbs", 
+            description: "Type E1 edging for cycle track to footpath separation",
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing E1"],
+            manuals: ["TPDM Volume 2 Chapter 3.8"],
+            overview: {
+                description: "Type E1 precast concrete edging designed for separating cycle tracks from adjacent footways. Provides low-level delineation without creating hazard to cyclists while maintaining clear boundary definition.",
+                specifications: [
+                    "Profile: E1 low-profile edging section per H1118",
+                    "Length: 750mm nominal edging unit",
+                    "Material: Grade 30/20 concrete",
+                    "Height: Low profile suitable for cycle track edge",
+                    "Application: Cycle track to footway separation",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
+                ]
+            },
+            usage: {
+                applications: [
+                    "Cycle track edge definition",
+                    "Separation between cycle tracks and footways",
+                    "Guidance for cyclists and pedestrians",
+                    "Low-level boundary marking",
+                    "Cycle infrastructure delineation"
+                ],
+                conditions: [
+                    "Cycle track installations per TPDM Chapter 3.8",
+                    "Areas requiring cycle/pedestrian separation",
+                    "Where low-profile edging is appropriate",
+                    "Integration with cycle track surfacing"
+                ]
+            },
+            composition: {
+                layers: [
+                    "Cycle track and footway level establishment",
+                    "Edge line marking and excavation",
+                    "Shallow foundation bedding installation",
+                    "E1 edging unit positioning with 750mm lengths",
+                    "Level adjustment for smooth cycle track edge",
+                    "Joint pointing and sealing",
+                    "Surface integration with cycle track and footway"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete E1 edging units",
+                    "Lightweight foundation bedding material",
+                    "Fine joint pointing mortar",
+                    "Cycle track surface integration materials"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Plan cycle track layout per TPDM Chapter 3.8",
+                    "Mark edge line between cycle track and footway",
+                    "Excavate shallow foundation for edging",
+                    "Install E1 edging units with smooth cycle-side profile",
+                    "Ensure no sharp edges or obstacles to cyclists",
+                    "Complete joint pointing and level adjustment",
+                    "Integrate with cycle track surfacing and markings"
+                ],
+                manuals: ["H1118", "TPDM Volume 2 Chapter 3.8"],
+                tools: ["Cycle track construction equipment", "Low-profile installation tools", "Level control equipment"],
+                materials: ["E1 cycle track edging units", "Cycle-track compatible bedding", "Integration materials"]
+            }
         },
         {
             id: "e2",
             name: "E2 - Planter Kerb",
             category: "kerbs",
-            description: "Kerb for footpath to planter",
+            description: "Type E2 edging for footway to planter separation",
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing E2"],
+            manuals: ["Landscape Design Standards"],
+            overview: {
+                description: "Type E2 precast concrete edging designed for separating footways from planted areas. Provides defined boundary for landscaping while allowing surface water drainage into planted areas.",
+                specifications: [
+                    "Profile: E2 edging section per H1118",
+                    "Length: 750mm nominal edging unit",
+                    "Material: Grade 30/20 concrete", 
+                    "Height: Low profile for planter boundary",
+                    "Application: Footway to planted area separation",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
+                ]
+            },
             usage: {
                 applications: [
-                    "Footpath to planter separation",
-                    "Property boundary definition",
-                    "Landscape edge control",
-                    "Low-level delineation"
+                    "Footway to planter separation",
+                    "Landscaped area boundary definition",
+                    "Tree pit and garden bed edging",
+                    "Decorative landscape integration",
+                    "Surface water direction to planted areas"
                 ],
                 conditions: [
-                    "Pedestrian areas only",
-                    "No vehicle access",
-                    "Decorative applications"
+                    "Landscaped areas adjacent to footways",
+                    "Areas requiring defined planting boundaries",
+                    "Decorative and amenity applications",
+                    "Where drainage into planted areas is beneficial"
                 ]
             },
             composition: {
                 layers: [
-                    "Edge alignment marking",
-                    "Shallow foundation excavation",
-                    "Base leveling and compaction",
-                    "Edge unit installation",
-                    "Both sides backfilling"
+                    "Footway and planter level coordination",
+                    "Edge line marking between footway and planter",
+                    "Shallow foundation bedding with drainage consideration",
+                    "E2 edging unit installation with 750mm lengths",
+                    "Level setting for surface water flow to planters",
+                    "Joint pointing and weatherproofing", 
+                    "Integration with footway paving and planting"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete E2 edging units",
+                    "Free-draining foundation bedding material",
+                    "Weather-resistant joint pointing compound",
+                    "Landscape integration materials"
                 ]
             },
-            variants: [
-                {
-                    name: "E3 Standard",
-                    use: "General boundary edging"
-                }
-            ]
+            installation: {
+                steps: [
+                    "Coordinate footway and landscape design",
+                    "Mark boundaries between paved and planted areas",
+                    "Excavate foundation allowing for drainage",
+                    "Install E2 edging with appropriate levels for drainage",
+                    "Ensure smooth integration with footway paving",
+                    "Complete joint pointing and sealing",
+                    "Coordinate with planting and irrigation installation"
+                ],
+                manuals: ["H1118", "Landscape Design Standards"],
+                tools: ["Landscape construction equipment", "Drainage level tools", "Edging installation tools"],
+                materials: ["E2 planter edging units", "Drainage-compatible bedding", "Landscape coordination materials"]
+            }
         },
         {
             id: "e3",
             name: "E3 - Boundary Kerb",
             category: "kerbs",
-            description: "Kerb for footpath to boundary",
+            description: "Type E3 edging for footway to property boundary separation", 
             drawings: ["h1118"],
-            manuals: ["Highway Standard Drawing E3"],
+            manuals: ["Property Boundary Standards"],
+            overview: {
+                description: "Type E3 precast concrete edging designed for defining boundaries between public footways and private property. Provides clear legal and physical boundary definition.",
+                specifications: [
+                    "Profile: E3 boundary edging section per H1118",
+                    "Length: 750mm nominal edging unit",
+                    "Material: Grade 30/20 concrete",
+                    "Height: Appropriate for boundary demarcation",
+                    "Application: Footway to property boundary definition",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
+                ]
+            },
             usage: {
                 applications: [
-                    "Footpath to planter separation",
-                    "Property boundary definition",
-                    "Landscape edge control",
-                    "Low-level delineation"
+                    "Public footway to private property boundaries",
+                    "Legal boundary demarcation", 
+                    "Property line definition",
+                    "Maintenance responsibility boundaries",
+                    "Clear separation of public and private areas"
                 ],
                 conditions: [
-                    "Pedestrian areas only",
-                    "No vehicle access",
-                    "Decorative applications"
+                    "Property boundary requirements",
+                    "Legal demarcation needs",
+                    "Areas requiring clear public/private separation",
+                    "Maintenance boundary definition"
                 ]
-            },
+            },  
             composition: {
                 layers: [
-                    "Edge alignment marking",
-                    "Shallow foundation excavation",
-                    "Base leveling and compaction",
-                    "Edge unit installation",
-                    "Both sides backfilling"
+                    "Boundary survey and legal verification",
+                    "Property line marking and setting out",
+                    "Foundation excavation along property boundary",
+                    "E3 edging unit installation with 750mm lengths",
+                    "Precise alignment to legal property boundaries",
+                    "Joint pointing and boundary marking",
+                    "Integration with footway and property surfaces"
+                ],
+                materials: [
+                    "Grade 30/20 precast concrete E3 boundary edging",
+                    "Precise foundation bedding materials",
+                    "Permanent joint pointing compounds",
+                    "Boundary marker integration materials"
                 ]
             },
-            variants: [
-                {
-                    name: "E3 Standard",
-                    use: "General boundary edging"
-                }
-            ]
+            installation: {
+                steps: [
+                    "Verify legal property boundaries with survey",
+                    "Mark precise boundary line positions",
+                    "Excavate foundation along exact property line",
+                    "Install E3 edging units to legal boundary alignment",
+                    "Ensure precise positioning and levels",
+                    "Complete joint pointing and boundary verification",
+                    "Coordinate with property owners and legal requirements"
+                ],
+                manuals: ["H1118", "Property Boundary Standards", "Legal Survey Requirements"],
+                tools: ["Survey equipment", "Boundary marking tools", "Precision installation equipment"],
+                materials: ["E3 boundary edging units", "Survey-grade bedding materials", "Legal boundary markers"]
+            }
         },
         {
             id: "gk1",
             name: "Granite Kerb",
             category: "kerbs",
-            description: "Natural granite kerb for premium applications",
+            description: "Natural granite kerb for premium and heritage applications",
             drawings: ["h4101"],
-            manuals: ["h4101"],
+            manuals: ["Heritage and Premium Development Standards"],
             overview: {
-                description: "High-quality natural granite kerb providing durable and aesthetic edge definition for premium applications.",
-                specifications: ["Height: 125mm", "Width: 150mm", "Material: Natural granite", "Profile: Dressed finish", "Color: Natural grey granite"],
-                image: "assets/gk1-profile.png"
+                description: "Natural granite kerb providing durable and aesthetic edge definition for premium developments and heritage areas. Features chisel-dressed finish and variable height options for different applications.",
+                specifications: [
+                    "Material: Natural granite stone",
+                    "Height: 150-300mm as required (dimension h)",
+                    "Length: Minimum 600mm per kerb unit",
+                    "Finish: Chisel-dressed to 140mm depth on front face, 75mm on back face",
+                    "Top face: Full width chisel-dressed finish",
+                    "Corner treatment: May be omitted where specified"
+                ]
             },
             usage: {
                 applications: [
                     "Premium urban developments",
-                    "Historic area conservation",
-                    "Landscape enhancement projects",
-                    "High-end commercial areas",
-                    "Ceremonial routes"
+                    "Heritage area conservation projects",
+                    "High-end commercial districts",
+                    "Ceremonial routes and public spaces",
+                    "Areas requiring long-term durability and aesthetics"
                 ],
                 conditions: [
-                    "Areas requiring premium finish",
-                    "Long-term durability requirements",
-                    "Aesthetic enhancement zones",
-                    "Heritage conservation areas"
+                    "Premium finish specifications",
+                    "Heritage conservation requirements",
+                    "Long-term durability priorities", 
+                    "Aesthetic enhancement objectives",
+                    "Low maintenance requirements"
                 ]
             },
             composition: {
                 layers: [
-                    "Foundation excavation to required depth",
-                    "Concrete foundation (ST2 mix) laying",
-                    "Granite kerb unit positioning with 10mm joints",
-                    "Alignment and levels careful checking",
-                    "Backfill and compaction behind kerb",
-                    "Joint pointing with matching mortar",
-                    "Granite surface cleaning and sealing"
+                    "Enhanced foundation excavation for granite weight",
+                    "Reinforced concrete foundation bedding",
+                    "Granite kerb unit positioning with minimum 600mm lengths",
+                    "Precise alignment and level control",
+                    "Enhanced backfill and support systems",
+                    "Natural stone joint pointing with compatible materials",
+                    "Surface protection and sealing treatment"
+                ],
+                materials: [
+                    "Natural granite kerb units with chisel-dressed finish",
+                    "High-strength concrete foundation materials",
+                    "Natural stone compatible joint pointing compound",
+                    "Enhanced backfill materials for granite support",
+                    "Stone sealing and protection treatments"
                 ]
+            },
+            installation: {
+                steps: [
+                    "Plan granite kerb layout with aesthetic considerations",
+                    "Excavate reinforced foundation for granite weight",
+                    "Install high-strength foundation bedding",
+                    "Position granite units with minimum 600mm lengths",
+                    "Achieve precise alignment and consistent levels",
+                    "Complete natural stone joint pointing",
+                    "Apply protective sealing and finishing treatments"
+                ],
+                manuals: ["H4101", "Natural Stone Construction Standards"],
+                tools: ["Heavy lifting equipment for granite", "Stone cutting and finishing tools", "Precision alignment equipment"],
+                materials: ["Natural granite kerb units", "Stone-grade foundation materials", "Natural stone sealants"]
             },
             variants: [
                 {
-                    name: "GK1 Standard",
-                    use: "Standard granite kerb"
+                    name: "Standard Granite Kerb",
+                    use: "Height 150-300mm, straight sections with chisel-dressed finish",
+                    manuals: ["H4101"]
                 },
                 {
-                    name: "GK1 Polished",
-                    use: "Polished finish version"
+                    name: "Granite Quadrant Kerb", 
+                    use: "Curved sections with radius 200-300mm as required",
+                    manuals: ["H4101"]
+                },
+                {
+                    name: "Heritage Conservation Granite",
+                    use: "Matching existing heritage stonework with specialized finish",
+                    manuals: ["Heritage Conservation Guidelines"]
                 }
             ]
         }
@@ -3173,8 +3620,11 @@ function getManualUrl(manualCode) {
         // Structures Design Manual format: hyd-sdm
         return `https://www.hyd.gov.hk/en/technical_references/technical_document/structures_design_manual_2013/doc/SDM2013.pdf`;
     } else if (manualCode.toLowerCase().startsWith('tpdm')){
-        const cleanCode = manualCode.match(/(?<=Volume )(.*?)(?= Chapter)/g)[0];
-        return `https://www.td.gov.hk/filemanager/en/content_5055/V${cleanCode}_12_2024.pdf`;
+        let cleanCode = manualCode.match(/(?<=Volume )(.*?)(?= Chapter)/g);
+        if (!cleanCode) {
+            cleanCode = manualCode.match(/(?<=V)(.*?)(?=C)/g);
+        }
+        return `https://www.td.gov.hk/filemanager/en/content_5055/V${cleanCode[0]}_12_2024.pdf`;
     }
     
     // Default fallback for other manual types
