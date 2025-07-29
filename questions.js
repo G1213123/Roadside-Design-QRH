@@ -20,7 +20,7 @@ const furnitureDatabase = {
                 ],
                 applications: [
                     "Horizontal curve design",
-                    "Design speed determination", 
+                    "Design speed determination",
                     "Sight distance verification",
                     "Route alignment planning",
                     "Junction approach design",
@@ -28,7 +28,7 @@ const furnitureDatabase = {
                 ],
                 conditions: [
                     "New road construction",
-                    "Road improvement projects", 
+                    "Road improvement projects",
                     "Geometric upgrades",
                     "Safety enhancement schemes",
                     "Areas with topographical constraints"
@@ -38,7 +38,7 @@ const furnitureDatabase = {
                 steps: [
                     "Determine appropriate design speed for road type",
                     "Calculate minimum horizontal curve radii",
-                    "Check sight distance requirements", 
+                    "Check sight distance requirements",
                     "Design appropriate superelevation",
                     "Verify junction and access visibility",
                     "Consider single vs dual carriageway requirements"
@@ -51,7 +51,7 @@ const furnitureDatabase = {
         {
             id: "rg2",
             name: "Profile",
-            category: "road", 
+            category: "road",
             description: "Vertical profile design including gradients, vertical curves, and climbing lanes",
             manuals: ["TPDM Volume 2 Chapter 3.3"],
             usage: {
@@ -60,7 +60,7 @@ const furnitureDatabase = {
                     "Maximum gradients: 4% desirable, 8% absolute for trunk roads",
                     "Minimum drainage gradient: 0.67% for effective drainage",
                     "Crest curve K-values: 6.5-182 based on design speed",
-                    "Sag curve K-values: 9-37 based on design speed", 
+                    "Sag curve K-values: 9-37 based on design speed",
                     "Climbing lane width: 10m total (3.2m + 3.4m + 3.4m)",
                     "Dual carriageway climbing lanes: based on traffic flow vs gradient"
                 ],
@@ -221,7 +221,7 @@ const furnitureDatabase = {
                 specifications: [
                     "Urban single carriageway: 7.3-13.5m (2-4 lanes), refer to Table 3.4.2.1",
                     "Urban dual carriageway: 6.75-14.6m per direction",
-                    "Rural single carriageway: 6-14.5m (2-4 lanes)", 
+                    "Rural single carriageway: 6-14.5m (2-4 lanes)",
                     "Rural dual carriageway: 7.3-14.6m per direction",
                     "Service roads: 4.5-7.3m based on vehicle types",
                     "Curve widening: additional 0.3-1.9m for radii <400m, refer to Table 3.4.4.1",
@@ -229,7 +229,7 @@ const furnitureDatabase = {
                 ],
                 applications: [
                     "New road design standards",
-                    "Road improvement schemes", 
+                    "Road improvement schemes",
                     "Traffic capacity enhancement",
                     "Curve widening design",
                     "Service road provision",
@@ -392,7 +392,7 @@ const furnitureDatabase = {
                     manuals: ["TPDM V2C3.5.1.1 Table 3.5.1.1"]
                 },
                 {
-                    name: "Sign Gantry Clearance", 
+                    name: "Sign Gantry Clearance",
                     use: "Overhead sign structures: 5.5m new, 5.4m maintained",
                     manuals: ["TPDM V2C3.5.1.1 Table 3.5.1.1"]
                 },
@@ -668,20 +668,23 @@ const furnitureDatabase = {
             category: "pavement",
             description: "Flexible pavement design using bituminous materials",
             drawings: ["h1101e"],
-            manuals: ["hyd-gn042a"],
-            usage: {
-                description: "Flexible pavement construction using bituminous materials for various traffic loading conditions. Provides cost-effective and durable road surface suitable for different traffic volumes and loading requirements.",
+            manuals: ["hyd-gn042a", "hyd-gn014d"],
+            overview: {
+                description: "Flexible pavement construction using bituminous materials for various traffic loading conditions.",
                 specifications: [
-                    "Wearing course: 40mm thickness using WC20 or HMSMA10 materials",
-                    "Base course: 30mm thickness using HMSMA6 or HMFC materials", 
-                    "Road base: 65mm bituminous layer",
-                    "Sub-base: Granular material with thickness designed according to RD/GN/042",
-                    "Total pavement thickness: minimum 205mm for low-volume roads, minimum 280mm for other roads, minimum 350mm for Expressway/Trunk/Primary roads",
-                    "Maximum thickness: 395mm for WC20/HMSMA10 wearing course, 405mm for HMSMA6/HMFC base course"
+                    "Wearing course: 40mm (WC20/HMSMA10)",
+                    "Base course: 30mm (HMSMA6/HMFC)",
+                    "Road base: 65mm bituminous",
+                    "Sub-base: Granular material (thickness designed to RD/GN/042)",
+                    "Total thickness: min. 205mm (low-volume roads), min. 280mm (other roads), min. 350mm (Expressway/Trunk/Primary)",
+                    "Max thickness: 395mm (WC20/HMSMA10), 405mm (HMSMA6/HMFC)"
                 ],
+                image: "assets/pv1-profile.png"
+            },
+            usage: {
                 applications: [
-                    "Main carriageways and arterial roads",
-                    "Secondary roads and residential streets", 
+                    "Main carriageways",
+                    "Secondary roads",
                     "Expressways and trunk roads",
                     "Primary distributors and collector roads",
                     "Low-volume rural roads"
@@ -710,17 +713,28 @@ const furnitureDatabase = {
                     "HMSMA6 or HMFC materials for base course construction",
                     "WC20 or HMSMA10 materials for wearing course application"
                 ]
-            }
+            },
+            variants: [
+                {
+                    name: "Bituminous Pavement on Concrete Bridge Deck",
+                    use: "Bituminous Pavement constitution layers need special attention when laid on concrete deck surface",
+                    manuals: ["hyd-gn033"]
+                }, {
+                    name: "Anti-skid surface dressing",
+                    use: "A thin epoxy based anti-skid dressing material laid on carriageway for improving the skid resistance of roads",
+                    manuals: ["hyd-gn039c"]
+                },
+            ]
         },
         {
-            id: "pv2", 
+            id: "pv2",
             name: "Concrete",
             category: "pavement",
             description: "Rigid pavement design using concrete construction",
             drawings: ["h1102c", "H1105", "H1106A", "H1107"],
-            manuals: ["hyd-gn042a"],
-            usage: {
-                description: "Rigid pavement construction using reinforced concrete for heavy-duty applications requiring long service life and high structural integrity. Designed to withstand very heavy traffic loading with minimal deflection and long-term durability.",
+            manuals: ["hyd-gn042a", "hyd-gn014d"],
+            overview: {
+                description: "Rigid pavement construction using concrete for heavy-duty applications requiring long service life.",
                 specifications: [
                     "Concrete slab: Grade 40/20 concrete construction",
                     "Reinforcement: B503 mesh where specified, minimum 188mm²/m reinforcement density",
@@ -731,11 +745,11 @@ const furnitureDatabase = {
                     "Typical panel dimensions: 4.0m x 4.5m for standard construction"
                 ],
                 applications: [
-                    "Heavy duty pavements for industrial areas",
-                    "Airport runways and taxiways", 
-                    "Industrial loading areas and hardstanding",
-                    "Container terminals and port facilities",
-                    "Long-life pavement applications requiring minimal maintenance"
+                    "Heavy duty pavements",
+                    "Airport runways", 
+                    "Industrial loading areas",
+                    "Container terminals",
+                    "Long-life pavement requirements"
                 ],
                 conditions: [
                     "Areas with very heavy traffic loading and point loads",
@@ -748,14 +762,13 @@ const furnitureDatabase = {
             },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction to specified bearing capacity",
-                    "Sub-base installation: Granular material or lean concrete foundation",
-                    "Polythene sheeting placement: 0.125mm waterproof membrane over full slab area",
-                    "Mesh reinforcement installation: B503 mesh positioning where specified, minimum 188mm²/m density",
-                    "Concrete slab construction: Grade 40/20 concrete placement and finishing", 
-                    "Joint construction: Transverse and longitudinal joints per H1105-H1109 details",
-                    "Surface finishing and texturing for skid resistance",
-                    "Concrete curing and protection during setting period"
+                    "Subgrade preparation and compaction",
+                    "Sub-base: Granular material or lean concrete",
+                    "Polythene sheeting: 0.125mm waterproof membrane",
+                    "Mesh reinforcement installation (B503 mesh where specified, >188mm²/m)",
+                    "Concrete slab: Grade 40/20 concrete placement",
+                    "Joint construction: Transverse and longitudinal joints per H1105-H1109",
+                    "Surface finishing and curing"
                 ],
                 materials: [
                     "Grade 40/20 concrete meeting specified strength and durability requirements",
@@ -764,7 +777,13 @@ const furnitureDatabase = {
                     "Granular sub-base material or lean concrete for foundation support",
                     "Joint sealant materials for expansion and contraction joints"
                 ]
-            }
+            }, variants: [
+                {
+                    name: "Anti-skid surface dressing",
+                    use: "A thin epoxy based anti-skid dressing material laid on carriageway for improving the skid resistance of roads",
+                    manuals: ["hyd-gn037", "hyd-gn039c"]
+                },
+            ]
         },
         {
             id: "pv3",
@@ -777,7 +796,7 @@ const furnitureDatabase = {
                 applications: [
                     "Noise-sensitive areas",
                     "Residential zones",
-                    "Hospital and school vicinities", 
+                    "Hospital and school vicinities",
                     "Urban motorways",
                     "Environmental noise mitigation projects"
                 ],
@@ -831,10 +850,9 @@ const furnitureDatabase = {
             name: "Cycle Track",
             category: "pavement",
             description: "Specialized pavement for cycle tracks",
-            drawings: ["h1104c"],
-            manuals: ["TPDM Volume 2 Chapter 3.8"],
-            usage: {
-                description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features. Designed specifically for bicycle traffic with smooth surface finish, proper drainage, and defined edges for cyclist safety and comfort.",
+            drawings: ["h1104c", "hyd-gn014d"],
+            overview: {
+                description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features.",
                 specifications: [
                     "Surface width: Variable based on design requirements and traffic volume",
                     "Surfacing layer: 50mm bituminous surfacing wearing course",
@@ -845,11 +863,11 @@ const furnitureDatabase = {
                     "Sub-base: Granular material foundation layer"
                 ],
                 applications: [
-                    "Dedicated cycle lanes separated from vehicular traffic",
-                    "Shared use paths for pedestrians and cyclists",
-                    "Park cycling routes and recreational paths", 
-                    "Urban cycling infrastructure networks",
-                    "Recreational cycling facilities and leisure routes"
+                    "Dedicated cycle lanes",
+                    "Shared use paths",
+                    "Park cycling routes",
+                    "Urban cycling infrastructure",
+                    "Recreational cycling facilities"
                 ],
                 conditions: [
                     "Areas where cyclist safety is priority concern",
@@ -862,12 +880,12 @@ const furnitureDatabase = {
             },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction to required density", 
-                    "Sub-base material placement and compaction to specification",
-                    "Bituminous emulsion tack coat application for surface bonding",
-                    "Bituminous surfacing wearing course installation: 50mm thickness with maximum 10mm aggregate size",
-                    "Precast concrete edging installation: 150x125x750mm units on Grade 20/20 concrete foundation",
-                    "Surface finishing with 3% crossfall gradient for effective drainage"
+                    "Subgrade preparation and compaction",
+                    "Sub-base material placement and compaction",
+                    "Bituminous emulsion tack coat application",
+                    "Bituminous surfacing wearing course (50mm, nominal maximum aggregate size 10)",
+                    "Precast concrete edging installation (150x125x750) on grade 20/20 concrete foundation",
+                    "Surface finishing with 3% crossfall for drainage"
                 ],
                 materials: [
                     "Sub-base material conforming to specification requirements",
@@ -883,10 +901,9 @@ const furnitureDatabase = {
             name: "Concrete Footpath",
             category: "pavement",
             description: "Concrete construction for pedestrian footpaths",
-            drawings: ["h1104c"],
-            manuals: ["TPDM Volume 2 Chapter 3.4"],
-            usage: {
-                description: "Durable concrete footpath construction for pedestrian areas with proper drainage and accessibility features. Designed to provide safe, accessible, and weather-resistant pedestrian infrastructure with long service life.",
+            drawings: ["h1104c", "hyd-gn014d"],
+            overview: {
+                description: "Durable concrete footpath construction for pedestrian areas with proper drainage and accessibility features.",
                 specifications: [
                     "Concrete thickness: Variable - 75mm for level verge areas, 100mm for sloping verge areas, 125-200mm for higher load applications",
                     "Concrete grade: Grade 30/20 concrete for structural adequacy",
@@ -937,27 +954,28 @@ const furnitureDatabase = {
             category: "pavement",
             description: "Paver block construction for footpaths",
             drawings: ["h1103g", "H1131B", "H5609", "H5610", "H5611"],
-            manuals: ["hyd-gn044c"],
-            usage: {
-                description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces. Offers flexible pavement solution with easy access for utilities maintenance and aesthetic appeal for urban environments.",
+            manuals: ["hyd-gn044c", "hyd-gn014d"],
+            overview: {
+                description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces.",
                 specifications: [
-                    "Paving units: Paving slabs or paving blocks as specified in design",
-                    "Bedding layer: 20-30mm sand course or sand and cement bedding",
-                    "Sub-base thickness: Minimum 150mm for footway applications",
-                    "Road-base thickness: 100mm for run-in areas, 225mm for carriageway applications with design traffic <5MSA, 225mm for footway with E subgrade >50MPa",
-                    "Joint width: 2-5mm between paving units filled with joint sand",
-                    "Edge restraint: Kerb or other approved edge restraint system required",
-                    "Precast concrete pavers: Preferred for new paving installations",
-                    "Clay pavers: Require special approval, not recommended for new work",
-                    "Granite/artificial granite pavers: Require minimum 200mm concrete base"
+                    "Paving unit: Paving slab or paving block as specified",
+                    "Bedding: 20-30mm sand course/sand and cement bedding",
+                    "Sub-base: 150mm thick for footway, varies for carriageway",
+                    "Road-base: 100mm (run-in), 225mm (carriageway <5MSA), 225mm (footway E subgrade >50MPa)",
+                    "Drainage: Minimum 150mm sub-base thickness",
+                    "Edge restraint: Kerb or other edge restraint system",
+                    "Joint sand: 2-5mm joint width with sand filling"
                 ],
+                image: "assets/pv5-profile.png"
+            },
+            usage: {
                 applications: [
-                    "Pedestrian areas and walkways",
-                    "Shopping precincts and commercial areas", 
-                    "Historic areas requiring heritage-appropriate materials",
-                    "Decorative walkways and feature paving",
-                    "Vehicle run-in areas across footways",
-                    "Light traffic carriageways with design loads <5MSA"
+                    "Pedestrian areas",
+                    "Shopping precincts",
+                    "Historic areas",
+                    "Decorative walkways",
+                    "Run-in areas",
+                    "Light traffic carriageways"
                 ],
                 conditions: [
                     "Areas where aesthetic enhancement is required",
@@ -1002,7 +1020,7 @@ const furnitureDatabase = {
                 applications: [
                     "Urban beautification",
                     "Street tree planters",
-                    "Roadside landscaping", 
+                    "Roadside landscaping",
                     "Central reservation planting",
                     "Kerb planters",
                     "Quality greening along roads"
@@ -1048,12 +1066,25 @@ const furnitureDatabase = {
             category: "pavement-joints",
             description: "Expansion joints in concrete carriageways to accommodate thermal movement",
             drawings: ["H1105"],
-            manuals: ["hyd-gn020a"],
+            manuals: ["hyd-gn020a", "hyd-gn014d"],
+            overview: {
+                description: "Expansion joints in concrete pavement construction designed to accommodate thermal expansion and contraction movements. These joints allow the concrete slabs to move without cracking, ensuring long-term pavement performance and structural integrity.",
+                specifications: [
+                    "Joint spacing: 100-150m depending on local conditions",
+                    "Joint construction: Sealing groove and approved joint sealant",
+                    "Dowel bars: 25mm diameter, 650mm length, at 300mm centers (slabs ≥150mm thick)",
+                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
+                    "Compressible filler: 20mm thick compressible joint filler",
+                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Polythene sheeting: 0.125mm over full width"
+                ]
+            },
             usage: {
                 applications: [
                     "Concrete carriageway construction",
                     "Airport runway pavement",
-                    "Industrial hard standing areas", 
+                    "Industrial hard standing areas",
                     "Bridge deck connections",
                     "Long concrete pavement sections"
                 ],
@@ -1069,7 +1100,7 @@ const furnitureDatabase = {
                     "Joint location marking during concrete placement",
                     "Dowel bar installation (25mm diameter, 650mm length) with PVC anti-corrosive sleeve (400mm)",
                     "Wire ties and cradle bent 6mm diameter tie bars at 300mm centers installation",
-                    "Compressible joint filler installation (20mm thick) at specified position", 
+                    "Compressible joint filler installation (20mm thick) at specified position",
                     "Joint groove cutting to accommodate sealant",
                     "Reinforcement placement with 60 ± 10mm cover maintained",
                     "0.125mm polythene sheeting installation over full width",
@@ -1088,11 +1119,24 @@ const furnitureDatabase = {
         },
         {
             id: "pv9",
-            name: "Contraction Joint", 
+            name: "Contraction Joint",
             category: "pavement-joints",
             description: "Contraction joints in concrete carriageways to control shrinkage cracking",
             drawings: ["H1106A"],
-            manuals: ["hyd-gn020a"],
+            manuals: ["hyd-gn020a", "hyd-gn014d"],
+            overview: {
+                description: "Contraction joints (also known as control joints) in concrete pavement designed to control where shrinkage cracks occur during the curing process. These joints create a planned weak point where cracking is intended to occur, preventing random cracking throughout the pavement.",
+                specifications: [
+                    "Joint construction: Sealing groove and approved joint sealant",
+                    "Dowel bars: 20mm diameter (150-220mm slabs), 25mm diameter (230mm+ slabs), 650mm length",
+                    "Dowel spacing: 300mm centers at mid-depth",
+                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
+                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Polythene sheeting: 0.125mm over full width",
+                    "Mortar bed: 1 part cement to 3 parts sand"
+                ]
+            },
             usage: {
                 applications: [
                     "Concrete carriageway panels",
@@ -1103,7 +1147,7 @@ const furnitureDatabase = {
                 ],
                 conditions: [
                     "All concrete pavements to control shrinkage",
-                    "Regular panel construction requirements", 
+                    "Regular panel construction requirements",
                     "Areas requiring controlled crack location",
                     "New concrete construction projects"
                 ]
@@ -1125,19 +1169,31 @@ const furnitureDatabase = {
                     "400mm length tight fitting PVC anti-corrosive sleeve",
                     "6mm diameter wire ties and tie bars",
                     "Approved joint sealant",
-                    "0.125mm polythene sheeting", 
+                    "0.125mm polythene sheeting",
                     "Mortar materials (1 part cement, 3 parts sand)",
                     "Reinforcement materials where specified"
                 ]
             }
         },
         {
-            id: "pv10", 
+            id: "pv10",
             name: "Longitudinal Joint",
             category: "pavement-joints",
             description: "Longitudinal joints in concrete carriageways to reduce slab width and limit transverse stresses",
             drawings: ["H1107"],
-            manuals: ["hyd-gn020a"],
+            manuals: ["hyd-gn020a", "hyd-gn014d"],
+            overview: {
+                description: "Longitudinal joints in concrete pavement construction designed to reduce slab width and limit stresses in the transverse direction. These joints provide a balance between construction operations and load transfer requirements while controlling slab dimensions for optimal pavement performance.",
+                specifications: [
+                    "Reinforcement: Where specified, with approved sealing strip",
+                    "Tie bars: 12mm diameter, 1.0m length, spaced at 600mm centers at mid-depth (sow-cut)",
+                    "PVC sleeve: 150mm tight fitting anti-corrosive sleeve",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Joint spacing: 125 ± 25mm nominal between first and second slab",
+                    "Polythene sheeting: 0.125mm installation",
+                    "Sealing: Approved sealing strip application"
+                ]
+            },
             usage: {
                 applications: [
                     "Wide concrete carriageway construction",
@@ -1162,7 +1218,7 @@ const furnitureDatabase = {
                     "Sow-cut tie bar installation (12mm diameter, 1.0m length) at 600mm centers at mid-depth",
                     "150mm tight fitting PVC anti-corrosive sleeve installation",
                     "Reinforcement placement (where specified) with 60 ± 10mm cover",
-                    "0.125mm polythene sheeting installation", 
+                    "0.125mm polythene sheeting installation",
                     "Joint spacing maintenance (125 ± 25mm nominal between slabs)",
                     "Approved sealing strip application",
                     "Joint termination at any transverse joint"
@@ -1180,10 +1236,23 @@ const furnitureDatabase = {
         {
             id: "pv11",
             name: "Isolation Joint",
-            category: "pavement-joints", 
+            category: "pavement-joints",
             description: "Isolation joints in concrete carriageways for complete separation between pavement sections",
             drawings: ["H1107"],
-            manuals: ["hyd-gn020a"],
+            manuals: ["hyd-gn020a", "hyd-gn014d"],
+            overview: {
+                description: "Isolation joints in concrete pavement construction that provide complete separation between pavement sections without load transfer mechanisms. These joints prevent induced cracking by allowing slabs to move independently in both transverse and longitudinal directions, particularly at road junctions and around utility structures.",
+                specifications: [
+                    "No dowel bars or tie bars for load transfer",
+                    "Complete separation between concrete sections",
+                    "Joint material: 10mm thick compressible joint filler",
+                    "Full depth: Extends through entire slab thickness",
+                    "Cover: 60 ± 10mm cover to reinforcement",
+                    "Joint width: 75mm + 5mm nominal spacing",
+                    "Polythene sheeting: 0.125mm installation",
+                    "Box-out arrangement: Orthogonal to road slab alignment"
+                ]
+            },
             usage: {
                 applications: [
                     "Road junction terminations where transverse joints cannot continue",
@@ -1231,10 +1300,21 @@ const furnitureDatabase = {
             description: "Type K1 precast concrete kerb for urban areas with adjacent footways",
             drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K1 precast concrete kerb designed for urban areas where a footway is adjacent to the carriageway. Provides standard edge definition and protection between carriageway and footway with 125mm height profile.",
+                specifications: [
+                    "Height: 125mm above carriageway level",
+                    "Length: 1000mm nominal kerb unit, 750mm edging unit",
+                    "Material: Grade 30/20 concrete",
+                    "Profile: Standard K1 section per H1118",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
             usage: {
                 applications: [
                     "Urban area carriageway edges",
-                    "Footway to carriageway transitions", 
+                    "Footway to carriageway transitions",
                     "Standard kerbing in built-up areas",
                     "Areas with pedestrian activity",
                     "Shopping and commercial precincts"
@@ -1279,12 +1359,23 @@ const furnitureDatabase = {
             }
         },
         {
-            id: "k2", 
+            id: "k2",
             name: "K2 - Carriageway to Verge Kerb",
             category: "kerbs",
             description: "Type K2 precast concrete kerb for rural areas without adjacent footways",
             drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K2 precast concrete kerb designed for rural areas and high speed roads where there is no adjoining footway. Features lower profile than K1 for improved vehicle safety on high-speed roads.",
+                specifications: [
+                    "Profile: K2 section per H1118 (lower than K1)",
+                    "Length: 1000mm nominal kerb unit",
+                    "Material: Grade 30/20 concrete",
+                    "Application: Rural areas without footways",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
             usage: {
                 applications: [
                     "Rural road edges",
@@ -1295,7 +1386,7 @@ const furnitureDatabase = {
                 ],
                 conditions: [
                     "Rural areas without adjacent footways",
-                    "High speed road environments", 
+                    "High speed road environments",
                     "Where reduced kerb height is appropriate",
                     "Areas with grass verges or landscaping"
                 ]
@@ -1312,7 +1403,7 @@ const furnitureDatabase = {
                 ],
                 materials: [
                     "Grade 30/20 precast concrete K2 kerb units",
-                    "Concrete foundation bedding material", 
+                    "Concrete foundation bedding material",
                     "Joint pointing mortar",
                     "Topsoil and seed for verge areas"
                 ]
@@ -1334,16 +1425,27 @@ const furnitureDatabase = {
         },
         {
             id: "k3",
-            name: "K3 - Bridge Deck Kerb", 
+            name: "K3 - Bridge Deck Kerb",
             category: "kerbs",
             description: "Type K3 precast concrete kerb specifically for bridge deck applications",
             drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
+            overview: {
+                description: "Type K3 precast concrete kerb designed specifically for use on bridge decks. Features specialized profile and mounting details suitable for bridge structure requirements and loading conditions.",
+                specifications: [
+                    "Profile: K3 section per H1118 (bridge deck specific)",
+                    "Length: 1000mm nominal kerb unit",
+                    "Material: Grade 30/20 concrete",
+                    "Application: Bridge decks only",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
+                    "Joint width: 10mm between units"
+                ]
+            },
             usage: {
                 applications: [
                     "Bridge deck edge definition",
                     "Elevated structure kerbing",
-                    "Viaduct and flyover edges", 
+                    "Viaduct and flyover edges",
                     "Bridge approach transitions",
                     "Specialized structural applications"
                 ],
@@ -1449,7 +1551,7 @@ const furnitureDatabase = {
                     manuals: ["TPDM V2C3.6.3.1"]
                 },
                 {
-                    name: "Container Vehicle Access", 
+                    name: "Container Vehicle Access",
                     use: "Heavy goods and container vehicle access, minimum 7.3m width",
                     manuals: ["TPDM V2C3.6.3.1"]
                 },
@@ -1462,7 +1564,7 @@ const furnitureDatabase = {
         },
         {
             id: "k10-14",
-            name: "K10-K14 - Pedestrian Drop Kerbs", 
+            name: "K10-K14 - Pedestrian Drop Kerbs",
             category: "kerbs",
             description: "Drop kerb series (K10-K14) for pedestrian crossings and accessibility",
             drawings: ["h1134", "h1117b"],
@@ -1471,7 +1573,7 @@ const furnitureDatabase = {
                 applications: [
                     "Designated pedestrian crossings",
                     "Zebra crossing approaches",
-                    "Pelican and puffin crossing points", 
+                    "Pelican and puffin crossing points",
                     "Accessibility compliance at junctions",
                     "Wheelchair and mobility aid access",
                     "Pushchair and trolley access points"
@@ -1538,7 +1640,7 @@ const furnitureDatabase = {
         {
             id: "e1",
             name: "E1 - Cycle Track Edge",
-            category: "kerbs", 
+            category: "kerbs",
             description: "Type E1 edging for cycle track to footpath separation",
             drawings: ["h1118"],
             manuals: ["TPDM Volume 2 Chapter 3.8"],
@@ -1596,6 +1698,17 @@ const furnitureDatabase = {
             description: "Type E2 edging for footway to planter separation",
             drawings: ["h1118"],
             manuals: ["Landscape Design Standards"],
+            overview: {
+                description: "Type E2 precast concrete edging designed for separating footways from planted areas. Provides defined boundary for landscaping while allowing surface water drainage into planted areas.",
+                specifications: [
+                    "Profile: E2 edging section per H1118",
+                    "Length: 750mm nominal edging unit",
+                    "Material: Grade 30/20 concrete",
+                    "Height: Low profile for planter boundary",
+                    "Application: Footway to planted area separation",
+                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
+                ]
+            },
             usage: {
                 applications: [
                     "Footway to planter separation",
@@ -1618,7 +1731,7 @@ const furnitureDatabase = {
                     "Shallow foundation bedding with drainage consideration",
                     "E2 edging unit installation with 750mm lengths",
                     "Level setting for surface water flow to planters",
-                    "Joint pointing and weatherproofing", 
+                    "Joint pointing and weatherproofing",
                     "Integration with footway paving and planting"
                 ],
                 materials: [
@@ -1647,13 +1760,13 @@ const furnitureDatabase = {
             id: "e3",
             name: "E3 - Boundary Kerb",
             category: "kerbs",
-            description: "Type E3 edging for footway to property boundary separation", 
+            description: "Type E3 edging for footway to property boundary separation",
             drawings: ["h1118"],
             manuals: ["Property Boundary Standards"],
             usage: {
                 applications: [
                     "Public footway to private property boundaries",
-                    "Legal boundary demarcation", 
+                    "Legal boundary demarcation",
                     "Property line definition",
                     "Maintenance responsibility boundaries",
                     "Clear separation of public and private areas"
@@ -1664,7 +1777,7 @@ const furnitureDatabase = {
                     "Areas requiring clear public/private separation",
                     "Maintenance boundary definition"
                 ]
-            },  
+            },
             composition: {
                 layers: [
                     "Boundary survey and legal verification",
@@ -1715,7 +1828,7 @@ const furnitureDatabase = {
                 conditions: [
                     "Premium finish specifications",
                     "Heritage conservation requirements",
-                    "Long-term durability priorities", 
+                    "Long-term durability priorities",
                     "Aesthetic enhancement objectives",
                     "Low maintenance requirements"
                 ]
@@ -1759,7 +1872,7 @@ const furnitureDatabase = {
                     manuals: ["H4101"]
                 },
                 {
-                    name: "Granite Quadrant Kerb", 
+                    name: "Granite Quadrant Kerb",
                     use: "Curved sections with radius 200-300mm as required",
                     manuals: ["H4101"]
                 },
@@ -1819,7 +1932,12 @@ const furnitureDatabase = {
             category: "barriers",
             description: "Removable concrete profile barrier",
             drawings: ["H2254"],
-            manuals: ["TPDM Volume 2 Chapter 3.9"],
+            manuals: ["TPDM Volume 2 Chapter 3.4.8", "hyd-gn34a", "TPDM Volume 2 Chapter 3.9"],
+            overview: {
+                description: "Removable concrete profile barriers for temporary traffic management and work zone protection. These barriers can be repositioned using specialized equipment while maintaining the same containment performance as permanent concrete barriers. Designed for quick deployment and removal during construction or emergency situations.",
+                specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey", "Type: Removable/portable", "Containment level: L2", "Lifting points: Integrated"],
+                image: "assets/cpb2-profile.png"
+            },
             usage: {
                 applications: [
                     "Temporary traffic diversion",
@@ -1900,7 +2018,12 @@ const furnitureDatabase = {
             category: "barriers",
             description: "Movable steel barrier system",
             drawings: ["H2273"],
-            manuals: ["TPDM Volume 2 Chapter 3.9"],
+            manuals: ["TPDM Volume 2 Chapter 3.4.8", "hyd-gn34a", "TPDM Volume 2 Chapter 3.9"],
+            overview: {
+                description: "Movable steel beam barriers designed for temporary installations and emergency access provisions. These barriers can be relocated or removed to allow emergency vehicle passage through median openings while maintaining protection during normal operations. Features quick-release mechanisms for rapid deployment.",
+                specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: W-beam", "Type: Movable/removable", "Containment level: L1", "Access: Emergency vehicle passage"],
+                image: "assets/cb2-profile.png"
+            },
             usage: {
                 applications: [
                     "Rural road protection",
@@ -2409,7 +2532,11 @@ const furnitureDatabase = {
             category: "railings",
             description: "Emergency Access Gate for controlled emergency vehicle access",
             drawings: ["H2276B"],
-            manuals: ["HYD Standard Drawing H2276B"],
+            manuals: ["TPDM Volume 2 Chapter 3.4.8", "hyd-gn34a"],
+            overview: {
+                description: "Emergency Access Gate (EAG) system providing controlled access for emergency vehicles through restricted areas while maintaining security and access control under normal conditions.",
+                specifications: ["Emergency Access Gate design", "Controlled access system", "Emergency vehicle compatibility", "Security maintenance capability"]
+            },
             usage: {
                 applications: [
                     "Emergency vehicle access control",
@@ -2583,7 +2710,7 @@ const furnitureDatabase = {
             name: "Multi-Sign Support - Street Name & Center Mount",
             category: "signs",
             description: "Single post multi-sign support for street name plates and center-mounted traffic signs",
-            drawings: ["H2228E"],
+            drawings: ["H2228E", "H2229C"],
             manuals: ["HYD Standard Drawing H2228E"],
             usage: {
                 applications: [
@@ -2904,7 +3031,7 @@ const furnitureDatabase = {
                 materials: ["Lighting column brackets", "Integration hardware"]
             }
         },
-        
+
     ],
     signals: [
         {
@@ -2950,7 +3077,7 @@ const furnitureDatabase = {
             usage: {
                 applications: [
                     "Area traffic control systems",
-                    "Traffic signal cable management", 
+                    "Traffic signal cable management",
                     "Control equipment housing",
                     "Electrical infrastructure protection",
                     "Shallow depth installations (≤850mm)",
@@ -2966,7 +3093,7 @@ const furnitureDatabase = {
             installation: {
                 steps: [
                     "Determine required depth and chamber type",
-                    "Excavate drawpit to specified dimensions", 
+                    "Excavate drawpit to specified dimensions",
                     "Install appropriate chamber type (single or twin)",
                     "Install cable draw-in provisions",
                     "Mount appropriate cover and frame systems",
@@ -3215,7 +3342,7 @@ const furnitureDatabase = {
             name: "Frangible Bollards for Cycle Track",
             category: "bollards",
             description: "Type 1 and Type 2 frangible bollards designed for cycle track applications",
-            drawings: ["H2189"],
+            drawings: ["H2189-1"],
             manuals: ["HYD Standard Drawing H2189"],
             usage: {
                 applications: [
@@ -3248,7 +3375,7 @@ const furnitureDatabase = {
             name: "Self-Erective Tubular Marker on Cycle Track",
             category: "bollards",
             description: "Self-erecting tubular marker system for cycle track applications",
-            drawings: ["H2189"],
+            drawings: ["H2189-2a"],
             manuals: ["HYD Standard Drawing H2189"],
             usage: {
                 applications: [
@@ -3309,43 +3436,6 @@ const furnitureDatabase = {
                 materials: ["Bollard and rail components", "Integrated mounting systems", "Connection hardware"]
             }
         },
-        {
-            id: "b9",
-            name: "Removable Bollards and Railings",
-            category: "bollards",
-            description: "Removable bollard and railing system for temporary traffic control",
-            drawings: ["H2259"],
-            manuals: ["HYD Standard Drawing H2259"],
-            usage: {
-                applications: [
-                    "Temporary traffic control",
-                    "Event area management",
-                    "Construction zone delineation",
-                    "Flexible pedestrian control",
-                    "Seasonal area restrictions",
-                    "Emergency traffic diversion"
-                ],
-                conditions: [
-                    "Temporary installation requirements",
-                    "Flexible area control needs",
-                    "Easy removal requirements",
-                    "Event-based applications"
-                ]
-            },
-            installation: {
-                steps: [
-                    "Plan temporary installation layout",
-                    "Prepare removable foundation systems",
-                    "Install removable bollard mounting points",
-                    "Mount removable railing components",
-                    "Test removal and reinstallation procedures",
-                    "Establish maintenance and storage protocols"
-                ],
-                drawings: ["H2259", "H2260", "H2261", "H2262"],
-                tools: ["Removable mounting equipment", "Temporary installation tools", "Storage and transport equipment"],
-                materials: ["Removable bollard units", "Removable railing sections", "Temporary mounting hardware", "Storage systems"]
-            }
-        }
     ],
     lighting: [
         {
@@ -3425,56 +3515,56 @@ function getHydDrawingsByCategory(category) {
             { code: 'H2164C', description: 'Details of Plinth for Traffic Controller (Type Delta 4)', section: 2 }
         ]
     };
-    
+
     return sampleHydDrawings[category] || [];
 }
 
 // Helper function to search furniture
 function searchFurniture(query) {
     const allItems = getAllFurniture();
-    return allItems.filter(item => 
+    return allItems.filter(item =>
         item.name.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) 
+        item.description.toLowerCase().includes(query.toLowerCase())
     );
 }
 
 // Helper function to generate HYD drawing URL from drawing code
 function getDrawingUrl(drawingCode) {
     if (!drawingCode) return null;
-    
+
     // Special list of drawing codes that require uppercase .PDF extension
     const uppercasePdfCodes = [
         "SSD153(1)", "SSD153(2)", "SSD153(3)", "SSD153(4)", "SSD153(5)",
         "SSD151(1)-A", "SSD151(2)-A", "SSD151(3)-A", "SSD151(4)"
     ];
-    
+
     // Handle SSD (Structure Standard Drawings) codes
     if (drawingCode.toUpperCase().startsWith('SSD')) {
-        const cleanCode = drawingCode.toUpperCase().replace(/[^A-Z0-9()]/g, '');
+        const cleanCode = drawingCode.toUpperCase().replace(/[^A-Z0-9()/-]/g, '');
         const extension = uppercasePdfCodes.includes(drawingCode.toUpperCase()) ? '.PDF' : '.pdf';
         return `https://www.hyd.gov.hk/en/technical_references/standard_drawings/structures_standard_drawings/doc/${cleanCode}${extension}`;
     }
-    
+
     // Convert to lowercase and remove special characters except brackets for URL
-    const cleanCode = drawingCode.toLowerCase().replace(/[^a-z0-9()]/g, '');
-    
+    const cleanCode = drawingCode.toLowerCase().replace(/[^a-z0-9()/-]/g, '');
+
     // Determine section based on drawing code prefix
     let section = 1; // default
     if (cleanCode.startsWith('h2')) section = 2;
     else if (cleanCode.startsWith('h3')) section = 3;
     else if (cleanCode.startsWith('h4')) section = 4;
     else if (cleanCode.startsWith('h5')) section = 5;
-    
+
     // Check if this drawing code requires uppercase PDF extension
     const extension = uppercasePdfCodes.includes(drawingCode.toUpperCase()) ? '.PDF' : '.pdf';
-    
+
     return `https://www.hyd.gov.hk/en/technical_references/standard_drawings/hyd_standard_drawings/doc/section_${section}/pdf/${cleanCode}${extension}`;
 }
 
 // Helper function to generate manual URL from manual code
 function getManualUrl(manualCode) {
     if (!manualCode) return null;
-    
+
     // Handle different manual types
     if (manualCode.toLowerCase().startsWith('hyd-gn')) {
         // Guidance Notes format: hyd-gn042a -> gn042a.pdf
@@ -3486,14 +3576,14 @@ function getManualUrl(manualCode) {
     } else if (manualCode.toLowerCase().startsWith('hyd-sdm')) {
         // Structures Design Manual format: hyd-sdm
         return `https://www.hyd.gov.hk/en/technical_references/technical_document/structures_design_manual_2013/doc/SDM2013.pdf`;
-    } else if (manualCode.toLowerCase().startsWith('tpdm')){
+    } else if (manualCode.toLowerCase().startsWith('tpdm')) {
         let cleanCode = manualCode.match(/(?<=Volume )(.*?)(?= Chapter)/g);
         if (!cleanCode) {
             cleanCode = manualCode.match(/(?<=V)(.*?)(?=C)/g);
         }
         return `https://www.td.gov.hk/filemanager/en/content_5055/V${cleanCode[0]}_12_2024.pdf`;
     }
-    
+
     // Default fallback for other manual types
     return null;
 }
