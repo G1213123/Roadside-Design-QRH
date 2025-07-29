@@ -8,7 +8,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Horizontal alignment design standards including design speeds, curvature, and sight distances",
             manuals: ["TPDM Volume 2 Chapter 3.3"],
-            overview: {
+            usage: {
                 description: "Standards for horizontal road alignment including design speed selection, minimum curve radii, superelevation, and sight distance requirements. Covers general principles for different road types and locations.",
                 specifications: [
                     "Design speeds: 50-100 km/h based on road type and access control",
@@ -17,9 +17,7 @@ const furnitureDatabase = {
                     "Sight distances: 50-295m (desirable minimum based on design speed)",
                     "Rural vs urban design considerations",
                     "Single vs dual carriageway alignment principles"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Horizontal curve design",
                     "Design speed determination", 
@@ -56,7 +54,7 @@ const furnitureDatabase = {
             category: "road", 
             description: "Vertical profile design including gradients, vertical curves, and climbing lanes",
             manuals: ["TPDM Volume 2 Chapter 3.3"],
-            overview: {
+            usage: {
                 description: "Standards for vertical road profile design including maximum gradients, vertical curve design, and climbing lane provision. Covers both crest and sag curve requirements with minimum K-values for different design speeds.",
                 specifications: [
                     "Maximum gradients: 4% desirable, 8% absolute for trunk roads",
@@ -65,9 +63,7 @@ const furnitureDatabase = {
                     "Sag curve K-values: 9-37 based on design speed", 
                     "Climbing lane width: 10m total (3.2m + 3.4m + 3.4m)",
                     "Dual carriageway climbing lanes: based on traffic flow vs gradient"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Vertical alignment design",
                     "Gradient optimization",
@@ -91,7 +87,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Cross-sectional slope design for surface drainage and vehicle stability",
             manuals: ["TPDM Volume 2 Chapter 3.4"],
-            overview: {
+            usage: {
                 description: "Standards for crossfall design including normal crossfall, superelevation transitions, and drainage requirements. Covers crossfall requirements for different road types and junction treatments.",
                 specifications: [
                     "Normal crossfall: 2.5% from crown to edge",
@@ -99,9 +95,7 @@ const furnitureDatabase = {
                     "Adverse camber elimination on curves >R7",
                     "Junction crossfall: minor road graded to major road channels",
                     "Urban superelevation: limited to 4-5% maximum"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Surface water drainage design",
                     "Vehicle stability on curves",
@@ -124,7 +118,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Banking design for curved sections and transitions between different crossfall",
             manuals: ["TPDM Volume 2 Chapter 3.3"],
-            overview: {
+            usage: {
                 description: "Standards for superelevation (banking) design on horizontal curves and transitional design between normal crossfall and superelevated sections. Includes calculation methods, maximum rates, transition lengths, and special considerations for urban roads and constrained locations.",
                 specifications: [
                     "Superelevation formula: S = V²/(2.82R) for radii R7-R3",
@@ -135,9 +129,7 @@ const furnitureDatabase = {
                     "Edge profile grade variation: 1% maximum (2% in difficult areas)",
                     "Minimum drainage gradient: 0.67% through transitions",
                     "Rate of centripetal acceleration: 0.3 m/sec³ maximum (0.6+ in constraints)"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Horizontal curve banking design",
                     "Transition curve design (clothoid spirals)",
@@ -224,7 +216,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Carriageway width standards for different road types and traffic conditions",
             manuals: ["TPDM Volume 2 Chapter 3.4"],
-            overview: {
+            usage: {
                 description: "Minimum carriageway width requirements for urban and rural roads across all hierarchy levels. Includes widening requirements for curves, parking provisions, and special applications like climbing lanes and service roads.",
                 specifications: [
                     "Urban single carriageway: 7.3-13.5m (2-4 lanes), refer to Table 3.4.2.1",
@@ -233,10 +225,8 @@ const furnitureDatabase = {
                     "Rural dual carriageway: 7.3-14.6m per direction",
                     "Service roads: 4.5-7.3m based on vehicle types",
                     "Curve widening: additional 0.3-1.9m for radii <400m, refer to Table 3.4.4.1",
-                    "Check road width enough to achieve sight distance, further widening is needed when < R3",
-                ]
-            },
-            usage: {
+                    "Check road width enough to achieve sight distance, further widening is needed when < R3"
+                ],
                 applications: [
                     "New road design standards",
                     "Road improvement schemes", 
@@ -282,7 +272,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Forward visibility requirements for safe driving including stopping and junction sight distances",
             manuals: ["TPDM Volume 2 Chapter 3.3.5"],
-            overview: {
+            usage: {
                 description: "Standards for sight distance provision on roads including stopping sight distances, junction visibility, and horizontal curve sight requirements. Covers measurement methods and clearance requirements for safe forward visibility.",
                 specifications: [
                     "Sight distances by design speed: 50m (50 km/h) to 295m (120 km/h), refer to Table 3.3.5.1",
@@ -290,9 +280,7 @@ const furnitureDatabase = {
                     "Target object height: 0.26-2.0m above road surface",
                     "Horizontal curve clearance: 3m (80 km/h) to 4m (≥100 km/h)",
                     "Low radius curve (<R3) clearance: 3-4m from carriageway edge"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Junction approach visibility design",
                     "Horizontal curve sight line clearance",
@@ -354,7 +342,7 @@ const furnitureDatabase = {
             category: "road",
             description: "Vertical and horizontal clearance requirements for structures and obstructions",
             manuals: ["TPDM Volume 2 Chapter 3.5"],
-            overview: {
+            usage: {
                 description: "Standards for vertical clearances above carriageways and horizontal clearances from carriageway edges to obstructions. Includes requirements for bridges, sign gantries, utilities, and roadside furniture.",
                 specifications: [
                     "Vertical clearance over carriageways: 5.1m new construction, 5.0m maintained",
@@ -363,9 +351,7 @@ const furnitureDatabase = {
                     "Horizontal clearance: 500mm-1000mm based on design speed",
                     "Railway power wire clearance: 5.6m minimum",
                     "Pedestrian subway: 2.3-2.6m based on length"
-                ]
-            },
-            usage: {
+                ],
                 applications: [
                     "Bridge design over carriageways",
                     "Overhead sign gantry installation",
@@ -431,6 +417,248 @@ const furnitureDatabase = {
                     manuals: ["TPDM V2C3.5.1.3"]
                 }
             ]
+        },
+        {
+            id: "rg14",
+            name: "Run-in/out",
+            category: "road",
+            description: "Vehicle access construction across footways including standard, skew, and petrol station variants",
+            drawings: ["h1113c", "h1114b", "h1115b", "h1116b"],
+            manuals: ["TPDM Volume 2 Chapter 3.6"],
+            usage: {
+                description: "Construction details for vehicle run-ins and run-outs providing access across footways from carriageways to private properties. Run-ins should be restricted on Trunk Roads, Primary Distributors, and District Distributors wherever possible, and must comply with location restrictions relative to junctions, curves, and other facilities.",
+                specifications: [
+                    "Width: Minimum compatible with satisfactory operation, minimum 7.3m for container vehicles per TPDM 3.6.3.1",
+                    "Visibility: 4.5m sight line from run-in edge, with distances per Table 3.6.3.1 (60m-150m based on road design speed)",
+                    "Location restrictions: 60m from signal-controlled junctions (45m on minor roads), 30m from roundabouts",
+                    "Concrete: Grade 40/20 concrete construction per H1113C",
+                    "Reinforcement: Fabric reinforcement (C283 of B.S.4483) min. weight 2.61kg/m²",
+                    "Thickness: 150mm concrete with 60±10mm cover to reinforcement",
+                    "Membrane: 0.125mm polythene sheeting waterproof barrier",
+                    "Crossfall: 3% drainage gradient maintained",
+                    "Joints: Contraction joint required if L>20m per Drawing H1106",
+                    "Utility provision: Spare PVC ducts (100mm for ATC/CCTV, 150mm for power cables)"
+                ],
+                applications: [
+                    "Private property vehicle access across footways",
+                    "Commercial and industrial vehicle access points", 
+                    "Car park and loading facility entrances",
+                    "Container vehicle access (minimum 7.3m width required)",
+                    "Petrol filling station access with underground services",
+                    "Skew run-ins for angled access where perpendicular access not possible",
+                    "Short Term Tenancy (STT) and Short Term Waiver (STW) site access"
+                ],
+                conditions: [
+                    "Restricted on Trunk Roads and Primary Distributors per TPDM 3.6.1",
+                    "Compliance with location restrictions: away from junctions, curves, bus stops, pedestrian crossings",
+                    "Visibility requirements per TPDM Table 3.6.3.1 (sight distances 60m-150m based on road speed)",
+                    "Distance requirements: 60m from signal junctions, 30m from roundabouts, 30m from uncontrolled junctions",
+                    "Normally one run-in and one run-out maximum per frontage",
+                    "Underground utility coordination for spare duct requirements"
+                ]
+            },
+            composition: {
+                description: "Construction details for vehicle run-ins and run-outs providing access across footways from carriageways to private properties. Run-ins should be restricted on Trunk Roads, Primary Distributors, and District Distributors wherever possible, and must comply with location restrictions relative to junctions, curves, and other facilities.",
+                specifications: [
+                    "Width: Minimum compatible with satisfactory operation, minimum 7.3m for container vehicles per TPDM 3.6.3.1",
+                    "Visibility: 4.5m sight line from run-in edge, with distances per Table 3.6.3.1 (60m-150m based on road design speed)",
+                    "Location restrictions: 60m from signal-controlled junctions (45m on minor roads), 30m from roundabouts",
+                    "Concrete: Grade 40/20 concrete construction per H1113C",
+                    "Reinforcement: Fabric reinforcement (C283 of B.S.4483) min. weight 2.61kg/m²",
+                    "Thickness: 150mm concrete with 60±10mm cover to reinforcement",
+                    "Membrane: 0.125mm polythene sheeting waterproof barrier",
+                    "Crossfall: 3% drainage gradient maintained",
+                    "Joints: Contraction joint required if L>20m per Drawing H1106",
+                    "Utility provision: Spare PVC ducts (100mm for ATC/CCTV, 150mm for power cables)"
+                ],
+                layers: [
+                    "Site survey and compliance check with TPDM 3.6.2 location restrictions",
+                    "Excavation and subgrade preparation to design levels",
+                    "Sub-base material placement and compaction",
+                    "0.125mm polythene sheeting installation over full width",
+                    "Fabric reinforcement installation (C283 of B.S.4483, min. 2.61kg/m²)",
+                    "Spare PVC duct installation (2x100mm for ATC/CCTV, 2x150mm for power)",
+                    "Grade 40/20 concrete placement to 150mm thickness",
+                    "Surface finishing with 3% crossfall for drainage",
+                    "Joint groove cutting (contraction joints if L>20m)",
+                    "Lot boundary marking on footway surface with visibility splay provision"
+                ],
+                materials: [
+                    "Grade 40/20 concrete per H1113C specifications",
+                    "Fabric reinforcement C283 of B.S.4483 (min. weight 2.61kg/m²)",
+                    "0.125mm polythene sheeting membrane",
+                    "100mm diameter PVC ducts for ATC/CCTV cables",
+                    "150mm diameter PVC ducts for power cables", 
+                    "Grade 20/20 concrete for duct bedding",
+                    "Sub-base material per specification",
+                    "Joint sealant for contraction joints"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Verify run-in location compliance per TPDM 3.6.2 (distances from junctions, curves, crossings)",
+                    "Check visibility requirements per TPDM Table 3.6.3.1 (sight distances based on road design speed)",
+                    "Ensure minimum width requirements (7.3m for container vehicles per TPDM 3.6.3.1)",
+                    "Coordinate with utility authorities for spare duct requirements per H1114B",
+                    "Excavate to design levels maintaining lot boundary alignment",
+                    "Install sub-base and compact to specification",
+                    "Lay 0.125mm polythene sheeting with proper overlaps",
+                    "Position fabric reinforcement with 60±10mm cover maintained",
+                    "Install spare PVC duct system with Grade 20/20 concrete bedding",
+                    "Place Grade 40/20 concrete maintaining 3% crossfall",
+                    "Cut contraction joints if length exceeds 20m per H1106A",
+                    "Mark duct positions and lot boundaries on completed footway surface"
+                ],
+                manuals: ["TPDM Volume 2 Chapter 3.6", "H1113C", "H1114B", "H1115B", "H1116B"],
+                tools: ["Sight distance measurement equipment", "Concrete placement equipment", "Compaction equipment", "Level and alignment tools", "Joint cutting equipment"],
+                materials: ["Grade 40/20 concrete", "Fabric reinforcement C283", "PVC duct systems", "Waterproof membrane", "Sub-base materials"]
+            },
+            variants: [
+                {
+                    name: "Standard Run-in",
+                    use: "Normal vehicle access with perpendicular approach, minimum width for intended vehicle types",
+                    manuals: ["H1113C", "H1114B", "TPDM V2C3.6 Diagrams 3.6.3.1"]
+                },
+                {
+                    name: "Skew Run-in", 
+                    use: "Angled vehicle access where site conditions prevent perpendicular approach",
+                    manuals: ["H1115B", "TPDM V2C3.6 Diagram 3.6.3.2"]
+                },
+                {
+                    name: "Petrol Station Run-in",
+                    use: "Wide access for filling stations with extensive underground utility requirements", 
+                    manuals: ["H1116B", "TPDM V2C3.6 Diagram 3.6.3.3"]
+                },
+                {
+                    name: "Container Vehicle Access",
+                    use: "Heavy goods and container vehicle access, minimum 7.3m width required per TPDM 3.6.3.1",
+                    manuals: ["TPDM V2C3.6.3.1"]
+                },
+                {
+                    name: "STT/STW Site Access",
+                    use: "Short Term Tenancy/Waiver site access with special restrictions per TPDM 3.6.4",
+                    manuals: ["TPDM V2C3.6.4"]
+                }
+            ]
+        },
+        {
+            id: "rg15",
+            name: "Crossings",
+            category: "road", 
+            description: "Pedestrian crossing facilities including at-grade and grade-separated options",
+            drawings: ["h1117b", "h1134"],
+            manuals: ["TPDM Volume 2 Chapter 3.7"],
+            usage: {
+                description: "Comprehensive pedestrian crossing facilities including zebra crossings, signal-controlled crossings, cautionary crossings, and grade-separated facilities. All crossings require dropped kerbs for accessibility and proper width sizing based on pedestrian flows. Signal-controlled crossings preferred for heavy flows and high-speed roads.",
+                specifications: [
+                    "Crossing width: Generally 2.5m-9m, typically 4m-6m per TPDM Table 3.7.2.1",
+                    "Minimum width: 2.5m for uncontrolled cautionary crossings",
+                    "Drop kerb ramping: Per Diagram 3.7.2.1, full crossing width with ramped kerbs outside",
+                    "Zebra crossing sight distance: 50m-125m based on speed limit per Table 3.7.3.2",
+                    "Signal crossing layout: Per Diagram 3.7.4.1 with proper signal positioning",
+                    "Grade-separated minimum widths: 2m footbridges, 3m subways per Table 3.7.7.2",
+                    "Pedestrian capacity: 1200 pedestrians/m width/hour maximum for at-grade crossings",
+                    "Access provisions: Ramps (1:12 max gradient) or lifts required for grade-separated facilities"
+                ],
+                applications: [
+                    "Zebra crossings on local and district distributor roads (speed ≤50km/h)",
+                    "Signal-controlled crossings for heavy pedestrian/vehicle flows", 
+                    "Cautionary crossings at signal-controlled junctions",
+                    "Uncontrolled cautionary crossings on local/feeder roads only",
+                    "Grade-separated crossings (footbridges/subways) for trunk roads and primary distributors",
+                    "Pedestrian/cycle combined facilities with segregation requirements",
+                    "Accessibility-compliant crossings for elderly and disabled users"
+                ],
+                conditions: [
+                    "At-grade crossings not permitted on Trunk Roads or Primary Distributors per TPDM 3.7.2.3",
+                    "Zebra crossings restricted: no speeds >50km/h, no 4%+ gradients >100m, avoid ATC systems",
+                    "Signal crossings preferred for elderly/disabled, heavy flows, high speeds, ATC areas",
+                    "Sight distance requirements: 50m-125m for zebra crossings based on speed",
+                    "Location restrictions: away from roundabouts, bus stops, merge points",
+                    "Grade-separated required where pedestrian volumes >1200/m width/hour unsuitable for at-grade"
+                ]
+            },
+            composition: {
+                description: "Comprehensive pedestrian crossing facilities including zebra crossings, signal-controlled crossings, cautionary crossings, and grade-separated facilities. All crossings require dropped kerbs for accessibility and proper width sizing based on pedestrian flows. Signal-controlled crossings preferred for heavy flows and high-speed roads.",
+                specifications: [
+                    "Crossing width: Generally 2.5m-9m, typically 4m-6m per TPDM Table 3.7.2.1",
+                    "Minimum width: 2.5m for uncontrolled cautionary crossings",
+                    "Drop kerb ramping: Per Diagram 3.7.2.1, full crossing width with ramped kerbs outside",
+                    "Zebra crossing sight distance: 50m-125m based on speed limit per Table 3.7.3.2",
+                    "Signal crossing layout: Per Diagram 3.7.4.1 with proper signal positioning",
+                    "Grade-separated minimum widths: 2m footbridges, 3m subways per Table 3.7.7.2",
+                    "Pedestrian capacity: 1200 pedestrians/m width/hour maximum for at-grade crossings",
+                    "Access provisions: Ramps (1:12 max gradient) or lifts required for grade-separated facilities"
+                ],
+                layers: [
+                    "Crossing location assessment per TPDM 3.7.1.3 (maximum usage, convenient to pedestrian paths)",
+                    "Pedestrian flow survey and analysis per Table 3.7.2.1",
+                    "Sight distance verification per Table 3.7.3.2 (zebra) or signal design requirements",
+                    "Drop kerb installation per Diagram 3.7.2.1 (full crossing width, ramped outside)",
+                    "Road markings and studs installation per TPDM Volume 3 specifications",
+                    "Signal equipment installation (where applicable) per TPDM Volume 4",
+                    "Tactile warning surfaces for accessibility compliance",
+                    "Reservoir space provision at carriageway edges and central refuges"
+                ],
+                materials: [
+                    "Drop kerb units (K10-K14 series) per H1134 specifications",
+                    "Road marking materials per TPDM Volume 3",
+                    "Tactile warning surfaces and accessibility materials",
+                    "Traffic signal equipment per TPDM Volume 4",
+                    "Studs for crossing delineation",
+                    "Central refuge construction materials (where required)",
+                    "Warning signs and visibility enhancement materials"
+                ]
+            },
+            installation: {
+                steps: [
+                    "Conduct pedestrian/vehicle flow surveys per TPDM 3.7.2.8 assessment criteria",
+                    "Verify crossing type suitability (zebra criteria per 3.7.3.5, signal criteria per 3.7.4.2)",
+                    "Check sight distance requirements (Table 3.7.3.2 for zebra, adequate for signals)",
+                    "Determine crossing width per Table 3.7.2.1 based on pedestrian flows",
+                    "Install drop kerbs per Diagram 3.7.2.1 (full width lowered, ramped outside)",
+                    "Provide adequate reservoir space at edges and central refuges",
+                    "Install road markings per TPDM Volume 3 (zebra stripes, studs, zig-zag areas)",
+                    "Install signal equipment per TPDM Volume 4 (if signal-controlled)",
+                    "Install tactile warning surfaces for accessibility compliance",
+                    "Coordinate with railings, signing, and street furniture positioning"
+                ],
+                manuals: ["TPDM Volume 2 Chapter 3.7", "TPDM Volume 3 Traffic Signs", "TPDM Volume 4 Road Traffic Signals", "H1117B", "H1134"],
+                tools: ["Pedestrian counting equipment", "Sight distance measurement tools", "Road marking equipment", "Signal installation equipment"],
+                materials: ["Drop kerb systems", "Road marking materials", "Signal equipment", "Tactile paving", "Warning signs"]
+            },
+            variants: [
+                {
+                    name: "Zebra Crossing",
+                    use: "Local and district roads, speeds ≤50km/h, PV² >10⁸ (or >2x10⁸ with refuge)",
+                    manuals: ["TPDM V2C3.7.3", "Table 3.7.3.1 rural areas", "Diagrams 3.7.3.1-3.7.3.2"]
+                },
+                {
+                    name: "Signal-Controlled Crossing",
+                    use: "Heavy flows, elderly/disabled users, high speeds, ATC areas per TPDM 3.7.4.2",
+                    manuals: ["TPDM V2C3.7.4", "Diagram 3.7.4.1", "Volume 4 signal timing"]
+                },
+                {
+                    name: "Cautionary Crossing at Signals",
+                    use: "Signal junctions without separate pedestrian phase, cross 'with the light'",
+                    manuals: ["TPDM V2C3.7.5", "avoid where possible, especially with split phases"]
+                },
+                {
+                    name: "Uncontrolled Cautionary Crossing",
+                    use: "Local/feeder roads only, no markings, drop kerbs and railings only",
+                    manuals: ["TPDM V2C3.7.6", "avoid on dual carriageways"]
+                },
+                {
+                    name: "Grade-Separated Footbridge",
+                    use: "Trunk roads, primary distributors, capacity >1200 ped/m/hr unsuitable at-grade",
+                    manuals: ["TPDM V2C3.7.7", "Table 3.7.7.2 design standards", "covers required in development areas"]
+                },
+                {
+                    name: "Grade-Separated Subway",
+                    use: "Underground crossing, 4.6m radius corners for 4m visibility, accessibility provisions",
+                    manuals: ["TPDM V2C3.7.7", "Tables 3.7.7.2-3.7.7.4", "segregation for pedestrian/cycle"]
+                }
+            ]
         }
     ],
     pavement: [
@@ -441,47 +669,46 @@ const furnitureDatabase = {
             description: "Flexible pavement design using bituminous materials",
             drawings: ["h1101e"],
             manuals: ["hyd-gn042a"],
-            overview: {
-                description: "Flexible pavement construction using bituminous materials for various traffic loading conditions.",
+            usage: {
+                description: "Flexible pavement construction using bituminous materials for various traffic loading conditions. Provides cost-effective and durable road surface suitable for different traffic volumes and loading requirements.",
                 specifications: [
-                    "Wearing course: 40mm (WC20/HMSMA10)",
-                    "Base course: 30mm (HMSMA6/HMFC)", 
-                    "Road base: 65mm bituminous",
-                    "Sub-base: Granular material (thickness designed to RD/GN/042)",
-                    "Total thickness: min. 205mm (low-volume roads), min. 280mm (other roads), min. 350mm (Expressway/Trunk/Primary)",
-                    "Max thickness: 395mm (WC20/HMSMA10), 405mm (HMSMA6/HMFC)"
+                    "Wearing course: 40mm thickness using WC20 or HMSMA10 materials",
+                    "Base course: 30mm thickness using HMSMA6 or HMFC materials", 
+                    "Road base: 65mm bituminous layer",
+                    "Sub-base: Granular material with thickness designed according to RD/GN/042",
+                    "Total pavement thickness: minimum 205mm for low-volume roads, minimum 280mm for other roads, minimum 350mm for Expressway/Trunk/Primary roads",
+                    "Maximum thickness: 395mm for WC20/HMSMA10 wearing course, 405mm for HMSMA6/HMFC base course"
+                ],
+                applications: [
+                    "Main carriageways and arterial roads",
+                    "Secondary roads and residential streets", 
+                    "Expressways and trunk roads",
+                    "Primary distributors and collector roads",
+                    "Low-volume rural roads"
+                ],
+                conditions: [
+                    "Areas requiring flexible pavement construction",
+                    "Locations with heavy to moderate traffic loading",
+                    "Sites where cost-effective pavement solution is needed",
+                    "Areas with various traffic volumes requiring adaptable design",
+                    "Locations where periodic maintenance is acceptable"
                 ],
                 image: "assets/pv1-profile.png"
             },
-            usage: {
-                applications: [
-                    "Main carriageways",
-                    "Secondary roads", 
-                    "Expressways and trunk roads",
-                    "Primary distributors",
-                    "Low-volume roads"
-                ],
-                conditions: [
-                    "Heavy traffic loading",
-                    "Flexible pavement required",
-                    "Cost-effective solution",
-                    "Various traffic volumes"
-                ]
-            },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction",
-                    "Sub-base: Granular material (thickness per RD/GN/042)",
-                    "Road base: 65mm bituminous layer",
-                    "Base course: 30mm (HMSMA6/HMFC)",
-                    "Wearing course: 40mm (WC20/HMSMA10)",
-                    "Joint construction with minimum overlap 150mm longitudinal, 500mm transverse"
+                    "Subgrade preparation and compaction to specified density",
+                    "Sub-base layer: Granular material placed and compacted to thickness per RD/GN/042 design",
+                    "Road base layer: 65mm bituminous material placement and compaction",
+                    "Base course layer: 30mm HMSMA6 or HMFC material application",
+                    "Wearing course layer: 40mm WC20 or HMSMA10 final surface layer",
+                    "Joint construction with minimum overlap requirements: 150mm longitudinal, 500mm transverse"
                 ],
                 materials: [
-                    "Bituminous materials per specifications",
-                    "Granular sub-base material",
-                    "HMSMA6/HMFC for base course",
-                    "WC20/HMSMA10 for wearing course"
+                    "Bituminous materials conforming to specification requirements",
+                    "Granular sub-base material meeting grading and compaction standards",
+                    "HMSMA6 or HMFC materials for base course construction",
+                    "WC20 or HMSMA10 materials for wearing course application"
                 ]
             }
         },
@@ -492,50 +719,50 @@ const furnitureDatabase = {
             description: "Rigid pavement design using concrete construction",
             drawings: ["h1102c", "H1105", "H1106A", "H1107"],
             manuals: ["hyd-gn042a"],
-            overview: {
-                description: "Rigid pavement construction using concrete for heavy-duty applications requiring long service life.",
+            usage: {
+                description: "Rigid pavement construction using reinforced concrete for heavy-duty applications requiring long service life and high structural integrity. Designed to withstand very heavy traffic loading with minimal deflection and long-term durability.",
                 specifications: [
-                    "Concrete slab: Grade 40/20 concrete",
-                    "Reinforcement: B503 mesh (where specified) with >188mm²/m",
-                    "Polythene sheeting: 0.125mm under slab",
-                    "Sub-base: Granular material or lean concrete",
-                    "Maximum slab width: 4.5m (unreinforced), 6.0m (with B503 mesh)",
-                    "Maximum slab length: 20.0m (reinforced), 5.0m (unreinforced)",
-                    "Joint spacing: 4.0m x 4.5m typical panels"
+                    "Concrete slab: Grade 40/20 concrete construction",
+                    "Reinforcement: B503 mesh where specified, minimum 188mm²/m reinforcement density",
+                    "Polythene sheeting: 0.125mm waterproof membrane installed under slab",
+                    "Sub-base: Granular material or lean concrete foundation",
+                    "Maximum unreinforced slab dimensions: 4.5m width, 5.0m length",
+                    "Maximum reinforced slab dimensions: 6.0m width with B503 mesh, 20.0m length",
+                    "Typical panel dimensions: 4.0m x 4.5m for standard construction"
+                ],
+                applications: [
+                    "Heavy duty pavements for industrial areas",
+                    "Airport runways and taxiways", 
+                    "Industrial loading areas and hardstanding",
+                    "Container terminals and port facilities",
+                    "Long-life pavement applications requiring minimal maintenance"
+                ],
+                conditions: [
+                    "Areas with very heavy traffic loading and point loads",
+                    "Locations requiring long service life with minimal maintenance",
+                    "Sites where structural integrity is prioritized over initial cost",
+                    "Areas where pavement failure would result in significant operational disruption",
+                    "Locations with heavy goods vehicles and container handling equipment"
                 ],
                 image: "assets/pv2-profile.png"
             },
-            usage: {
-                applications: [
-                    "Heavy duty pavements",
-                    "Airport runways", 
-                    "Industrial loading areas",
-                    "Container terminals",
-                    "Long-life pavement requirements"
-                ],
-                conditions: [
-                    "Very heavy traffic loading",
-                    "Long service life required",
-                    "Minimal maintenance desired",
-                    "Structural integrity priority"
-                ]
-            },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction",
-                    "Sub-base: Granular material or lean concrete",
-                    "Polythene sheeting: 0.125mm waterproof membrane",
-                    "Mesh reinforcement installation (B503 mesh where specified, >188mm²/m)",
-                    "Concrete slab: Grade 40/20 concrete placement", 
-                    "Joint construction: Transverse and longitudinal joints per H1105-H1109",
-                    "Surface finishing and curing"
+                    "Subgrade preparation and compaction to specified bearing capacity",
+                    "Sub-base installation: Granular material or lean concrete foundation",
+                    "Polythene sheeting placement: 0.125mm waterproof membrane over full slab area",
+                    "Mesh reinforcement installation: B503 mesh positioning where specified, minimum 188mm²/m density",
+                    "Concrete slab construction: Grade 40/20 concrete placement and finishing", 
+                    "Joint construction: Transverse and longitudinal joints per H1105-H1109 details",
+                    "Surface finishing and texturing for skid resistance",
+                    "Concrete curing and protection during setting period"
                 ],
                 materials: [
-                    "Grade 40/20 concrete",
-                    "B503 mesh reinforcement (where specified)",
-                    "0.125mm polythene sheeting",
-                    "Granular sub-base or lean concrete",
-                    "Joint sealant materials"
+                    "Grade 40/20 concrete meeting specified strength and durability requirements",
+                    "B503 mesh reinforcement where specified for crack control",
+                    "0.125mm polythene sheeting for moisture barrier",
+                    "Granular sub-base material or lean concrete for foundation support",
+                    "Joint sealant materials for expansion and contraction joints"
                 ]
             }
         },
@@ -546,18 +773,6 @@ const furnitureDatabase = {
             description: "Specialized surfacing designed to reduce traffic noise",
             drawings: ["h1101e", "H1135"],
             manuals: ["hyd-gn011e"],
-            overview: {
-                description: "Low noise road surfacing using specialized materials and techniques to reduce traffic noise while maintaining durability and safety.",
-                specifications: [
-                    "Wearing course: 40mm specialized low-noise materials (WC20/HMSMA10)",
-                    "Base course: 30mm (HMSMA6/HMFC)",
-                    "Road base: 65mm bituminous",
-                    "Sub-base: Granular material (thickness designed to RD/GN/042)",
-                    "Noise reduction: 3-5 dB(A) typical",
-                    "Void content: 18-25% for porous asphalt variants"
-                ],
-                image: "assets/pv2a-profile.png"
-            },
             usage: {
                 applications: [
                     "Noise-sensitive areas",
@@ -617,49 +832,49 @@ const furnitureDatabase = {
             category: "pavement",
             description: "Specialized pavement for cycle tracks",
             drawings: ["h1104c"],
-            overview: {
-                description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features.",
-                specifications: [
-                    "Width: Variable based on design requirements",
-                    "Surface: Bituminous surfacing wearing course (nominal maximum aggregate size 10)",
-                    "Thickness: 50mm surfacing layer",
-                    "Base: Sub-base material foundation",
-                    "Edge restraint: 150x125x750 precast concrete edging",
-                    "Crossfall: 3% for drainage",
-                    "Edging foundation: Grade 20/20 concrete"
-                ],
-                image: "assets/pv3-profile.png"
-            },
+            manuals: ["TPDM Volume 2 Chapter 3.8"],
             usage: {
+                description: "Dedicated cycling infrastructure with appropriate surface treatment and safety features. Designed specifically for bicycle traffic with smooth surface finish, proper drainage, and defined edges for cyclist safety and comfort.",
+                specifications: [
+                    "Surface width: Variable based on design requirements and traffic volume",
+                    "Surfacing layer: 50mm bituminous surfacing wearing course",
+                    "Aggregate size: Nominal maximum aggregate size 10mm for smooth surface",
+                    "Edge restraint: 150x125x750mm precast concrete edging units",
+                    "Crossfall: 3% gradient for effective surface drainage",
+                    "Foundation: Grade 20/20 concrete foundation for edging support",
+                    "Sub-base: Granular material foundation layer"
+                ],
                 applications: [
-                    "Dedicated cycle lanes",
-                    "Shared use paths",
-                    "Park cycling routes", 
-                    "Urban cycling infrastructure",
-                    "Recreational cycling facilities"
+                    "Dedicated cycle lanes separated from vehicular traffic",
+                    "Shared use paths for pedestrians and cyclists",
+                    "Park cycling routes and recreational paths", 
+                    "Urban cycling infrastructure networks",
+                    "Recreational cycling facilities and leisure routes"
                 ],
                 conditions: [
-                    "Cyclist safety priority",
-                    "Good drainage required",
-                    "Smooth surface essential",
-                    "Weather resistance needed"
-                ]
+                    "Areas where cyclist safety is priority concern",
+                    "Locations requiring effective surface drainage",
+                    "Sites needing smooth surface for comfortable cycling",
+                    "Areas requiring weather-resistant cycling infrastructure",
+                    "Locations with defined separation from other traffic modes"
+                ],
+                image: "assets/pv4-profile.png"
             },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction", 
-                    "Sub-base material placement and compaction",
-                    "Bituminous emulsion tack coat application",
-                    "Bituminous surfacing wearing course (50mm, nominal maximum aggregate size 10)",
-                    "Precast concrete edging installation (150x125x750) on grade 20/20 concrete foundation",
-                    "Surface finishing with 3% crossfall for drainage"
+                    "Subgrade preparation and compaction to required density", 
+                    "Sub-base material placement and compaction to specification",
+                    "Bituminous emulsion tack coat application for surface bonding",
+                    "Bituminous surfacing wearing course installation: 50mm thickness with maximum 10mm aggregate size",
+                    "Precast concrete edging installation: 150x125x750mm units on Grade 20/20 concrete foundation",
+                    "Surface finishing with 3% crossfall gradient for effective drainage"
                 ],
                 materials: [
-                    "Sub-base material per specification",
-                    "Bituminous emulsion tack coat",
-                    "Bituminous surfacing material (max aggregate size 10mm)",
-                    "150x125x750 precast concrete edging units",
-                    "Grade 20/20 concrete for edging foundation"
+                    "Sub-base material conforming to specification requirements",
+                    "Bituminous emulsion tack coat for adhesion",
+                    "Bituminous surfacing material with maximum 10mm aggregate size for smooth finish",
+                    "150x125x750mm precast concrete edging units for edge definition",
+                    "Grade 20/20 concrete for edging foundation and support"
                 ]
             }
         },
@@ -669,50 +884,50 @@ const furnitureDatabase = {
             category: "pavement",
             description: "Concrete construction for pedestrian footpaths",
             drawings: ["h1104c"],
-            overview: {
-                description: "Durable concrete footpath construction for pedestrian areas with proper drainage and accessibility features.",
-                specifications: [
-                    "Thickness: Variable - 75mm (level verge), 100mm (sloping verge), 125-200mm (higher load areas)",
-                    "Concrete grade: Grade 30/20 concrete",
-                    "Surface finish: Class U4 finish",
-                    "Membrane: 0.125 polythene sheeting under slab",
-                    "Crossfall: 3% for drainage",
-                    "Joint spacing: Maximum 5m with 20m bay maximum",
-                    "Joint details: 3-6mm wide, 20mm deep open joints"
-                ],
-                image: "assets/pv4-profile.png"
-            },
+            manuals: ["TPDM Volume 2 Chapter 3.4"],
             usage: {
+                description: "Durable concrete footpath construction for pedestrian areas with proper drainage and accessibility features. Designed to provide safe, accessible, and weather-resistant pedestrian infrastructure with long service life.",
+                specifications: [
+                    "Concrete thickness: Variable - 75mm for level verge areas, 100mm for sloping verge areas, 125-200mm for higher load applications",
+                    "Concrete grade: Grade 30/20 concrete for structural adequacy",
+                    "Surface finish: Class U4 finish for slip resistance and durability",
+                    "Moisture barrier: 0.125mm polythene sheeting installed under concrete slab",
+                    "Drainage gradient: 3% crossfall for effective surface water removal",
+                    "Joint spacing: Maximum 5m centers with 20m maximum bay length",
+                    "Joint dimensions: 3-6mm width, 20mm depth open joints for movement accommodation"
+                ],
                 applications: [
-                    "Urban footpaths",
-                    "Shopping areas",
-                    "School zones",
-                    "Accessible walkways",
-                    "Pedestrian plazas"
+                    "Urban footpaths and pedestrian walkways",
+                    "Shopping areas and commercial precincts",
+                    "School zones and educational facility access",
+                    "Accessible walkways complying with disability access requirements",
+                    "Pedestrian plazas and public gathering spaces"
                 ],
                 conditions: [
-                    "Heavy pedestrian traffic",
-                    "Durability required",
-                    "Accessibility compliance needed",
-                    "Weather resistance essential"
-                ]
+                    "Areas with heavy pedestrian traffic requiring durable surface",
+                    "Locations where long-term durability is required",
+                    "Sites requiring accessibility compliance for disabled users",
+                    "Areas needing weather-resistant pedestrian infrastructure",
+                    "Locations where low maintenance is priority"
+                ],
+                image: "assets/pv5-profile.png"
             },
             composition: {
                 layers: [
-                    "Subgrade preparation and leveling",
-                    "Sub-base material placement and compaction",
-                    "Polythene sheeting installation (0.125mm)",
-                    "Grade 30/20 concrete placement (thickness as specified)",
-                    "Class U4 surface finish application",
-                    "Joint cutting (3-6mm wide, 20mm deep) at maximum 5m spacing",
-                    "Curing and protection during setting"
+                    "Subgrade preparation and leveling to design profiles",
+                    "Sub-base material placement and compaction to specification",
+                    "Polythene sheeting installation: 0.125mm moisture barrier over full area",
+                    "Grade 30/20 concrete placement to specified thickness (75mm, 100mm, or 125-200mm)",
+                    "Class U4 surface finish application for slip resistance",
+                    "Joint cutting: 3-6mm wide, 20mm deep joints at maximum 5m spacing",
+                    "Concrete curing and protection during setting period"
                 ],
                 materials: [
-                    "Sub-base material per specification",
-                    "0.125mm polythene sheeting",
-                    "Grade 30/20 concrete",
-                    "Class U4 surface finish materials",
-                    "Joint sealant (where required)"
+                    "Sub-base material meeting compaction and grading requirements",
+                    "0.125mm polythene sheeting for moisture protection",
+                    "Grade 30/20 concrete meeting strength and durability standards",
+                    "Class U4 surface finish materials for texture and slip resistance",
+                    "Joint sealant materials where movement joints require sealing"
                 ]
             }
         },
@@ -723,54 +938,57 @@ const furnitureDatabase = {
             description: "Paver block construction for footpaths",
             drawings: ["h1103g", "H1131B", "H5609", "H5610", "H5611"],
             manuals: ["hyd-gn044c"],
-            overview: {
-                description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces.",
-                specifications: [
-                    "Paving unit: Paving slab or paving block as specified", 
-                    "Bedding: 20-30mm sand course/sand and cement bedding",
-                    "Sub-base: 150mm thick for footway, varies for carriageway",
-                    "Road-base: 100mm (run-in), 225mm (carriageway <5MSA), 225mm (footway E subgrade >50MPa)",
-                    "Drainage: Minimum 150mm sub-base thickness",
-                    "Edge restraint: Kerb or other edge restraint system",
-                    "Joint sand: 2-5mm joint width with sand filling"
-                ],
-                image: "assets/pv5-profile.png"
-            },
             usage: {
+                description: "Interlocking paver block construction providing attractive and maintainable pedestrian surfaces. Offers flexible pavement solution with easy access for utilities maintenance and aesthetic appeal for urban environments.",
+                specifications: [
+                    "Paving units: Paving slabs or paving blocks as specified in design",
+                    "Bedding layer: 20-30mm sand course or sand and cement bedding",
+                    "Sub-base thickness: Minimum 150mm for footway applications",
+                    "Road-base thickness: 100mm for run-in areas, 225mm for carriageway applications with design traffic <5MSA, 225mm for footway with E subgrade >50MPa",
+                    "Joint width: 2-5mm between paving units filled with joint sand",
+                    "Edge restraint: Kerb or other approved edge restraint system required",
+                    "Precast concrete pavers: Preferred for new paving installations",
+                    "Clay pavers: Require special approval, not recommended for new work",
+                    "Granite/artificial granite pavers: Require minimum 200mm concrete base"
+                ],
                 applications: [
-                    "Pedestrian areas",
-                    "Shopping precincts", 
-                    "Historic areas",
-                    "Decorative walkways",
-                    "Run-in areas",
-                    "Light traffic carriageways"
+                    "Pedestrian areas and walkways",
+                    "Shopping precincts and commercial areas", 
+                    "Historic areas requiring heritage-appropriate materials",
+                    "Decorative walkways and feature paving",
+                    "Vehicle run-in areas across footways",
+                    "Light traffic carriageways with design loads <5MSA"
                 ],
                 conditions: [
-                    "Aesthetic enhancement required",
-                    "Easy maintenance access",
-                    "Heritage area compliance",
-                    "Flexible surface needed"
-                ]
+                    "Areas where aesthetic enhancement is required",
+                    "Locations needing easy maintenance access for utilities",
+                    "Heritage conservation areas requiring compliant materials",
+                    "Sites where flexible surface is preferred over rigid pavement",
+                    "Areas subject to periodic utility access requirements"
+                ],
+                image: "assets/pv6-profile.png"
             },
             composition: {
                 layers: [
-                    "Subgrade preparation and compaction",
-                    "Sub-base placement and compaction (150mm minimum)",
-                    "Road-base installation (thickness as specified for application)",
-                    "Sand course/sand and cement bedding layer (20-30mm) preparation and screeding",
-                    "Paving unit installation (paving blocks or slabs) in specified pattern",
-                    "Joint sand application and compaction (2-5mm joints)",
-                    "Edge restraint installation (kerb or specified system)",
-                    "Joint stabilizing sealer application (areas with railings or high pressure water jet cleaning)"
+                    "Subgrade preparation and compaction to specified density",
+                    "Sub-base placement and compaction: minimum 150mm thickness for footways",
+                    "Road-base installation: thickness varies by application (100mm run-in, 225mm carriageway)",
+                    "Sand course or sand and cement bedding preparation: 20-30mm layer screeded to level",
+                    "Paving unit installation: blocks or slabs laid in specified pattern with proper joint spacing",
+                    "Joint sand application and compaction: 2-5mm joints filled and consolidated",
+                    "Edge restraint installation: kerb or specified edge system for structural integrity",
+                    "Joint stabilizing sealer application: for areas with railings or high pressure cleaning requirements"
                 ],
                 materials: [
-                    "Precast concrete pavers (preferred for new paving)",
-                    "Clay pavers (special approval required, not recommended for new work)",
-                    "Granite and artificial granite pavers (200mm concrete base required)",
-                    "Sand course or sand and cement bedding (85% sand, 15% cement by mass)",
-                    "Sub-base material per specification",
-                    "Bituminous road-base (run-in/carriageway) or concrete base (clay/granite pavers)",
-                    "Joint sand and stabilizing sealer"
+                    "Precast concrete pavers: preferred material for new paving work",
+                    "Clay pavers: special approval required, not recommended for new installations",
+                    "Granite and artificial granite pavers: require Grade 40/20 concrete base minimum 200mm thick",
+                    "Sand course bedding: fine sand for standard applications",
+                    "Sand and cement bedding: 85% sand, 15% cement by mass for high-stress areas",
+                    "Sub-base material: meeting specification grading and compaction requirements",
+                    "Bituminous road-base: for run-in and carriageway applications",
+                    "Joint sand: fine sand for joint filling and stabilization",
+                    "Joint stabilizing sealer: for areas requiring enhanced joint stability"
                 ]
             }
         },
@@ -780,20 +998,6 @@ const furnitureDatabase = {
             category: "pavement",
             description: "Landscaped planter construction and design",
             drawings: ["h5146a", "H5705", "H5706", "H5707"],
-            overview: {
-                description: "Structural planter construction for landscaping within paved areas, providing controlled growing environments.",
-                specifications: [
-                    "Minimum dimensions: 2000mm minimum (modify to suit site conditions)",
-                    "Soil provision: 50mm thick mulch over soil mix",
-                    "Frame: GMS frame fabricated from 75x50x5mm thick angle",
-                    "Foundation: In-situ mass concrete frame footing",
-                    "Base: In-situ planting base with compacted CDG",
-                    "Drainage: Sub-soil drainage consideration essential",
-                    "Tree securing: Stakes/guys as specified",
-                    "Soil level: Top of root ball at same level as finished soil level"
-                ],
-                image: "assets/pv6-profile.png"
-            },
             usage: {
                 applications: [
                     "Urban beautification",
@@ -845,19 +1049,6 @@ const furnitureDatabase = {
             description: "Expansion joints in concrete carriageways to accommodate thermal movement",
             drawings: ["H1105"],
             manuals: ["hyd-gn020a"],
-            overview: {
-                description: "Expansion joints in concrete pavement construction designed to accommodate thermal expansion and contraction movements. These joints allow the concrete slabs to move without cracking, ensuring long-term pavement performance and structural integrity.",
-                specifications: [
-                    "Joint spacing: 100-150m depending on local conditions",
-                    "Joint construction: Sealing groove and approved joint sealant",
-                    "Dowel bars: 25mm diameter, 650mm length, at 300mm centers (slabs ≥150mm thick)",
-                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
-                    "Compressible filler: 20mm thick compressible joint filler",
-                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
-                    "Cover: 60 ± 10mm cover to reinforcement",
-                    "Polythene sheeting: 0.125mm over full width"
-                ]
-            },
             usage: {
                 applications: [
                     "Concrete carriageway construction",
@@ -901,20 +1092,7 @@ const furnitureDatabase = {
             category: "pavement-joints",
             description: "Contraction joints in concrete carriageways to control shrinkage cracking",
             drawings: ["H1106A"],
-            manuals: ["hyd-gn020a"], 
-            overview: {
-                description: "Contraction joints (also known as control joints) in concrete pavement designed to control where shrinkage cracks occur during the curing process. These joints create a planned weak point where cracking is intended to occur, preventing random cracking throughout the pavement.",
-                specifications: [
-                    "Joint construction: Sealing groove and approved joint sealant",
-                    "Dowel bars: 20mm diameter (150-220mm slabs), 25mm diameter (230mm+ slabs), 650mm length",
-                    "Dowel spacing: 300mm centers at mid-depth",
-                    "Dowel sleeve: 400mm length tight fitting PVC anti-corrosive sleeve",
-                    "Reinforcement: Wire ties and cradle bent 6mm diameter tie bars at 300mm centers",
-                    "Cover: 60 ± 10mm cover to reinforcement",
-                    "Polythene sheeting: 0.125mm over full width",
-                    "Mortar bed: 1 part cement to 3 parts sand"
-                ]
-            },
+            manuals: ["hyd-gn020a"],
             usage: {
                 applications: [
                     "Concrete carriageway panels",
@@ -960,18 +1138,6 @@ const furnitureDatabase = {
             description: "Longitudinal joints in concrete carriageways to reduce slab width and limit transverse stresses",
             drawings: ["H1107"],
             manuals: ["hyd-gn020a"],
-            overview: {
-                description: "Longitudinal joints in concrete pavement construction designed to reduce slab width and limit stresses in the transverse direction. These joints provide a balance between construction operations and load transfer requirements while controlling slab dimensions for optimal pavement performance.",
-                specifications: [
-                    "Reinforcement: Where specified, with approved sealing strip",
-                    "Tie bars: 12mm diameter, 1.0m length, spaced at 600mm centers at mid-depth (sow-cut)",
-                    "PVC sleeve: 150mm tight fitting anti-corrosive sleeve", 
-                    "Cover: 60 ± 10mm cover to reinforcement",
-                    "Joint spacing: 125 ± 25mm nominal between first and second slab",
-                    "Polythene sheeting: 0.125mm installation",
-                    "Sealing: Approved sealing strip application"
-                ]
-            },
             usage: {
                 applications: [
                     "Wide concrete carriageway construction",
@@ -1018,19 +1184,6 @@ const furnitureDatabase = {
             description: "Isolation joints in concrete carriageways for complete separation between pavement sections",
             drawings: ["H1107"],
             manuals: ["hyd-gn020a"],
-            overview: {
-                description: "Isolation joints in concrete pavement construction that provide complete separation between pavement sections without load transfer mechanisms. These joints prevent induced cracking by allowing slabs to move independently in both transverse and longitudinal directions, particularly at road junctions and around utility structures.",
-                specifications: [
-                    "No dowel bars or tie bars for load transfer",
-                    "Complete separation between concrete sections",
-                    "Joint material: 10mm thick compressible joint filler",
-                    "Full depth: Extends through entire slab thickness", 
-                    "Cover: 60 ± 10mm cover to reinforcement",
-                    "Joint width: 75mm + 5mm nominal spacing",
-                    "Polythene sheeting: 0.125mm installation",
-                    "Box-out arrangement: Orthogonal to road slab alignment"
-                ]
-            },
             usage: {
                 applications: [
                     "Road junction terminations where transverse joints cannot continue",
@@ -1076,19 +1229,8 @@ const furnitureDatabase = {
             name: "K1 - Standard Kerb",
             category: "kerbs",
             description: "Type K1 precast concrete kerb for urban areas with adjacent footways",
-            drawings: ["h1118"],
+            drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
-            overview: {
-                description: "Type K1 precast concrete kerb designed for urban areas where a footway is adjacent to the carriageway. Provides standard edge definition and protection between carriageway and footway with 125mm height profile.",
-                specifications: [
-                    "Height: 125mm above carriageway level", 
-                    "Length: 1000mm nominal kerb unit, 750mm edging unit",
-                    "Material: Grade 30/20 concrete",
-                    "Profile: Standard K1 section per H1118",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
-                    "Joint width: 10mm between units"
-                ]
-            },
             usage: {
                 applications: [
                     "Urban area carriageway edges",
@@ -1141,19 +1283,8 @@ const furnitureDatabase = {
             name: "K2 - Carriageway to Verge Kerb",
             category: "kerbs",
             description: "Type K2 precast concrete kerb for rural areas without adjacent footways",
-            drawings: ["h1118"],
+            drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
-            overview: {
-                description: "Type K2 precast concrete kerb designed for rural areas and high speed roads where there is no adjoining footway. Features lower profile than K1 for improved vehicle safety on high-speed roads.",
-                specifications: [
-                    "Profile: K2 section per H1118 (lower than K1)",
-                    "Length: 1000mm nominal kerb unit", 
-                    "Material: Grade 30/20 concrete",
-                    "Application: Rural areas without footways",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
-                    "Joint width: 10mm between units"
-                ]
-            },
             usage: {
                 applications: [
                     "Rural road edges",
@@ -1206,19 +1337,8 @@ const furnitureDatabase = {
             name: "K3 - Bridge Deck Kerb", 
             category: "kerbs",
             description: "Type K3 precast concrete kerb specifically for bridge deck applications",
-            drawings: ["h1118"],
+            drawings: ["h1118", "h1101e", "h1102c"],
             manuals: ["TPDM Volume 2 Chapter 3.4"],
-            overview: {
-                description: "Type K3 precast concrete kerb designed specifically for use on bridge decks. Features specialized profile and mounting details suitable for bridge structure requirements and loading conditions.",
-                specifications: [
-                    "Profile: K3 section per H1118 (bridge deck specific)",
-                    "Length: 1000mm nominal kerb unit",
-                    "Material: Grade 30/20 concrete", 
-                    "Application: Bridge decks only",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
-                    "Joint width: 10mm between units"
-                ]
-            },
             usage: {
                 applications: [
                     "Bridge deck edge definition",
@@ -1271,18 +1391,8 @@ const furnitureDatabase = {
             name: "K5-K9 - Vehicular Drop Kerbs",
             category: "kerbs",
             description: "Drop kerb series (K5-K9) for vehicular access across footways",
-            drawings: ["h1119"],
+            drawings: ["h1119", "h1113c", "h1114b", "h1115b", "h1116b"],
             manuals: ["TPDM Volume 2 Chapter 3.6"],
-            overview: {
-                description: "Series of precast concrete drop kerbs (K5, K6, K7, K8, K9) designed for vehicular access across footways. Provides smooth transition from carriageway level to footway level for vehicle crossings and run-ins.",
-                specifications: [
-                    "Series: K5 (left hand), K6 (left hand), K7 (centre), K8 (right hand), K9 (right hand)",
-                    "Material: Grade 30/20 concrete",
-                    "Profile: Gradual slope transition for vehicle access",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)",
-                    "Application: Double drop crossing kerb arrangements"
-                ]
-            },
             usage: {
                 applications: [
                     "Vehicle access points across footways",
@@ -1355,19 +1465,8 @@ const furnitureDatabase = {
             name: "K10-K14 - Pedestrian Drop Kerbs", 
             category: "kerbs",
             description: "Drop kerb series (K10-K14) for pedestrian crossings and accessibility",
-            drawings: ["h1134"],
+            drawings: ["h1134", "h1117b"],
             manuals: ["TPDM Volume 2 Chapter 3.7"],
-            overview: {
-                description: "Series of precast concrete drop kerbs (K10, K11, K12, K13, K14) designed for pedestrian crossings and accessibility compliance. Provides level access for wheelchairs, pushchairs, and mobility aids.",
-                specifications: [
-                    "Series: K10, K11, K12, K13, K14 for pedestrian crossings",
-                    "Material: Grade 30/20 concrete",
-                    "Profile: Gradual slope for accessibility compliance",
-                    "Gradient: Maximum 1:12 (8.33%) for accessibility",
-                    "Width: Full footway width coverage typically required",
-                    "Compliance: BS 7263 Part 1 and accessibility standards"
-                ]
-            },
             usage: {
                 applications: [
                     "Designated pedestrian crossings",
@@ -1443,17 +1542,6 @@ const furnitureDatabase = {
             description: "Type E1 edging for cycle track to footpath separation",
             drawings: ["h1118"],
             manuals: ["TPDM Volume 2 Chapter 3.8"],
-            overview: {
-                description: "Type E1 precast concrete edging designed for separating cycle tracks from adjacent footways. Provides low-level delineation without creating hazard to cyclists while maintaining clear boundary definition.",
-                specifications: [
-                    "Profile: E1 low-profile edging section per H1118",
-                    "Length: 750mm nominal edging unit",
-                    "Material: Grade 30/20 concrete",
-                    "Height: Low profile suitable for cycle track edge",
-                    "Application: Cycle track to footway separation",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
-                ]
-            },
             usage: {
                 applications: [
                     "Cycle track edge definition",
@@ -1508,17 +1596,6 @@ const furnitureDatabase = {
             description: "Type E2 edging for footway to planter separation",
             drawings: ["h1118"],
             manuals: ["Landscape Design Standards"],
-            overview: {
-                description: "Type E2 precast concrete edging designed for separating footways from planted areas. Provides defined boundary for landscaping while allowing surface water drainage into planted areas.",
-                specifications: [
-                    "Profile: E2 edging section per H1118",
-                    "Length: 750mm nominal edging unit",
-                    "Material: Grade 30/20 concrete", 
-                    "Height: Low profile for planter boundary",
-                    "Application: Footway to planted area separation",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
-                ]
-            },
             usage: {
                 applications: [
                     "Footway to planter separation",
@@ -1573,17 +1650,6 @@ const furnitureDatabase = {
             description: "Type E3 edging for footway to property boundary separation", 
             drawings: ["h1118"],
             manuals: ["Property Boundary Standards"],
-            overview: {
-                description: "Type E3 precast concrete edging designed for defining boundaries between public footways and private property. Provides clear legal and physical boundary definition.",
-                specifications: [
-                    "Profile: E3 boundary edging section per H1118",
-                    "Length: 750mm nominal edging unit",
-                    "Material: Grade 30/20 concrete",
-                    "Height: Appropriate for boundary demarcation",
-                    "Application: Footway to property boundary definition",
-                    "Compliance: BS 7263 Part 1 (except water absorption testing)"
-                ]
-            },
             usage: {
                 applications: [
                     "Public footway to private property boundaries",
@@ -1638,17 +1704,6 @@ const furnitureDatabase = {
             description: "Natural granite kerb for premium and heritage applications",
             drawings: ["h4101"],
             manuals: ["Heritage and Premium Development Standards"],
-            overview: {
-                description: "Natural granite kerb providing durable and aesthetic edge definition for premium developments and heritage areas. Features chisel-dressed finish and variable height options for different applications.",
-                specifications: [
-                    "Material: Natural granite stone",
-                    "Height: 150-300mm as required (dimension h)",
-                    "Length: Minimum 600mm per kerb unit",
-                    "Finish: Chisel-dressed to 140mm depth on front face, 75mm on back face",
-                    "Top face: Full width chisel-dressed finish",
-                    "Corner treatment: May be omitted where specified"
-                ]
-            },
             usage: {
                 applications: [
                     "Premium urban developments",
@@ -1724,11 +1779,6 @@ const furnitureDatabase = {
             description: "Single-sided concrete profile barrier",
             drawings: ["H2101D"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Concrete profile barriers providing vehicle restraint through controlled redirection. These barriers are designed to contain and redirect errant vehicles while minimizing vehicle damage and occupant injury. The New Jersey profile provides optimal balance between containment and redirection performance.",
-                specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey", "Containment level: L2", "Working width: 1.0-1.3m"],
-                image: "assets/cpb1-profile.png"
-            },
             usage: {
                 applications: [
                     "Central reservation barriers",
@@ -1770,11 +1820,6 @@ const furnitureDatabase = {
             description: "Removable concrete profile barrier",
             drawings: ["H2254"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Removable concrete profile barriers for temporary traffic management and work zone protection. These barriers can be repositioned using specialized equipment while maintaining the same containment performance as permanent concrete barriers. Designed for quick deployment and removal during construction or emergency situations.",
-                specifications: ["Height: 800mm", "Length: 4000mm segments", "Material: Reinforced concrete", "Profile: New Jersey", "Type: Removable/portable", "Containment level: L2", "Lifting points: Integrated"],
-                image: "assets/cpb2-profile.png"
-            },
             usage: {
                 applications: [
                     "Temporary traffic diversion",
@@ -1816,11 +1861,6 @@ const furnitureDatabase = {
             description: "Corrugated beam crash barrier system",
             drawings: ["H2112C"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Corrugated steel beam barriers providing vehicle restraint through controlled deformation and energy absorption. The W-beam profile distributes impact forces over multiple posts while allowing controlled deflection to reduce vehicle damage and occupant injury. Cost-effective solution for medium-risk locations.",
-                specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: W-beam", "Post spacing: 4000mm centers", "Containment level: L1", "Working width: 2.0-2.5m"],
-                image: "assets/cb1-profile.png"
-            },
             usage: {
                 applications: [
                     "Rural road protection",
@@ -1861,11 +1901,6 @@ const furnitureDatabase = {
             description: "Movable steel barrier system",
             drawings: ["H2273"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Movable steel beam barriers designed for temporary installations and emergency access provisions. These barriers can be relocated or removed to allow emergency vehicle passage through median openings while maintaining protection during normal operations. Features quick-release mechanisms for rapid deployment.",
-                specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: W-beam", "Type: Movable/removable", "Containment level: L1", "Access: Emergency vehicle passage"],
-                image: "assets/cb2-profile.png"
-            },
             usage: {
                 applications: [
                     "Rural road protection",
@@ -1909,11 +1944,6 @@ const furnitureDatabase = {
             description: "Thrie beam crash barrier system",
             drawings: ["H2191A"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Three-wave beam barriers providing enhanced containment performance compared to standard W-beam systems. The thrie beam profile offers greater structural depth and resistance to vehicle penetration while maintaining controlled deformation characteristics. Suitable for locations requiring higher containment levels.",
-                specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: Three-wave thrie beam", "Post spacing: 4000mm centers", "Containment level: L2", "Working width: 1.5-2.0m"],
-                image: "assets/cb3-profile.png"
-            },
             usage: {
                 applications: [
                     "Rural road protection",
@@ -1957,11 +1987,6 @@ const furnitureDatabase = {
             description: "Thrie beam crash barrier system",
             drawings: ["H2238"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Enhanced thrie beam barrier system with additional upper rail for increased containment performance. This double-rail configuration provides superior vehicle restraint for high-risk locations or areas with heavy vehicles. The additional rail helps prevent vehicle rollover and provides redundancy in barrier performance.",
-                specifications: ["Height: 750mm", "Length: 4320mm beams", "Material: Galvanized steel", "Profile: Three-wave double-sided", "Configuration: Dual rail system", "Containment level: L3", "Containment: Enhanced level"],
-                image: "assets/cb4-profile.png"
-            },
             usage: {
                 applications: [
                     "Rural road protection",
@@ -2005,11 +2030,6 @@ const furnitureDatabase = {
             description: "Steel parapet barrier system for bridges and elevated sections",
             drawings: ["SSD164-165"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Steel parapet barriers designed for bridge and elevated structure applications where both vehicle containment and pedestrian protection are required. These barriers combine structural steel framework with infill panels to provide high containment performance while allowing for drainage and maintenance access.",
-                specifications: ["Height: 1100mm", "Material: Galvanized steel", "Profile: Steel beam construction", "Containment level: L2", "Application: Bridge structures", "Protection: Combined vehicle/pedestrian"],
-                image: "assets/steel-parapet-profile.png"
-            },
             usage: {
                 applications: [
                     "Bridge deck protection",
@@ -2055,11 +2075,6 @@ const furnitureDatabase = {
             description: "Combined rail and concrete parapet barrier system",
             drawings: ["SSD161-163"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Hybrid barrier system combining reinforced concrete base with steel rail elements for enhanced protection and aesthetic appeal. The concrete base provides structural integrity and containment while the steel rail components offer visibility and architectural enhancement. Designed for urban bridge applications where appearance is important.",
-                specifications: ["Height: 1200mm", "Base: Reinforced concrete", "Rail: Steel tube/beam", "Containment level: L2", "Application: Urban bridges", "Finish: Architectural treatment"],
-                image: "assets/combined-rail-concrete-profile.png"
-            },
             usage: {
                 applications: [
                     "Urban bridge parapets",
@@ -2109,11 +2124,6 @@ const furnitureDatabase = {
             description: "L4 containment level concrete parapet barrier",
             drawings: ["Figure 11.3 HyD SDM"],
             manuals: ["Highways Department Structures Design Manual Figure 11.3"],
-            overview: {
-                description: "Highest level concrete parapet barriers designed for critical infrastructure protection where maximum vehicle containment is essential. These barriers meet L4 containment requirements per EN 1317 standards and are designed to contain large vehicles at high speeds with minimal deflection. Reserved for locations where barrier failure would result in catastrophic consequences.",
-                specifications: ["Height: 1500mm", "Containment Level: L4", "Material: Reinforced concrete", "Design standard: EN 1317", "Working width: <1.0m", "Impact severity: ASI ≤ 1.4"],
-                image: "assets/l4-concrete-parapet-profile.png"
-            },
             usage: {
                 applications: [
                     "Major bridge structures",
@@ -2163,11 +2173,6 @@ const furnitureDatabase = {
             description: "Type 2 railings for pedestrian control purpose",
             drawings: ["H2130H"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Type 2 railings designed for pedestrian control applications including standard sections, junction details, and expansion joint provisions.",
-                specifications: ["Height: 1100mm", "Panel length: 2000mm", "Material: Galvanized steel", "Infill: Vertical bars"],
-                image: "assets/r1-profile.png"
-            },
             usage: {
                 applications: [
                     "Pedestrian control at junctions",
@@ -2201,11 +2206,6 @@ const furnitureDatabase = {
             description: "Type 2 railings near Junction and Crossing with high visibility",
             drawings: ["H2132H"],
             manuals: ["TPDM Volume 2 Chapter 3.9"],
-            overview: {
-                description: "Type 2 railings located near Junction and Crossing should adopt a higher visibility panel to avoid block motorists sight line.",
-                specifications: ["Height: 1100mm", "Panel length: 2000mm", "Material: Galvanized steel", "Infill: Vertical bars"],
-                image: "assets/r1-profile.png"
-            },
             usage: {
                 applications: [
                     "Pedestrian control at junctions",
@@ -2239,11 +2239,6 @@ const furnitureDatabase = {
             description: "Type 4 railings for pedestrian control purpose",
             drawings: ["H2282A"],
             manuals: ["HYD Standard Drawing H2282A"],
-            overview: {
-                description: "Type 4 railings for pedestrian control with enhanced design features and expansion joint capabilities.",
-                specifications: ["Height: 1100mm", "Enhanced design features", "Material: Galvanized steel", "Expansion joint provision"],
-                image: "assets/r2-profile.png"
-            },
             usage: {
                 applications: [
                     "Enhanced pedestrian control",
@@ -2277,10 +2272,6 @@ const furnitureDatabase = {
             description: "Tubular amenity railings for aesthetic and functional applications",
             drawings: ["H2135C"],
             manuals: ["HYD Standard Drawing H2135C"],
-            overview: {
-                description: "Tubular amenity railings designed for aesthetic enhancement and functional pedestrian guidance in urban environments.",
-                specifications: ["Tubular construction", "Amenity-focused design", "Aesthetic enhancement", "Urban environment application"]
-            },
             usage: {
                 applications: [
                     "Urban amenity areas",
@@ -2314,10 +2305,6 @@ const furnitureDatabase = {
             description: "Stainless steel railings for public transport interchange",
             drawings: ["H2271"],
             manuals: ["HYD Standard Drawing H2271"],
-            overview: {
-                description: "Stainless steel Type SS01 railings specifically designed for public transport interchange applications with corrosion resistance and durability.",
-                specifications: ["Stainless steel construction", "Public transport specification", "Corrosion resistance", "High durability"]
-            },
             usage: {
                 applications: [
                     "Public transport interchanges",
@@ -2352,10 +2339,6 @@ const furnitureDatabase = {
             description: "Removable bollards and railings system",
             drawings: ["H2259"],
             manuals: ["HYD Standard Drawing H2259"],
-            overview: {
-                description: "Removable railing system designed for flexible access control and temporary traffic management applications.",
-                specifications: ["Removable design", "Flexible access control", "Temporary installation capability", "Quick deployment system"]
-            },
             usage: {
                 applications: [
                     "Temporary access control",
@@ -2390,10 +2373,6 @@ const furnitureDatabase = {
             description: "Emergency crash gate for emergency vehicle access through barriers",
             drawings: ["H2108C"],
             manuals: ["HYD Standard Drawing H2108C"],
-            overview: {
-                description: "Emergency crash gate system designed for emergency vehicle access through barrier systems, providing controlled access during emergency situations while maintaining barrier integrity under normal conditions.",
-                specifications: ["Emergency vehicle access capability", "Crash-through design", "Barrier integration", "Emergency activation system"]
-            },
             usage: {
                 applications: [
                     "Emergency vehicle access points",
@@ -2431,10 +2410,6 @@ const furnitureDatabase = {
             description: "Emergency Access Gate for controlled emergency vehicle access",
             drawings: ["H2276B"],
             manuals: ["HYD Standard Drawing H2276B"],
-            overview: {
-                description: "Emergency Access Gate (EAG) system providing controlled access for emergency vehicles through restricted areas while maintaining security and access control under normal conditions.",
-                specifications: ["Emergency Access Gate design", "Controlled access system", "Emergency vehicle compatibility", "Security maintenance capability"]
-            },
             usage: {
                 applications: [
                     "Emergency vehicle access control",
@@ -2472,10 +2447,6 @@ const furnitureDatabase = {
             description: "Standard chain link fence installation for perimeter security and area control",
             drawings: ["6121D"],
             manuals: ["Standard Drawing 6121D"],
-            overview: {
-                description: "Standard chain link fence system designed for perimeter security, area control, and boundary definition with durable galvanized construction and standard installation procedures.",
-                specifications: ["Galvanized chain link construction", "Standard height options", "Post and foundation system", "Gate integration capability"]
-            },
             usage: {
                 applications: [
                     "Perimeter security fencing",
@@ -2515,10 +2486,6 @@ const furnitureDatabase = {
             description: "Single post traffic sign support systems",
             drawings: ["H2147F"],
             manuals: ["HYD Standard Drawing H2147F"],
-            overview: {
-                description: "Single post traffic sign support systems designed for standard traffic sign installations with proper foundation and mounting details.",
-                specifications: ["Single post design", "Standard mounting system", "Foundation details included", "Traffic sign compatibility"]
-            },
             usage: {
                 applications: [
                     "Standard traffic sign installations",
@@ -2552,10 +2519,6 @@ const furnitureDatabase = {
             description: "Single post traffic sign support using off-centered method",
             drawings: ["H2198C"],
             manuals: ["HYD Standard Drawing H2198C"],
-            overview: {
-                description: "Single post traffic sign support system using off-centered mounting method for specific installation conditions and sign positioning requirements.",
-                specifications: ["Off-centered mounting design", "Specialized positioning capability", "Enhanced stability features", "Multi-sheet detailed design"]
-            },
             usage: {
                 applications: [
                     "Off-centered sign positioning",
@@ -2589,10 +2552,6 @@ const furnitureDatabase = {
             description: "Single post multi-sign support for cantilever-mounted traffic signs",
             drawings: ["H2227B"],
             manuals: ["HYD Standard Drawing H2227B"],
-            overview: {
-                description: "Single post multi-sign support system designed for cantilever-mounted traffic signs providing multiple sign mounting capability on a single support structure.",
-                specifications: ["Multi-sign capability", "Cantilever mounting system", "Single post efficiency", "Multiple sign coordination"]
-            },
             usage: {
                 applications: [
                     "Multiple traffic sign installations",
@@ -2626,10 +2585,6 @@ const furnitureDatabase = {
             description: "Single post multi-sign support for street name plates and center-mounted traffic signs",
             drawings: ["H2228E"],
             manuals: ["HYD Standard Drawing H2228E"],
-            overview: {
-                description: "Integrated multi-sign support system combining street name plate mounting with center-mounted traffic signs on a single post structure.",
-                specifications: ["Street name plate integration", "Center-mounted sign capability", "Combined functionality", "Integrated design approach"]
-            },
             usage: {
                 applications: [
                     "Street name and traffic sign combination",
@@ -2663,10 +2618,6 @@ const furnitureDatabase = {
             description: "Single post multi-sign support for street name plates and cantilever-mounted traffic signs",
             drawings: ["H2230C"],
             manuals: ["HYD Standard Drawing H2230C"],
-            overview: {
-                description: "Advanced multi-sign support system integrating street name plates with cantilever-mounted traffic signs for comprehensive street signage solutions.",
-                specifications: ["Street name plate integration", "Cantilever traffic sign capability", "Comprehensive signage solution", "Advanced design features"]
-            },
             usage: {
                 applications: [
                     "Comprehensive street signage",
@@ -2700,10 +2651,6 @@ const furnitureDatabase = {
             description: "Single post multi-sign support for perpendicular traffic signs",
             drawings: ["H2268B"],
             manuals: ["HYD Standard Drawing H2268B"],
-            overview: {
-                description: "Advanced multi-sign support system designed for traffic signs positioned perpendicular to each other, providing multi-directional sign visibility.",
-                specifications: ["Perpendicular sign arrangement", "Multi-directional visibility", "Advanced mounting system", "Optimized sign positioning"]
-            },
             usage: {
                 applications: [
                     "Multi-directional sign requirements",
@@ -2736,10 +2683,6 @@ const furnitureDatabase = {
             category: "signs",
             description: "Street name plates with building numbers",
             drawings: ["H2205"],
-            overview: {
-                description: "Street name plate system with building number integration for street identification and address reference in urban environments.",
-                specifications: ["Street name identification", "Building number integration", "Urban address system", "Multiple mounting options"]
-            },
             usage: {
                 applications: [
                     "Street identification",
@@ -2772,10 +2715,6 @@ const furnitureDatabase = {
             category: "signs",
             description: "Comprehensive roadside directional signage system",
             drawings: ["H2212A"],
-            overview: {
-                description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
-                specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
-            },
             usage: {
                 applications: [
                     "Highway directional guidance",
@@ -2808,10 +2747,6 @@ const furnitureDatabase = {
             category: "signs",
             description: "Cantilever directional signage system",
             drawings: ["SSD153(1)"],
-            overview: {
-                description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
-                specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
-            },
             usage: {
                 applications: [
                     "Highway directional guidance",
@@ -2844,10 +2779,6 @@ const furnitureDatabase = {
             category: "signs",
             description: "Overhead gantry directional signage system",
             drawings: ["SSD151(1)-A"],
-            overview: {
-                description: "Comprehensive roadside directional signage system with detailed specifications covering all aspects of directional sign design, mounting, and installation for highway and urban applications.",
-                specifications: ["Comprehensive directional system", "14-sheet detailed specification", "Highway and urban applications", "Complete installation guidance"]
-            },
             usage: {
                 applications: [
                     "Highway directional guidance",
@@ -2881,10 +2812,6 @@ const furnitureDatabase = {
             description: "Directional signage system specifically designed for visitors",
             drawings: ["H2301"],
             manuals: ["HYD Standard Drawing H2301"],
-            overview: {
-                description: "Specialized directional signage system designed specifically for visitor guidance with tourist-friendly design and information presentation.",
-                specifications: ["Visitor-specific design", "Tourist-friendly information", "Multi-sheet comprehensive system", "Visitor guidance optimization"]
-            },
             usage: {
                 applications: [
                     "Tourist area guidance",
@@ -2918,10 +2845,6 @@ const furnitureDatabase = {
             description: "Pedestrian directional sign support system",
             drawings: ["H2232C"],
             manuals: ["HYD Standard Drawing H2232C"],
-            overview: {
-                description: "Specialized directional sign support system designed specifically for pedestrian navigation and guidance applications.",
-                specifications: ["Pedestrian-scale design", "Walking route guidance", "Pedestrian-friendly information", "Urban pedestrian applications"]
-            },
             usage: {
                 applications: [
                     "Pedestrian navigation",
@@ -2955,10 +2878,6 @@ const furnitureDatabase = {
             description: "Street name plate and traffic sign mounting on public lighting columns",
             drawings: ["H2231"],
             manuals: ["HYD Standard Drawing H2231"],
-            overview: {
-                description: "Specialized mounting system for installing street name plates and traffic signs on existing public lighting columns, maximizing infrastructure efficiency.",
-                specifications: ["Lighting column integration", "Existing infrastructure utilization", "Sign and lighting coordination", "Space-efficient design"]
-            },
             usage: {
                 applications: [
                     "Lighting column sign integration",
@@ -2995,10 +2914,6 @@ const furnitureDatabase = {
             description: "Foundation and mini-drawpit for traffic signal pole installation",
             drawings: ["H2146C"],
             manuals: ["HYD Standard Drawing H2146C"],
-            overview: {
-                description: "Complete traffic signal pole installation system including foundation design and integrated mini-drawpit for electrical connections and maintenance access.",
-                specifications: ["Signal pole foundation", "Mini-drawpit integration", "Electrical connection provisions", "Maintenance access features"]
-            },
             usage: {
                 applications: [
                     "Traffic signal installations",
@@ -3032,10 +2947,6 @@ const furnitureDatabase = {
             description: "Area Traffic Control drawpit systems - single and twin concrete draw/jointing chambers",
             drawings: ["H2159B"],
             manuals: ["HYD Standard Drawing H2159B"],
-            overview: {
-                description: "Comprehensive Area Traffic Control drawpit system including single concrete draw/jointing chamber for shallow depths, and Type A & Type B twin concrete chambers for deeper installations, with covers and frames.",
-                specifications: ["Single concrete draw/jointing chamber (≤850mm depth)", "Type A twin concrete chamber (>850mm depth)", "Type B twin concrete chamber (>850mm depth)", "Heavy duty and light duty covers", "Cable draw-in pit capability"]
-            },
             usage: {
                 applications: [
                     "Area traffic control systems",
@@ -3073,10 +2984,6 @@ const furnitureDatabase = {
             description: "Electrical and Mechanical earthing pit system",
             drawings: ["H2165B"],
             manuals: ["HYD Standard Drawing H2165B"],
-            overview: {
-                description: "Specialized Electrical and Mechanical earthing pit system including concrete earth pit construction, cover and frame details, and concentrator pit integration.",
-                specifications: ["Concrete earth pit construction", "Specialized cover & frame", "Concentrator pit integration", "Earthing system provisions"]
-            },
             usage: {
                 applications: [
                     "Electrical system earthing",
@@ -3110,10 +3017,6 @@ const furnitureDatabase = {
             description: "Vehicle loop detector systems for traffic control",
             drawings: ["H2181A"],
             manuals: ["HYD Standard Drawing H2181A"],
-            overview: {
-                description: "Complete vehicle loop detector system including typical slot construction for ATC, mini drawpit details, and cover and frame specifications for traffic detection.",
-                specifications: ["Loop detector slot design", "Mini drawpit integration", "Detection system provisions", "Cover and frame details"]
-            },
             usage: {
                 applications: [
                     "Vehicle detection systems",
@@ -3147,10 +3050,6 @@ const furnitureDatabase = {
             description: "Traffic controller plinth systems for various controller types",
             drawings: ["H2164C"],
             manuals: ["HYD Standard Drawing H2164C"],
-            overview: {
-                description: "Comprehensive traffic controller plinth system including Type Delta 4 controller details, Type C 2000 & C 3000 controller plinths, T125B controller base, and fabricated steel recessed covers.",
-                specifications: ["Multiple controller type compatibility", "Delta 4 controller support", "C 2000 & C 3000 controller types", "T125B controller base", "Fabricated steel recessed covers"]
-            },
             usage: {
                 applications: [
                     "Traffic controller installations",
@@ -3186,10 +3085,6 @@ const furnitureDatabase = {
             description: "Non-illuminated retro-reflective traffic bollard for road delineation",
             drawings: ["HLDSDGE06-CL0047A"],
             manuals: ["HLD Standard Drawing HLDSDGE06-CL0047A"],
-            overview: {
-                description: "Non-illuminated retro-reflective traffic bollard system designed for road delineation and traffic guidance with high-visibility retro-reflective materials for enhanced nighttime visibility.",
-                specifications: ["Non-illuminated design", "Retro-reflective materials", "Traffic delineation capability", "High nighttime visibility"]
-            },
             usage: {
                 applications: [
                     "Road delineation",
@@ -3223,10 +3118,6 @@ const furnitureDatabase = {
             description: "Omnidirectional non-illuminated retro-reflective traffic bollard for 360-degree visibility",
             drawings: ["HLDSDGE06-CL0058"],
             manuals: ["HLD Standard Drawing HLDSDGE06-CL0058"],
-            overview: {
-                description: "Omnidirectional non-illuminated retro-reflective traffic bollard system providing 360-degree visibility for comprehensive traffic guidance and area delineation.",
-                specifications: ["Omnidirectional visibility", "360-degree retro-reflection", "Non-illuminated design", "Comprehensive area coverage"]
-            },
             usage: {
                 applications: [
                     "Central island delineation",
@@ -3260,10 +3151,6 @@ const furnitureDatabase = {
             description: "Standard traffic bollard with concrete plinth foundation",
             drawings: ["H2140A"],
             manuals: ["HYD Standard Drawing H2140A"],
-            overview: {
-                description: "Standard traffic bollard system with detailed concrete plinth foundation design for reliable traffic control and pedestrian area protection.",
-                specifications: ["Concrete plinth foundation", "Two-sheet detailed design", "Standard traffic control", "Durable construction"]
-            },
             usage: {
                 applications: [
                     "Traffic control points",
@@ -3297,10 +3184,6 @@ const furnitureDatabase = {
             description: "Galvanized Iron bollard for standard applications",
             drawings: ["H2179C"],
             manuals: ["HYD Standard Drawing H2179C"],
-            overview: {
-                description: "Galvanized Iron bollard system providing durable and cost-effective traffic control and area delineation with corrosion-resistant finish.",
-                specifications: ["Galvanized Iron construction", "Corrosion-resistant finish", "Standard height design", "Cost-effective solution"]
-            },
             usage: {
                 applications: [
                     "Standard traffic control",
@@ -3334,10 +3217,6 @@ const furnitureDatabase = {
             description: "Type 1 and Type 2 frangible bollards designed for cycle track applications",
             drawings: ["H2189"],
             manuals: ["HYD Standard Drawing H2189"],
-            overview: {
-                description: "Specialized Type 1 and Type 2 frangible bollard system designed specifically for cycle track applications with breakaway capability for safety.",
-                specifications: ["Type 1 and Type 2 designs", "Frangible breakaway capability", "Cycle track specific design", "Safety-oriented construction"]
-            },
             usage: {
                 applications: [
                     "Cycle track delineation",
@@ -3371,10 +3250,6 @@ const furnitureDatabase = {
             description: "Self-erecting tubular marker system for cycle track applications",
             drawings: ["H2189"],
             manuals: ["HYD Standard Drawing H2189"],
-            overview: {
-                description: "Self-erecting tubular marker system designed for cycle track applications with automatic recovery capability after impact for continuous guidance.",
-                specifications: ["Self-erecting capability", "Tubular marker design", "Cycle track specific application", "Impact recovery system"]
-            },
             usage: {
                 applications: [
                     "Cycle track guidance",
@@ -3408,10 +3283,6 @@ const furnitureDatabase = {
             description: "Combined bollard and chain system for comprehensive area control",
             drawings: ["h2308"],
             manuals: ["TD DC 2/2022"],
-            overview: {
-                description: "Integrated bollard and rail combination system providing comprehensive area control with both point and linear barrier capabilities.",
-                specifications: ["Combined bollard and rail design", "Integrated system approach", "Comprehensive area control", "Point and linear barriers"]
-            },
             usage: {
                 applications: [
                     "Comprehensive area control",
@@ -3445,10 +3316,6 @@ const furnitureDatabase = {
             description: "Removable bollard and railing system for temporary traffic control",
             drawings: ["H2259"],
             manuals: ["HYD Standard Drawing H2259"],
-            overview: {
-                description: "Comprehensive removable bollard and railing system designed for temporary traffic control and flexible area management with four-sheet detailed specifications covering all installation and removal procedures.",
-                specifications: ["Removable design capability", "Four-sheet comprehensive system", "Temporary installation capability", "Flexible area management", "Easy installation and removal"]
-            },
             usage: {
                 applications: [
                     "Temporary traffic control",

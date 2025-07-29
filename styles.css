@@ -870,3 +870,59 @@ body {
         padding: 12px 5px;
     }
 }
+
+/* Source Attribution Styles */
+.spec-text {
+    position: relative;
+    cursor: help;
+    transition: all 0.3s ease;
+}
+
+.spec-text:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.source-indicator {
+    font-size: 12px;
+    color: #6c757d;
+    margin-left: 8px;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.spec-text:hover + .source-indicator {
+    opacity: 1;
+    color: #007bff;
+}
+
+/* Tooltip styling for source attribution */
+.spec-text[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.spec-text[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    z-index: 1000;
+}

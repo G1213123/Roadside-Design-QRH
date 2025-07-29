@@ -235,7 +235,21 @@ class RoadsideCatalog {
                     ${overview.specifications && overview.specifications.length > 0 ? `
                     <h4>Specifications</h4>
                     <ul>
-                        ${overview.specifications.map(spec => `<li>${spec}</li>`).join('')}
+                        ${overview.specifications.map(spec => {
+                            // Handle both old string format and new object format
+                            if (typeof spec === 'string') {
+                                return `<li>${spec}</li>`;
+                            } else if (spec.text && spec.source) {
+                                return `<li>
+                                    <span class="spec-text" data-source="${spec.source}" title="Source: ${spec.source}">
+                                        ${spec.text}
+                                    </span>
+                                    <span class="source-indicator">ⓘ</span>
+                                </li>`;
+                            } else {
+                                return `<li>${spec.text || spec}</li>`;
+                            }
+                        }).join('')}
                     </ul>
                     ` : ''}
                 </div>

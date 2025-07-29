@@ -1,7 +1,7 @@
 # LLM Prompt: Update furnitureDatabase in questions.js
 
 ## Task Overview
-Update the `furnitureDatabase` object in `questions.js` to reflect accurate information from the HYD drawings and TPDM guidelines. Fill in comprehensive information for each furniture object's overview, usage, composition, and variants. Ensure the database structure matches the required format and all information is copied from the provided sources rather than being fabricated.
+Update the `furnitureDatabase` object in `questions.js` to reflect accurate information from the HYD drawings and TPDM guidelines. Fill in comprehensive information for each furniture object's usage, composition, installation, and variants sections. Ensure the database structure matches the required format and all information is copied from the provided sources rather than being fabricated.
 
 ## Required Database Structure
 Each furniture item should have the following structure:
@@ -13,16 +13,13 @@ Each furniture item should have the following structure:
     description: "Brief description",
     drawings: ["drawing_codes"], // HYD drawing references
     manuals: ["manual_references"], // TPDM or other manual references
-    overview: {
-        description: "Detailed technical description",
+    usage: {
+        description: "Detailed technical description of the item and its purpose",
         specifications: [
             "Technical specification 1",
             "Technical specification 2",
             // ... more specifications
         ],
-        image: "assets/image-file.png" // if applicable
-    },
-    usage: {
         applications: [
             "Application 1",
             "Application 2",
@@ -32,19 +29,27 @@ Each furniture item should have the following structure:
             "Condition 1",
             "Condition 2",
             // ... more conditions
-        ]
+        ],
+        image: "assets/image-file.png" // if applicable
     },
     composition: {
+        description: "Detailed construction description (if different from usage)",
+        specifications: [
+            "Construction specification 1",
+            "Construction specification 2",
+            // ... more construction specifications
+        ],
         layers: [
-            "Installation step 1",
-            "Installation step 2",
-            // ... more steps
+            "Construction layer/step 1",
+            "Construction layer/step 2",
+            // ... more layers/steps
         ],
         materials: [
             "Material 1",
             "Material 2",
             // ... more materials
-        ]
+        ],
+        image: "assets/construction-image.png" // if applicable
     },
     installation: {
         steps: [
@@ -66,6 +71,26 @@ Each furniture item should have the following structure:
     ]
 }
 ```
+
+## Key Structure Changes
+**IMPORTANT**: The database structure has been updated to eliminate redundancy:
+
+1. **No more `overview` section** - This has been removed to eliminate duplication
+2. **Enhanced `usage` section** - Now contains:
+   - `description`: Detailed technical description (previously in overview)
+   - `specifications`: Technical specifications array (previously in overview)
+   - `applications`: Where and how the item is used
+   - `conditions`: When and under what circumstances to use
+   - `image`: Reference image if applicable
+
+3. **Enhanced `composition` section** - May contain:
+   - `description`: Construction-specific description (if different from usage)
+   - `specifications`: Construction-specific specifications (if different from usage)
+   - `layers`: Construction sequence/layers
+   - `materials`: Required materials
+   - `image`: Construction diagram if applicable
+
+4. **No duplicate information** - Information should not be repeated between sections
 
 ## Source Information Available
 
@@ -126,12 +151,12 @@ Before updating any database entries, thoroughly read:
 3. The hyd-drawings.json metadata file for complete drawing information
 
 ### Step 2: Verify Database Structure
-Ensure each item follows the required structure with all fields:
-- `overview.description` and `overview.specifications`
-- `usage.applications` and `usage.conditions`  
-- `composition.layers` and `composition.materials`
+Ensure each item follows the updated structure with all fields:
+- `usage.description`, `usage.specifications`, `usage.applications` and `usage.conditions`  
+- `composition.layers` and `composition.materials` (and optionally `composition.description` and `composition.specifications` if different from usage)
 - `installation` details with steps, manuals, tools, materials
 - `variants` array with proper sub-structure
+- **NO `overview` section** - this has been removed to eliminate duplication
 
 ### Step 3: Extract Accurate Information
 For each furniture item:
@@ -140,20 +165,25 @@ For each furniture item:
 - Quote specific dimensions, specifications, and requirements
 - Reference exact drawing codes and manual sections
 - Include proper material specifications and construction details
+- **Place general descriptions, dimensions and specifications in the `usage` section**
+- **Use `composition` for material information of the item**
 
 ### Step 4: Fill Missing Information
 Current gaps to address:
-- Many items lack complete `overview.specifications` arrays
+- Items lacking complete `usage.description` and `usage.specifications` arrays
 - Missing `composition.layers` and `composition.materials` details
 - Incomplete `installation.steps` with proper sequencing
 - Missing `variants` for items that have multiple types
 - Some items need proper `drawings` and `manuals` references
+- **Ensure no duplication between `usage` and `composition` sections**
 
 ### Step 5: Cross-Reference and Validate
 - Verify drawing codes exist in the downloads folders
 - Ensure manual references point to actual TPDM sections
 - Check that specifications match between related items
 - Validate that variants are properly differentiated
+- **Ensure no information is duplicated between `usage` and `composition` sections**
+- **Verify that `usage` contains the primary technical description and specifications**
 
 ## Quality Requirements
 
@@ -163,7 +193,8 @@ Current gaps to address:
 - Drawing and manual references must be correct and accessible
 
 ### Completeness
-- Every item should have filled overview, usage, composition sections
+- Every item should have filled usage and composition sections
+- Usage section should contain comprehensive description and specifications
 - Installation steps should be comprehensive and sequential
 - Variants should cover all major types mentioned in drawings
 
@@ -171,6 +202,7 @@ Current gaps to address:
 - Similar items should have consistent formatting and detail level
 - Terminology should match the source documents
 - Cross-references between related items should be accurate
+- **No duplication of information between sections**
 
 ## Specific Focus Areas
 
@@ -191,7 +223,7 @@ Items that need significant updates:
 - Safety and regulatory compliance
 
 ## Output Format
-Provide the updated `furnitureDatabase` object as a complete JavaScript object, maintaining the existing structure but with enhanced and accurate information from the source documents.
+Provide the updated `furnitureDatabase` object as a complete JavaScript object, maintaining the existing structure but with enhanced and accurate information from the source documents. **Ensure the structure follows the updated format without `overview` sections and with comprehensive `usage` sections that include descriptions and specifications.**
 
 ## Important Notes
 - **DO NOT** make up information if it's not in the source documents
@@ -199,5 +231,26 @@ Provide the updated `furnitureDatabase` object as a complete JavaScript object, 
 - **DO** maintain backward compatibility with existing item IDs
 - **DO** ensure all drawing and manual references are valid and accessible
 - **DO** use consistent terminology and formatting throughout
+- **DO NOT** create `overview` sections - use the `usage` section for detailed descriptions and specifications
+- **DO** avoid duplicating information between `usage` and `composition` sections
+- **DO** place primary technical information in the `usage` section
+- **DO** use `composition` section specifically for construction sequence, layers, and materials
 
 If certain information cannot be found in the available sources, clearly indicate this rather than fabricating details.
+
+## Updated Structure Summary
+
+**Previous Structure (DEPRECATED):**
+```
+overview: { description, specifications, image }
+usage: { applications, conditions }
+composition: { layers, materials }
+```
+
+**New Structure (CURRENT):**
+```
+usage: { description, specifications, applications, conditions, image }
+composition: { description*, specifications*, layers, materials, image* }
+```
+
+*Optional fields in composition section, only include if construction-specific information differs from usage information.
