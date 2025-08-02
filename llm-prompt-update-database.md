@@ -1,7 +1,151 @@
-# LLM Prompt: Update furnitureDatabase in questions.js
+# LLM Prompt: Database Update Instructions
 
-## Task Overview
-Update the `furnitureDatabase` object in `questions.js` to reflect accurate information from the HYD drawings and TPDM guidelines. Fill in comprehensive information for each furniture object's usage, composition, installation, and variants sections. Ensure the database structure matches the required format and all information is copied from the provided sources rather than being fabricated.
+## Workflow Overview
+
+### Phase 1: Technical Content Extraction (COMPLETED)
+All PDF technical documents have been extracted into searchable text files for easy reference:
+
+- **HYD Standard Drawings**: All sections 1-6 (375+ drawings)
+- **TPDM Documents**: Traffic Planning and Design Manual content 
+- **Technical Specifications**: Extracted from all relevant PDFs
+
+**Extracted Content Location**: `extracted-pdfs/` directory
+- Organized by source: `downloads_section_1/`, `downloads_section_2/`, etc.
+- Each `.txt` file contains metadata + full extracted text
+- Summary report: `extracted-pdfs/EXTRACTION_SUMMARY.txt`
+
+### Phase 2: Content Research and Verification
+
+**ALWAYS use extracted content before updating database**:
+
+1. **Search for relevant technical content**:
+   ```javascript
+   // Use semantic search for conceptual queries
+   semantic_search("concrete profile barrier specifications Grade 30/20")
+   
+   // Use grep search for exact technical terms
+   grep_search("Grade 30/20|600mm|800mm", true, "extracted-pdfs/**")
+   ```
+
+2. **Read specific extracted technical documents**:
+   ```javascript
+   // Read specific HYD drawings
+   read_file("extracted-pdfs/downloads_section_2/h2101d.txt")
+   read_file("extracted-pdfs/downloads_section_2/h2112c.txt")
+   
+   // Read TPDM content 
+   read_file("TPDM 2024_07/TPDM/v2/c3/3_9.htm")
+   ```
+
+3. **Cross-reference multiple sources** to ensure accuracy
+
+### Phase 3: Database Structure Requirements
+
+#### Remove Redundancy
+- **Eliminate `overview` sections** - No duplicate content
+- Content should flow: `description` → `usage` → `composition` → `installation`
+
+#### Enhanced `usage` Section
+```javascript
+usage: {
+    description: "Comprehensive explanation of function and characteristics from technical docs",
+    specifications: [
+        "Height: XXXmm (from HYD drawing)",
+        "Material: Grade XX/XX (from technical specs)",
+        "Profile: Specific profile type (from drawings)",
+        // ... exact specifications from source documents
+    ],
+    applications: [
+        "Specific use cases from TPDM guidelines",
+        // ... based on containment levels and technical requirements
+    ],
+    conditions: [
+        "When to use (speed limits, road types, etc.)",
+        // ... from TPDM criteria and HYD recommendations
+    ]
+}
+```
+
+#### Enhanced `composition` Section  
+```javascript
+composition: {
+    layers: [
+        "Step-by-step construction sequence from drawings",
+        // ... actual construction process from technical docs
+    ],
+    materials: [
+        "Specific materials from HYD specifications",
+        // ... grades, types, standards from drawings
+    ]
+}
+```
+
+#### Complete `installation` Section
+```javascript
+installation: {
+    steps: [
+        "Detailed installation sequence from drawings",
+        // ... actual procedures from technical documentation
+    ],
+    drawings: ["H2101D", "H2104"], // Referenced drawings
+    tools: ["Specific tools from specs"],
+    materials: ["Exact materials from drawings"]
+}
+```
+
+### Phase 4: Source-Based Content Updates
+
+#### Authoritative Sources (in priority order):
+1. **HYD Standard Drawings** - Technical specifications and dimensions
+2. **TPDM Chapter 3.9** - Vehicle restraint system guidelines and criteria  
+3. **HyD Structures Design Manual** - Bridge and structure applications
+4. **Technical Standards** - BS EN, AASHTO, etc. (referenced in documents)
+
+#### Content Requirements:
+- **FACTUAL ACCURACY**: All specifications must match source documents
+- **TECHNICAL PRECISION**: Use exact dimensions, grades, standards from drawings
+- **PROPER CITATIONS**: Reference actual drawing numbers and manual sections
+- **NO FABRICATION**: Do not invent specifications - extract from real documents
+
+### Phase 5: Quality Assurance
+
+#### Before Database Updates:
+1. **Verify technical accuracy** against extracted source documents
+2. **Cross-check specifications** across multiple drawings  
+3. **Ensure completeness** of usage, composition, and installation sections
+4. **Remove redundant content** per structure requirements
+
+#### Documentation Standards:
+- Reference actual drawing numbers: `["H2101D", "H2104"]`
+- Cite real manual sections: `["TPDM Volume 2 Chapter 3.9"]`
+- Use exact technical specifications from source documents
+- Include proper containment levels (L1, L2, L3, L4) per TPDM criteria
+
+## Example Workflow for Barriers Category
+
+1. **Extract relevant content**:
+   ```javascript
+   semantic_search("concrete profile barrier New Jersey profile 800mm height")
+   grep_search("Grade 30/20", true, "extracted-pdfs/downloads_section_2/**")
+   ```
+
+2. **Read key technical documents**:
+   ```javascript
+   read_file("extracted-pdfs/downloads_section_2/h2101d.txt") // CPB1 specs
+   read_file("extracted-pdfs/downloads_section_2/h2104.txt")  // Precast details
+   read_file("extracted-pdfs/downloads_section_2/h2112c.txt") // W-beam specs
+   ```
+
+3. **Verify against TPDM**:
+   ```javascript
+   read_file("TPDM 2024_07/TPDM/v2/c3/3_9.htm") // Chapter 3.9
+   ```
+
+4. **Update database** with verified technical content following structure requirements
+
+5. **Quality check** against source documents for accuracy
+
+This workflow ensures all database updates are based on authoritative technical documentation rather than assumptions or general knowledge.
 
 ## Required Database Structure
 Each furniture item should have the following structure:
